@@ -1,0 +1,58 @@
+<ion-list>
+  <ion-toolbar>
+    <ion-title color="white">Ajustes</ion-title> 
+
+    <ion-buttons slot="start">
+      <ion-button [routerLink]="['/miperfil']">
+        <ion-icon slot="icon-only" name="arrow-back-circle-sharp"></ion-icon>
+      </ion-button>
+
+      <ion-button [routerLink]="['/inicio']">
+        <ion-icon slot="icon-only" name="home-outline"></ion-icon>
+      </ion-button>
+
+
+
+
+    </ion-buttons>
+
+  </ion-toolbar>
+  <ion-list-header>
+    <ion-label>
+    </ion-label>
+  </ion-list-header>
+  <ion-item>
+    <ion-label>Lenguaje</ion-label>
+    <ion-select placeholder="Selecciona">
+      <ion-select-option value="es">Español</ion-select-option>
+      <ion-select-option value="in">Ingles </ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-list>
+    <ion-list-header>
+      <ion-label>
+      </ion-label>
+    </ion-list-header>
+
+    <ion-item>
+      <ion-label>Personalizar Alertas</ion-label>
+      <ion-select multiple="true" cancelText="Cancelar" okText="Guardar">
+        <ion-select-option value="Cima">Cima</ion-select-option>
+        <ion-select-option value="Cristales">Cristales</ion-select-option>
+        <ion-select-option value="Destello">Destello </ion-select-option>
+        <ion-select-option value="Faro">Faro</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+  </ion-list>
+  <ion-item>
+    <ion-label> Califica esta APP </ion-label>
+    <ion-select value="brown" okText="Guardar" cancelText="Cancelar">
+      <ion-select-option value="brown">*</ion-select-option>
+      <ion-select-option value="blonde">**</ion-select-option>
+      <ion-select-option value="black">***</ion-select-option>
+      <ion-select-option value="red">****</ion-select-option>
+      <ion-select-option value="green">*****</ion-select-option>
+    </ion-select>
+  </ion-item>
