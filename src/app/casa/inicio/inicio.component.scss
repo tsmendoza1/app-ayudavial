@@ -8,7 +8,7 @@
 .form {
   ion.item {
     border-radius: 5px;
-    border-color: gold;
+    border-color: red;
     border-width: 2px;
     border-style: solid;
     margin-bottom: 10px;
@@ -16,5 +16,6 @@
 }
 
 ion-button {
-  text-transform: none;
+  text-transform:none;
+  color: red;
 }
