@@ -14,20 +14,21 @@
           <ion-icon slot="icon-only" name="ellipsis-vertical-outline"></ion-icon>
 
         </ion-button>
-          <ion-button [routerLink]="['/miperfil']">
-            <ion-icon slot="start" name="arrow-back-circle-sharp"></ion-icon>
-          </ion-button>
-      
+        <ion-button [routerLink]="['/miperfil']">
+          <ion-icon slot="start" name="arrow-back-circle-sharp"></ion-icon>
+        </ion-button>
+
 
       </ion-buttons>
     </ion-toolbar>
 
 
     <ion-avatar>
-      <img alt="auto" src="https://img.autocosmos.com/contenidos/galerias/800x600/GAZ_29428cb566924b69821f49af632625bf.jpg">
+      <img alt="auto"
+        src="https://img.autocosmos.com/contenidos/galerias/800x600/GAZ_29428cb566924b69821f49af632625bf.jpg">
     </ion-avatar>
   </ion-header>
-  <!-- List of Text Items -->
+
   <ion-list>
     <div *ngFor="let Auto of autos">
       <ion-item>
@@ -43,6 +44,4 @@
 
     </div>
   </ion-list>
-
-
 </ion-content>
