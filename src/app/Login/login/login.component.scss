@@ -8,14 +8,14 @@
   .form {
     ion.item {
       border-radius: 5px;
-      border-color: red;
+      border-color: aqua;
       border-width: 2px;
       border-style: solid;
       margin-bottom: 10px;
     }
   }
 
-  ion-button --background	 { 
+  ion-button  ion-card-subtitle{ 
       
     text-transform:none;
     color: red;
