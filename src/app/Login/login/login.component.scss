@@ -1,5 +1,17 @@
+ion-toolbar{
+  background-color: var(--ion-color-mycolor);
+}
+.btn{
+
+  background-color:  grayscale($color: #232428);
+  color: white;
+  padding: 18px 50px 18px 50px;
+ // border-radius: 50px;
+  font-size: 20px;
+  //border: 1px solid #363e42;
+}
 .logo {
-    margin-top: 50%;
+    margin-top: 0%;
     img {
       height: 200px;
     }
@@ -14,9 +26,18 @@
       margin-bottom: 10px;
     }
   }
+  .correo{
+    margin-left:2.9cm;
+    border-bottom: 1px solid #404649;
+    margin-right:2.9cm;
+  }
+  .contraseña{
+    margin-left:2.9cm;
+    border-bottom: 1px solid #404649;
+    margin-right:2.9cm;
+  }
   
-  ion-button {
-    color:red;
-
+  ion-button{ 
+    color:darkgray;
   }
   
