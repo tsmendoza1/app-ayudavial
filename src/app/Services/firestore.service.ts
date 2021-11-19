@@ -9,7 +9,21 @@ export class FirestoreService {
   constructor(private firestore: AngularFirestore) { }
 
 
-  createDoc () {
+
+  createDoc1(data: any, path: string, id: string) {
+
+    const collection = this.firestore.collection(path);
+    return collection.doc(id).set(data);
+
+
+}
+
+  getId (){
+    return this.firestore.createId();
+  }
+
+
+  createDoc() {
     this.firestore.collection('Clientes')
   }
 

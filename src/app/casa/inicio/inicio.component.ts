@@ -25,8 +25,6 @@ export class InicioComponent implements OnInit {
 
     await loading.present();
 
-    const { role, data } = await loading.onDidDismiss();
-    console.log('Sesión Iniciada');
   }
 
   getCliente(){
