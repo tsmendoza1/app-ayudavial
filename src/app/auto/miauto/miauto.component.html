@@ -3,22 +3,11 @@
 
     <ion-toolbar>
       <ion-title>Mi Auto </ion-title>
-      <ion-buttons slot="end">
-        <ion-button [routerLink]="['/inicio']">
-          <ion-icon slot="start" name="home-outline"></ion-icon>
-        </ion-button>
-        <ion-button [routerLink]="['/ajustes']">
-          <ion-icon slot="start" name="settings-outline"></ion-icon>
-        </ion-button>
-        <ion-button (click)='openMenu($event)'>
-          <ion-icon slot="icon-only" name="ellipsis-vertical-outline"></ion-icon>
-
-        </ion-button>
+      <ion-buttons slot="start">
         <ion-button [routerLink]="['/miperfil']">
-          <ion-icon slot="start" name="arrow-back-circle-sharp"></ion-icon>
+          <ion-icon slot="icon-only" name="chevron-back-outline"></ion-icon>
         </ion-button>
-
-
+        
       </ion-buttons>
     </ion-toolbar>
 

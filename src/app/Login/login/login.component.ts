@@ -28,7 +28,7 @@ export class LoginComponent implements OnInit {
     const id = this.database.getId();
     this.database.createDoc1(cliente,path,id).then((res) => {
       this.interaction.closeloading();
-        this.interaction.presentToast("Guardado con éxito")
+        this.interaction.presentToast("Registrado con éxito")
     })
   }
 

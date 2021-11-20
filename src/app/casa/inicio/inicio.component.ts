@@ -19,7 +19,7 @@ export class InicioComponent implements OnInit {
     const loading = await this.loadingController.create({
       cssClass: 'my-custom-class',
       message: 'Por favor, espere',
-      duration: 1500
+      duration: 500
      
     });
 
