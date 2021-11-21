@@ -1,3 +1,4 @@
+import { InteractionService } from './../../Services/interaction.service';
 import { MensajesComponent } from './../../Mensajes/mensajes/mensajes.component';
 import { Component, OnInit } from '@angular/core';
 import { Routes } from '@angular/router';
@@ -10,7 +11,7 @@ import { Routes } from '@angular/router';
 })
 export class UbicacionComponent implements OnInit {
 
-  constructor() { 
+  constructor(private ubication: InteractionService) { 
 
 
 
@@ -36,6 +37,16 @@ export class UbicacionComponent implements OnInit {
         ]
       }
     ];
+  }
+
+
+  compartirmiubicacion() {
+ 
+    
+    this.ubication.presentToast("Ubicación Compartida")
+   
+
+   
   }
 
   ngOnInit() {}
