@@ -1,3 +1,4 @@
+import { PagosComponent } from './Pagos/pagos/pagos.component';
 import { UbicacionComponent } from './Ubicacion/ubicacion/ubicacion.component';
 import { LoginComponent } from './Login/login/login.component';
 import { NgModule, Component } from '@angular/core';
@@ -19,6 +20,7 @@ const routes: Routes = [
   {path: 'ajustes',component:AjustesComponent},
   {path: 'login',component:LoginComponent},  
   {path: 'ubicacion',component:UbicacionComponent},  
+  {path: 'pagos',component:PagosComponent}
 ];
 
 @NgModule({

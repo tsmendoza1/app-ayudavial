@@ -1,3 +1,4 @@
+import { PagosComponent } from './Pagos/pagos/pagos.component';
 
 import { UbicacionComponent } from './Ubicacion/ubicacion/ubicacion.component';
 import { LoginComponent } from './Login/login/login.component';
@@ -33,6 +34,7 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
     AjustesComponent,
     LoginComponent,
     UbicacionComponent,
+    PagosComponent
   
 
   ],

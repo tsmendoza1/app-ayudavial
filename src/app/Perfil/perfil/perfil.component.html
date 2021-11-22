@@ -2,33 +2,33 @@
   <ion-header class="ion-no-border">
 
 
-
     <ion-toolbar>
       <ion-title color="white">Mi Perfil</ion-title>
 
-
-
+      
       <ion-buttons slot="end">
       
+        <ion-button [routerLink]="['/pagos']">
+          <ion-icon slot="start" name="logo-usd"></ion-icon>
+        </ion-button>
+
         <ion-button [routerLink]="['/ajustes']">
           <ion-icon slot="start" name="settings-outline"></ion-icon>
         </ion-button>
 
-
-
-
+      
         <ion-button (click)='getCollection($event)' (click)='openMenu($event)'>
           <ion-icon slot="icon-only" name="ellipsis-vertical-outline"></ion-icon>
         </ion-button>
 
-
-
       </ion-buttons>
 
-
+      
 
 
     </ion-toolbar>
+
+
 
 
     <ion-avatar>
