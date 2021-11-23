@@ -20,20 +20,20 @@
 
       <div class="form">
         <ion-item lines='none'>
-          <ion-input placeholder='Correo Electrónico'></ion-input>
+          <ion-input class="correo" placeholder='Correo Electrónico'></ion-input>
         </ion-item>
 
 
         <ion-item lines='none' short='block'>
-          <ion-input placeholder='Contraseña' type='password'></ion-input>
+          <ion-input class="contraseña" placeholder='Contraseña' type='password'></ion-input>
         </ion-item>
 
-        <ion-button (click)='presentLoading($event)' color='light blue' short='block' [routerLink]="['/miperfil']">
+        <ion-button (click)='presentLoading($event)' color='light blue' short='block' [routerLink]="['/miperfil']"class="btnInicio"> 
           Iniciar Sesión
 
         </ion-button>
 
-        <ion-button (click)='presentLoading($event)' color='light green' short='block' [routerLink]="['/login']">
+        <ion-button (click)='presentLoading($event)' color='light green' short='block' [routerLink]="['/login']"class="btnRegistrar">
           Registrarse
 
         </ion-button>
