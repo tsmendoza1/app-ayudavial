@@ -13,6 +13,7 @@ import { PerfilComponent } from './Perfil/perfil/perfil.component';
 
 const routes: Routes = [
   {path: 'inicio',component:InicioComponent},
+  {path: '',component:InicioComponent},
   {path: 'miauto',component:MiautoComponent},
   {path: 'mensajes',component:MensajesComponent},
   {path: 'miperfil',component:PerfilComponent},
