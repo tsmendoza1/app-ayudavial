@@ -42,16 +42,16 @@
     <div *ngFor="let cliente of clientes">
       <ion-item>
 
-        <ion-label>Nombre: {{cliente.nombre}} </ion-label>
+        <ion-label class="nombre">NOMBRE: {{cliente.nombre}} </ion-label>
       </ion-item>
       <ion-item>
-        <ion-label>Apellido: {{cliente.apellido}}</ion-label>
+        <ion-label class="apellido">APELLIDO: {{cliente.apellido}}</ion-label>
       </ion-item>
       <ion-item>
-        <ion-label>Correo: {{cliente.correo}}</ion-label>
+        <ion-label class="correo">CORREO: {{cliente.correo}}</ion-label>
       </ion-item>
       <ion-item>
-        <ion-label>Auto: {{cliente.auto}} </ion-label>
+        <ion-label class="auto">AUTO: {{cliente.auto}} </ion-label>
       </ion-item>
     </div>
   </ion-list>
