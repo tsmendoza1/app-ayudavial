@@ -22,13 +22,19 @@
     <div *ngFor="let Auto of autos">
       <ion-item>
 
-        <ion-label>Color: {{Auto.color}} </ion-label>
+        <ion-label class="miauto">
+          <ion-icon name="shield"></ion-icon>
+          Marca: {{Auto.marca}}</ion-label> 
       </ion-item>
       <ion-item>
-        <ion-label>Modelo: {{Auto.modelo}}</ion-label>
+        <ion-label>
+          <ion-icon name="car"></ion-icon>
+          Modelo: {{Auto.modelo}}</ion-label>
       </ion-item>
       <ion-item>
-        <ion-label>Marca: {{Auto.marca}}</ion-label>
+        <ion-label>
+          <ion-icon name="color-palette-outline"></ion-icon>
+          Color: {{Auto.color}}  </ion-label>
       </ion-item>
 
     </div>
