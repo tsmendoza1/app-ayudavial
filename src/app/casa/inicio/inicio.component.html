@@ -1,15 +1,13 @@
 <ion-content>
   <ion-header class="ion-text-center">
     <ion-toolbar>
-    
-      <ion-title size="center">Asistencia Vial</ion-title>
+
+   <ion-title size="center">Asistencia Vial</ion-title>
     </ion-toolbar>
-
-
   </ion-header>
   <ion-header class="ion-text-center">
     <div>
-     
+
     </div>
     <ion-toolbar>
 
@@ -29,20 +27,21 @@
           <ion-input class="contraseña" placeholder='Contraseña' type='password'></ion-input>
         </ion-item>
 
-        <ion-button (click)='presentLoading($event)' color='light blue' short='block' [routerLink]="['/miperfil']"class="btnInicio"> 
+        <ion-button (click)='presentLoading($event)' color='light blue' short='block' [routerLink]="['/miperfil']"
+          class="btnInicio">
           Iniciar Sesión
 
         </ion-button>
 
-        <ion-button (click)='presentLoading($event)' color='light green' short='block' [routerLink]="['/login']"class="btnRegistrar">
+        <ion-button (click)='presentLoading($event)' color='light green' short='block' [routerLink]="['/login']"
+          class="btnRegistrar">
           Registrarse
 
         </ion-button>
       </div>
       <ion-button fill='clear'>¿Olvidaste tu contraseña?</ion-button>
-      
+
     </ion-toolbar>
   </ion-header>
 
-  
 </ion-content>
