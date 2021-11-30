@@ -1,19 +1,15 @@
-
-
   <ion-header class="ion-text-center">
     <ion-toolbar>
-    
-      <ion-title size="center">Asistencia Vial</ion-title>
+
+   <ion-title size="center">Asistencia Vial</ion-title>
     </ion-toolbar>
-
-
   </ion-header>
 
 <ion-content  class="asistenciavialimg"   >
 
 
       <div class="ion-text-center">
-        <img alt="asistenciavial"
+        <img alt="asistenciavial" class="logo"
           src='http://autoconectado.cabsegurosequinoccial.com/templates/yootheme/cache/home-funcion-09-10ba4b36.jpeg'>
       </div>
 
@@ -28,12 +24,14 @@
           <ion-input class="contraseña" placeholder='Contraseña' type='password'></ion-input>
         </ion-item>
 
-        <ion-button (click)='presentLoading($event)' color='light blue' short='block' [routerLink]="['/miperfil']"class="btnInicio"> 
+        <ion-button (click)='presentLoading($event)' color='light blue' short='block' [routerLink]="['/miperfil']"
+          class="btnInicio">
           Iniciar Sesión
 
         </ion-button>
 
-        <ion-button (click)='presentLoading($event)' color='light green' short='block' [routerLink]="['/login']"class="btnRegistrar">
+        <ion-button (click)='presentLoading($event)' color='light green' short='block' [routerLink]="['/login']"
+          class="btnRegistrar">
           Registrarse
 
         </ion-button>
@@ -41,5 +39,4 @@
       <ion-button fill='clear'>¿Olvidaste tu contraseña?</ion-button>
 
 
-  
 </ion-content>

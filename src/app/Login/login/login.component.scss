@@ -1,11 +1,10 @@
 ion-toolbar {
-
 }
-.btn1{
-  background-color:  grayscale($color: #232428);
+.btn1 {
+  background-color: grayscale($color: #232428);
   color: white;
   padding: 10px 10px 10px 10px;
- // border-radius: 50px;
+  // border-radius: 50px;
   font-size: 20px;
   border: 1px solid #363e42;
 }
@@ -13,35 +12,34 @@ ion-toolbar {
   padding: 18px 50px 18px 50px;
   border-radius: 60px;
 
-    img {
-      height: 200px;
-    }
+  img {
+    height: 200px;
   }
-  
-  .form {
-    ion.item {
-      border-radius: 5px;
-      border-color: red;
-      border-width: 2px;
-      border-style: solid;
-      margin-bottom: 10px;
-    }
+}
+
+.form {
+  ion.item {
+    border-radius: 5px;
+    border-color: red;
+    border-width: 2px;
+    border-style: solid;
+    margin-bottom: 10px;
   }
-  .correo{
-    margin-left:1cm;
-    border-bottom: 1px solid #404649;
-    margin-right:1cm;
-  }
-  .contraseña{
-    margin-left:1cm;
-    border-bottom: 1px solid #404649;
-    margin-right:1cm;
-  }
-  
-  ion-button{ 
-    color:darkgray;
-  }
-  .registrarse{
-    margin-left: 23%;
-  }
-  
+}
+.correo {
+  margin-left: 1cm;
+  border-bottom: 1px solid #404649;
+  margin-right: 1cm;
+}
+.contraseña {
+  margin-left: 1cm;
+  border-bottom: 1px solid #404649;
+  margin-right: 1cm;
+}
+
+ion-button {
+  color: darkgray;
+}
+.registrarse {
+  margin-left: 23%;
+}
