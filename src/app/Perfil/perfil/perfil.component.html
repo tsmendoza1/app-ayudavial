@@ -5,25 +5,18 @@
       <ion-title color="white">Mi Perfil</ion-title>
       
       <ion-buttons slot="end">
-
-        <ion-button [routerLink]="['/pagos']">
-          <ion-icon slot="start" name="logo-usd"></ion-icon>
-        </ion-button>
       
         <ion-button (click)='getCollection($event)' (click)='openMenu($event)'>
           <ion-icon slot="icon-only" name="ellipsis-vertical-outline"></ion-icon>
         </ion-button>
       </ion-buttons>
 
-      <ion-button slot="start" [routerLink]="['/miauto']"> 
+      <ion-button class="botoncarro" slot="start" [routerLink]="['/miauto']"> 
         <ion-icon name="car"></ion-icon>
       </ion-button>
 
 
     </ion-toolbar>
-
-
-
 
     <ion-avatar class="avatarmiperfil">
       <img alt="Perfil"
