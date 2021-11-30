@@ -4,18 +4,12 @@
 
     <ion-toolbar>
       <ion-title color="white">Mi Perfil</ion-title>
-
       
       <ion-buttons slot="end">
       
         <ion-button [routerLink]="['/pagos']">
           <ion-icon slot="start" name="logo-usd"></ion-icon>
         </ion-button>
-
-        <ion-button [routerLink]="['/ajustes']">
-          <ion-icon slot="start" name="settings-outline"></ion-icon>
-        </ion-button>
-
       
         <ion-button (click)='getCollection($event)' (click)='openMenu($event)'>
           <ion-icon slot="icon-only" name="ellipsis-vertical-outline"></ion-icon>
@@ -23,7 +17,9 @@
 
       </ion-buttons>
 
-      
+      <ion-button slot="start" [routerLink]="['/miauto']"> 
+        <ion-icon name="car"></ion-icon>
+      </ion-button>
 
 
     </ion-toolbar>
@@ -31,7 +27,7 @@
 
 
 
-    <ion-avatar>
+    <ion-avatar class="avatarmiperfil">
       <img alt="Perfil"
         src="https://scontent.fcue3-1.fna.fbcdn.net/v/t31.18172-8/1493464_765437436829740_7491827991931428012_o.jpg?_nc_cat=102&ccb=1-5&_nc_sid=174925&_nc_ohc=sUH7mEmYnDQAX-mm2wk&_nc_ht=scontent.fcue3-1.fna&oh=af217c016e8873e24190610dad9dd0fa&oe=61C1069E">
     </ion-avatar>
