@@ -20,6 +20,7 @@ import { AjustesComponent } from './Ajustes/ajustes/ajustes.component';
 import { environment } from 'src/environments/environment';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 
 @NgModule({
@@ -44,7 +45,12 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
      IonicModule.forRoot(),
       AppRoutingModule, 
       AngularFireModule.initializeApp(environment.firebaseConfig),AngularFireAuthModule, 
-      AngularFirestoreModule],
+      AngularFirestoreModule, ServiceWorkerModule.register('ngsw-worker.js', {
+  enabled: environment.production,
+  // Register the ServiceWorker as soon as the app is stable
+  // or after 30 seconds (whichever comes first).
+  registrationStrategy: 'registerWhenStable:30000'
+})],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })
