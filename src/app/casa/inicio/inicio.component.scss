@@ -29,7 +29,9 @@
   // border-radius: 50px;
   font-size: 20px;
   border: 1px solid #363e42;
-}
+} 
+
+
     
 .btnRegistrar{
   background-color:  grayscale($color: #232428);
@@ -47,5 +49,10 @@ ion-button {
 
 .olvidastetucontraseña{
   align-content: center;
-  margin: 17%;
+  margin: 5%;
 }
+
+.saltar {
+  color: white;
+}
+
