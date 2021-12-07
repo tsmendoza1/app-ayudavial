@@ -1,15 +1,36 @@
 <ion-content>
   <ion-header class="ion-no-border">
+<<<<<<< Updated upstream
+=======
+
+
+>>>>>>> Stashed changes
     <ion-toolbar>
       <ion-title color="white">Mi Perfil</ion-title>
+
       
       <ion-buttons slot="end">
+<<<<<<< Updated upstream
 
+=======
+      
+        <ion-button [routerLink]="['/pagos']">
+          <ion-icon slot="start" name="logo-usd"></ion-icon>
+        </ion-button>
+
+        <ion-button [routerLink]="['/ajustes']">
+          <ion-icon slot="start" name="settings-outline"></ion-icon>
+        </ion-button>
+
+      
+>>>>>>> Stashed changes
         <ion-button (click)='getCollection($event)' (click)='openMenu($event)'>
           <ion-icon slot="icon-only" name="ellipsis-vertical-outline"></ion-icon>
         </ion-button>
+
       </ion-buttons>
 
+<<<<<<< Updated upstream
       <ion-button class="botoncarro" slot="start" [routerLink]="['/miauto']"> 
         <ion-icon name="car"></ion-icon>
       </ion-button>
@@ -19,9 +40,18 @@
 
     <ion-avatar class="avatarmiperfil">
       <img alt="Perfil"
+=======
+      
+
+
+    </ion-toolbar>
+    <ion-avatar>
+      <img alt="Perfil" class="avatar"
+>>>>>>> Stashed changes
         src="https://scontent.fcue3-1.fna.fbcdn.net/v/t31.18172-8/1493464_765437436829740_7491827991931428012_o.jpg?_nc_cat=102&ccb=1-5&_nc_sid=174925&_nc_ohc=sUH7mEmYnDQAX-mm2wk&_nc_ht=scontent.fcue3-1.fna&oh=af217c016e8873e24190610dad9dd0fa&oe=61C1069E">
     </ion-avatar>
   </ion-header>
+
 
   <ion-list>
     <div *ngFor="let cliente of clientes">
@@ -29,26 +59,22 @@
 
         <ion-label class="nombre">
           <ion-icon name="person-outline" slot="start"></ion-icon>
-          NOMBRE: {{cliente.nombre}}
-        </ion-label>
+          NOMBRE: {{cliente.nombre}} </ion-label>
       </ion-item>
       <ion-item>
         <ion-label class="apellido">
           <ion-icon name="person-outline" slot="start"></ion-icon>
-          APELLIDO: {{cliente.apellido}}
-        </ion-label>
+          APELLIDO: {{cliente.apellido}} </ion-label>
       </ion-item>
       <ion-item>
         <ion-label class="correo">
           <ion-icon name="mail-outline" slot="start"></ion-icon>
-          CORREO: {{cliente.correo}}
-        </ion-label>
+          CORREO: {{cliente.correo}} </ion-label>
       </ion-item>
       <ion-item>
         <ion-label class="auto">
           <ion-icon name="car-outline" slot="start"></ion-icon>
-          AUTO: {{cliente.auto}}
-        </ion-label>
+          AUTO: {{cliente.auto}} </ion-label>
       </ion-item>
     </div>
   </ion-list>
