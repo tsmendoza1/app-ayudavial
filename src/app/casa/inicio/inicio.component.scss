@@ -44,7 +44,7 @@
 ion-button {
   text-align: center;
   text-transform: none;
-  color: red;
+  color: rgb(0, 183, 255);
 }
 
 .olvidastetucontraseña{
@@ -53,6 +53,13 @@ ion-button {
 }
 
 .saltar {
+  background-color:  grayscale($color: #232428);
   color: white;
+  padding: 2px 10px 2px 10px;
+  // border-radius: 50px;
+  font-size: 20px;
+  border: 1px solid #363e42;
+  
+  // color: white;
 }
 
