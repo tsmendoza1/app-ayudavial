@@ -35,22 +35,25 @@ import { ServiceWorkerModule } from '@angular/service-worker';
     AjustesComponent,
     LoginComponent,
     UbicacionComponent,
-    PagosComponent
+    PagosComponent,
   
 
   ],
 
   entryComponents: [],
-  imports: [BrowserModule,
-     IonicModule.forRoot(),
+  imports: [
+    BrowserModule,
+    IonicModule.forRoot(),
       AppRoutingModule, 
       AngularFireModule.initializeApp(environment.firebaseConfig),AngularFireAuthModule, 
-      AngularFirestoreModule, ServiceWorkerModule.register('ngsw-worker.js', {
-  enabled: environment.production,
-  // Register the ServiceWorker as soon as the app is stable
-  // or after 30 seconds (whichever comes first).
-  registrationStrategy: 'registerWhenStable:30000'
-})],
+      AngularFirestoreModule,
+      ServiceWorkerModule.register('ngsw-worker.js', {
+        enabled: environment.production,
+     // Register the ServiceWorker as soon as the app is stable
+// or after 30 seconds (whichever comes first).
+      registrationStrategy: 'registerWhenStable:30000'
+  })
+  ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })

@@ -29,22 +29,20 @@
         <button ion-button color='light' short='block' [routerLink]="['/inicio']" class="btn1">Registrarme
         </button>
       </div>
-
-
       <ion-toolbar>
-        <ion-title size="center">Inicia sesión con tu cuenta</ion-title>
-
-        <ion-button size="large">
-          <ion-icon slot="start" name="logo-google"></ion-icon>Inicia sesión con Google
-        </ion-button>
-
-        <ion-button size="large">
-          <ion-icon slot="start" name="logo-facebook"></ion-icon>Inicia sesión con Facebook
-        </ion-button>
-        <ion-button size="large">
-          <ion-icon slot="start" name="logo-apple"></ion-icon>Inicia sesión con Apple
-        </ion-button>
-
+        <button class="sesionGoogle">
+          <ion-icon slot="start" name="logo-google" class="iconGoogle"> </ion-icon > Inicia sesión con Google
+        </button>
       </ion-toolbar>
 
+      <ion-toolbar>
+        <button class="sesionFacebook">
+          <ion-icon slot="start" name="logo-facebook" class="iconFacebook"></ion-icon>Inicia sesión con Facebook
+        </button>
+      </ion-toolbar>
+      <ion-toolbar>
+        <button class="sesionApple">
+          <ion-icon slot="start" name="logo-apple" class="iconApple"></ion-icon>Inicia sesión con Apple
+        </button>
+      </ion-toolbar>
     </ion-toolbar>

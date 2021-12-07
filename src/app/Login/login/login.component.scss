@@ -4,7 +4,7 @@ ion-toolbar {
   background-color: grayscale($color: #232428);
   color: white;
   padding: 10px 10px 10px 10px;
-  // border-radius: 50px;
+   border-radius: 18px;
   font-size: 20px;
   border: 1px solid #363e42;
 }
@@ -42,4 +42,48 @@ ion-button {
 }
 .registrarse {
   margin-left: 23%;
+}
+.sesionGoogle{
+  background:rgb(0, 89, 255);
+  color: rgb(255, 255, 255);
+ padding: 10px 10px 10px 10px;
+  border-radius: 50px;
+  font-size: 20px;
+  border: 1px solid #363e42;
+  //padding: 0 1rem;
+  width: 400px;
+ // margin: 0 auto;
+
+}
+.sesionFacebook{
+  background:rgb(8, 50, 128);
+  color: rgb(255, 255, 255);
+ padding: 10px 10px 10px 10px;
+  border-radius: 50px;
+  font-size: 20px;
+  border: 1px solid #363e42;
+  width: 400px;
+  margin: 0 auto;
+}
+.sesionApple{
+  background-color: grayscale($color: #232428);
+  color: rgb(255, 255, 255);
+ padding: 10px 10px 10px 10px;
+  border-radius: 50px;
+  font-size: 20px;
+  border: 1px solid #363e42;
+  width: 400px;
+}
+.iconGoogle{
+  padding: 0 1rem;
+}
+.iconFacebook{
+  padding: 0 1rem;
+}
+.iconApple{
+  padding: 0 1rem;
+}
+
+.sesion{
+  font-size: 100%
 }
