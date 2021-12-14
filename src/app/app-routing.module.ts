@@ -1,3 +1,6 @@
+import { DomoticaComponent } from './Ejercicios/domotica/domotica.component';
+import { AsistenciaComponent } from './Ejercicios/asistencia/asistencia.component';
+import { CronometroComponent } from './Ejercicios/cronometro/cronometro.component';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { PagosComponent } from './Pagos/pagos/pagos.component';
 import { UbicacionComponent } from './Ubicacion/ubicacion/ubicacion.component';
@@ -27,7 +30,10 @@ const routes: Routes = [
   {path: 'ajustes',component:AjustesComponent, }, //... canActivate (onlyAdmin)
   {path: 'login',component:LoginComponent},  
   {path: 'ubicacion',component:UbicacionComponent},  
-  {path: 'pagos',component:PagosComponent}
+  {path: 'pagos',component:PagosComponent},
+  {path: 'cronometro',component:CronometroComponent},
+  {path: 'asistencia',component:AsistenciaComponent},
+  {path: 'domotica',component:DomoticaComponent}
 ];
 
 @NgModule({
