@@ -21,6 +21,7 @@ import { environment } from 'src/environments/environment';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { ServiceWorkerModule } from '@angular/service-worker';
+import { BusComponent } from './componentes/bus/bus.component';
 
 
 @NgModule({
@@ -36,8 +37,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
     LoginComponent,
     UbicacionComponent,
     PagosComponent,
-  
-
+    BusComponent,
   ],
 
   entryComponents: [],
