@@ -22,6 +22,11 @@ import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { BusComponent } from './componentes/bus/bus.component';
+import { CronometroComponent } from './Ejercicios/cronometro/cronometro.component';
+import { AsistenciaComponent } from './Ejercicios/asistencia/asistencia.component';
+import { DomoticaComponent } from './Ejercicios/domotica/domotica.component';
+import { FormsModule } from '@angular/forms';
+
 
 
 @NgModule({
@@ -38,6 +43,9 @@ import { BusComponent } from './componentes/bus/bus.component';
     UbicacionComponent,
     PagosComponent,
     BusComponent,
+    CronometroComponent,
+    AsistenciaComponent,
+    DomoticaComponent
   ],
 
   entryComponents: [],
@@ -45,6 +53,7 @@ import { BusComponent } from './componentes/bus/bus.component';
     BrowserModule,
     IonicModule.forRoot(),
       AppRoutingModule, 
+      FormsModule,
       AngularFireModule.initializeApp(environment.firebaseConfig),AngularFireAuthModule, 
       AngularFirestoreModule,
       ServiceWorkerModule.register('ngsw-worker.js', {
