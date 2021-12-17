@@ -1,3 +1,6 @@
+import { ReprobasteComponent } from './Prueba/reprobaste/reprobaste.component';
+import { AprovasteComponent } from './Prueba/aprovaste/aprovaste.component';
+import { PromedioComponent } from './Prueba/promedio/promedio.component';
 import { DomoticaComponent } from './Ejercicios/domotica/domotica.component';
 import { AsistenciaComponent } from './Ejercicios/asistencia/asistencia.component';
 import { CronometroComponent } from './Ejercicios/cronometro/cronometro.component';
@@ -16,6 +19,7 @@ import { PerfilComponent } from './Perfil/perfil/perfil.component';
 import { AngularFireAuthGuard, canActivate } from '@angular/fire/compat/auth-guard';
 import { map } from 'rxjs/operators';
 import { BusComponent } from './componentes/bus/bus.component';
+import { FelicidadesComponent } from './Prueba/felicidades/felicidades.component';
 
 //const uidAdmin = "OUcJ2XWr0cdwftOB7XeY"
 //const onlyAdmin = () => map((user:any) =>  !!user && uidAdmin === user.uid);
@@ -35,7 +39,13 @@ const routes: Routes = [
   {path: 'bus',component:BusComponent},
   {path: 'cronometro',component:CronometroComponent},
   {path: 'asistencia',component:AsistenciaComponent},
-  {path: 'domotica',component:DomoticaComponent}
+  {path: 'domotica',component:DomoticaComponent},
+  {path: 'promedio',component:PromedioComponent},
+  {path: 'aprovaste',component:AprovasteComponent},
+  {path: 'reprobaste',component:ReprobasteComponent},
+  {path: 'premio',component: PromedioComponent},
+  {path: 'felicidades',component:FelicidadesComponent}
+
 ];
 
 @NgModule({

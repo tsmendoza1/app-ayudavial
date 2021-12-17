@@ -1,5 +1,4 @@
 import { PagosComponent } from './Pagos/pagos/pagos.component';
-
 import { UbicacionComponent } from './Ubicacion/ubicacion/ubicacion.component';
 import { LoginComponent } from './Login/login/login.component';
 import { FirestoreService } from './Services/firestore.service';
@@ -8,7 +7,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
 import { AngularFireModule } from '@angular/fire/compat';
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
-
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { InicioComponent } from './casa/inicio/inicio.component';
@@ -26,6 +24,9 @@ import { CronometroComponent } from './Ejercicios/cronometro/cronometro.componen
 import { AsistenciaComponent } from './Ejercicios/asistencia/asistencia.component';
 import { DomoticaComponent } from './Ejercicios/domotica/domotica.component';
 import { FormsModule } from '@angular/forms';
+import { AprovasteComponent } from './Prueba/aprovaste/aprovaste.component';
+import { PromedioComponent } from './Prueba/promedio/promedio.component';
+import { ReprobasteComponent } from './Prueba/reprobaste/reprobaste.component';
 
 
 
@@ -45,7 +46,10 @@ import { FormsModule } from '@angular/forms';
     BusComponent,
     CronometroComponent,
     AsistenciaComponent,
-    DomoticaComponent
+    DomoticaComponent,
+    AprovasteComponent,
+    PromedioComponent,
+    ReprobasteComponent
   ],
 
   entryComponents: [],
