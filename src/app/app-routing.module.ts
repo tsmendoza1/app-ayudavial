@@ -1,11 +1,5 @@
-import { ReprobasteComponent } from './Prueba/reprobaste/reprobaste.component';
-import { AprovasteComponent } from './Prueba/aprovaste/aprovaste.component';
-import { PromedioComponent } from './Prueba/promedio/promedio.component';
-import { DomoticaComponent } from './Ejercicios/domotica/domotica.component';
-import { AsistenciaComponent } from './Ejercicios/asistencia/asistencia.component';
-import { CronometroComponent } from './Ejercicios/cronometro/cronometro.component';
+
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
-import { PagosComponent } from './Pagos/pagos/pagos.component';
 import { UbicacionComponent } from './Ubicacion/ubicacion/ubicacion.component';
 import { LoginComponent } from './Login/login/login.component';
 import { NgModule, Component } from '@angular/core';
@@ -17,9 +11,7 @@ import { MensajesComponent } from './Mensajes/mensajes/mensajes.component';
 import { MenuuComponent } from './menu/menuu/menuu.component';
 import { PerfilComponent } from './Perfil/perfil/perfil.component';
 import { AngularFireAuthGuard, canActivate } from '@angular/fire/compat/auth-guard';
-import { map } from 'rxjs/operators';
-import { BusComponent } from './componentes/bus/bus.component';
-import { FelicidadesComponent } from './Prueba/felicidades/felicidades.component';
+import { map } from 'rxjs/operators'
 
 //const uidAdmin = "OUcJ2XWr0cdwftOB7XeY"
 //const onlyAdmin = () => map((user:any) =>  !!user && uidAdmin === user.uid);
