@@ -35,17 +35,6 @@ const routes: Routes = [
   {path: 'ajustes',component:AjustesComponent, }, //... canActivate (onlyAdmin)
   {path: 'login',component:LoginComponent},  
   {path: 'ubicacion',component:UbicacionComponent},  
-  {path: 'pagos',component:PagosComponent},
-  {path: 'bus',component:BusComponent},
-  {path: 'cronometro',component:CronometroComponent},
-  {path: 'asistencia',component:AsistenciaComponent},
-  {path: 'domotica',component:DomoticaComponent},
-  {path: 'promedio',component:PromedioComponent},
-  {path: 'aprovaste',component:AprovasteComponent},
-  {path: 'reprobaste',component:ReprobasteComponent},
-  {path: 'premio',component: PromedioComponent},
-  {path: 'felicidades',component:FelicidadesComponent}
-
 ];
 
 @NgModule({
