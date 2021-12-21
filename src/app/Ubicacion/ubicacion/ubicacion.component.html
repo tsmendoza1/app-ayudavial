@@ -2,9 +2,9 @@
 
   <ion-toolbar>
 
-    <ion-title color="blue">Mi Ubicación</ion-title>
+    <ion-title>Mi Ubicación</ion-title>
 
-    <ion-buttons slot="start">
+    <ion-buttons  slot="start">
       <ion-buttons [routerLink]="['/miperfil']">
         <ion-icon slot="start" name="chevron-back-outline">
 
@@ -17,9 +17,9 @@
 
     </ion-buttons>
 
-    <ion-button slot="end" [routerLink]="['/miperfil']">
+    <button  class="perfil" slot="end" [routerLink]="['/miperfil']">
       <ion-icon name="home-outline"></ion-icon>
-    </ion-button>
+    </button>
 
   </ion-toolbar>
   <iframe
@@ -28,6 +28,6 @@
 
 
   <ion-toolbar>
-    <ion-button (click)="compartirmiubicacion()" size="large">
-      <ion-icon slot="start" name="navigate-outline"></ion-icon>Compartir Ubicación
-    </ion-button>
+    <button class="compartir" (click)="compartirmiubicacion()" size="large">
+      <ion-icon slot="start" name="navigate-outline"></ion-icon>  Compartir Ubicación
+    </button>
