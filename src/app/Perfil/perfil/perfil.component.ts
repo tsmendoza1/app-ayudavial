@@ -3,18 +3,14 @@ import { Component, OnInit } from '@angular/core';
 import { PopoverController } from '@ionic/angular';
 import { MenuuComponent } from 'src/app/menu/menuu/menuu.component';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
-
-
 @Component({
   selector: 'app-perfil',
   templateUrl: './perfil.component.html',
   styleUrls: ['./perfil.component.scss'],
 })
 
-
 export class PerfilComponent implements OnInit {
   
-
 
   clientes: Cliente [] =[
     {

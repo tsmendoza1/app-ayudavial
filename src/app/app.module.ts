@@ -1,7 +1,3 @@
-import { PasasteComponent } from './pasaste/pasaste.component';
-import { IngresoNotasComponent } from './ingreso-notas/ingreso-notas.component';
-import { PagosComponent } from './Pagos/pagos/pagos.component';
-
 import { UbicacionComponent } from './Ubicacion/ubicacion/ubicacion.component';
 import { LoginComponent } from './Login/login/login.component';
 import { FirestoreService } from './Services/firestore.service';
@@ -10,7 +6,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
 import { AngularFireModule } from '@angular/fire/compat';
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
-
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { InicioComponent } from './casa/inicio/inicio.component';
@@ -23,11 +18,9 @@ import { environment } from 'src/environments/environment';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { ServiceWorkerModule } from '@angular/service-worker';
-import { BusComponent } from './componentes/bus/bus.component';
-import { CronometroComponent } from './Ejercicios/cronometro/cronometro.component';
-import { AsistenciaComponent } from './Ejercicios/asistencia/asistencia.component';
-import { DomoticaComponent } from './Ejercicios/domotica/domotica.component';
 import { FormsModule } from '@angular/forms';
+
+
 
 
 
@@ -42,14 +35,7 @@ import { FormsModule } from '@angular/forms';
     MenuuComponent,
     AjustesComponent,
     LoginComponent,
-    UbicacionComponent,
-    PagosComponent,
-    BusComponent,
-    CronometroComponent,
-    AsistenciaComponent,
-    DomoticaComponent,
-    IngresoNotasComponent,
-    PasasteComponent
+    UbicacionComponent
   ],
 
   entryComponents: [],
