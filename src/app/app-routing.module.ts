@@ -1,3 +1,5 @@
+import { PasasteComponent } from './pasaste/pasaste.component';
+import { IngresoNotasComponent } from './ingreso-notas/ingreso-notas.component';
 import { DomoticaComponent } from './Ejercicios/domotica/domotica.component';
 import { AsistenciaComponent } from './Ejercicios/asistencia/asistencia.component';
 import { CronometroComponent } from './Ejercicios/cronometro/cronometro.component';
@@ -35,7 +37,9 @@ const routes: Routes = [
   {path: 'bus',component:BusComponent},
   {path: 'cronometro',component:CronometroComponent},
   {path: 'asistencia',component:AsistenciaComponent},
-  {path: 'domotica',component:DomoticaComponent}
+  {path: 'domotica',component:DomoticaComponent},
+  {path: 'notas',component:IngresoNotasComponent},
+  {path: 'pasaste',component:PasasteComponent}
 ];
 
 @NgModule({

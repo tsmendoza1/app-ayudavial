@@ -1,9 +1,11 @@
+import { PasasteComponent } from './pasaste/pasaste.component';
+import { IngresoNotasComponent } from './ingreso-notas/ingreso-notas.component';
 import { PagosComponent } from './Pagos/pagos/pagos.component';
 
 import { UbicacionComponent } from './Ubicacion/ubicacion/ubicacion.component';
 import { LoginComponent } from './Login/login/login.component';
 import { FirestoreService } from './Services/firestore.service';
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
 import { AngularFireModule } from '@angular/fire/compat';
@@ -45,7 +47,9 @@ import { FormsModule } from '@angular/forms';
     BusComponent,
     CronometroComponent,
     AsistenciaComponent,
-    DomoticaComponent
+    DomoticaComponent,
+    IngresoNotasComponent,
+    PasasteComponent
   ],
 
   entryComponents: [],
