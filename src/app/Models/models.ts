@@ -3,10 +3,6 @@ export interface Cliente {
     apellido: string;
     correo: string;
     auto: string;
-    ubicacion {
-        lat: Number;
-        lng: Number;
-      }
 }
 
 export interface Auto {

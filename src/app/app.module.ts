@@ -19,7 +19,9 @@ import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { FormsModule } from '@angular/forms';
-import { Geolocation, GeolocationOriginal } from '@ionic-native/geolocation';
+
+
+
 
 
 @NgModule({
@@ -51,9 +53,7 @@ import { Geolocation, GeolocationOriginal } from '@ionic-native/geolocation';
       registrationStrategy: 'registerWhenStable:30000'
   })
   ],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy}],
+  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
-
-

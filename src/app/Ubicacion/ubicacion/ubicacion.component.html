@@ -28,16 +28,6 @@
 
 
   <ion-toolbar>
-
-    <ion-content>
-      <ion-item (click)="addDirection()">
-        <ion-label class="normal">
-          Ubicacion
-        </ion-label>
-        <ion-buttons slot="end">
-          <ion-button>
-            <ion-icon slot="icon-only" color="danger" name="location"> </ion-icon>
-          </ion-button>
-        </ion-buttons>
-      </ion-item>
-    </ion-content>
+    <ion-button (click)="compartirmiubicacion()" size="large">
+      <ion-icon slot="start" name="navigate-outline"></ion-icon>Compartir Ubicación
+    </ion-button>
