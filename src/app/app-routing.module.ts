@@ -1,5 +1,3 @@
-
-import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { UbicacionComponent } from './Ubicacion/ubicacion/ubicacion.component';
 import { LoginComponent } from './Login/login/login.component';
 import { NgModule, Component } from '@angular/core';
@@ -11,7 +9,6 @@ import { MensajesComponent } from './Mensajes/mensajes/mensajes.component';
 import { MenuuComponent } from './menu/menuu/menuu.component';
 import { PerfilComponent } from './Perfil/perfil/perfil.component';
 import { AngularFireAuthGuard, canActivate } from '@angular/fire/compat/auth-guard';
-import { map } from 'rxjs/operators'
 
 //const uidAdmin = "OUcJ2XWr0cdwftOB7XeY"
 //const onlyAdmin = () => map((user:any) =>  !!user && uidAdmin === user.uid);
@@ -26,7 +23,7 @@ const routes: Routes = [
   {path: 'menu',component:MenuuComponent},
   {path: 'ajustes',component:AjustesComponent, }, //... canActivate (onlyAdmin)
   {path: 'login',component:LoginComponent},  
-  {path: 'ubicacion',component:UbicacionComponent},  
+  {path: 'ubicacion',component:UbicacionComponent},   
 ];
 
 @NgModule({

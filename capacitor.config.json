@@ -1,6 +1,6 @@
 {
-	"appId": "com.crissandymax.asistenciavial",
-	"appName": "asistenciavialapp",
-	"webDir": "www",
-	"bundledWebRuntime": false
+  "appId": "com.crissandymax.asistenciavial",
+  "appName": "asistenciavialapp",
+  "webDir": "www",
+  "bundledWebRuntime": false
 }
