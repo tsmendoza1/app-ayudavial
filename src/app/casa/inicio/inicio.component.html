@@ -15,7 +15,7 @@
 
 
   <div class="form">
-    <ion-item >
+    <ion-item lines='none'>
       <ion-input class="correo" placeholder='Correo Electrónico'></ion-input>
     </ion-item>
 
@@ -23,11 +23,13 @@
     <ion-item lines='none' short='block'>
       <ion-input class="contraseña" placeholder='Contraseña' type='password'></ion-input>
     </ion-item>
-<ion-label>  <ion-card></ion-card> </ion-label>
-    <ion-button  (click)='presentLoading($event)' color='light blue' [routerLink]="['/miperfil']"
+
+    <ion-button (click)='presentLoading($event)' color='light blue' short='block' [routerLink]="['/miperfil']"
       class="btnInicio">
       Iniciar Sesión
+
     </ion-button>
+
     <ion-button (click)='presentLoading($event)' color='light green' short='block' [routerLink]="['/login']"
       class="btnRegistrar">
       Registrarse

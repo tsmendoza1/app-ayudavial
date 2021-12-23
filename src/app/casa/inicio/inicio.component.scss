@@ -3,6 +3,15 @@
   border-radius: 60px;
 }
 
+.form {
+  ion.item {
+    border-radius: 5px;
+    border-color: red;
+    border-width: 2px;
+    border-style: solid;
+    margin-bottom: 10px;
+  }
+}
 .correo {
   margin-left: 1cm;
   border-bottom: 1px solid #404649;
@@ -14,26 +23,23 @@
   margin-right: 1cm;
 }
 .btnInicio {
-  margin: 1cm;
   background-color: grayscale($color: #232428);
   color: white;
-  padding: 2px 10px 2px 10px;
-   border-radius: 18px;
+  padding: 10px 10px 10px 10px;
+  // border-radius: 50px;
   font-size: 20px;
   border: 1px solid #363e42;
-  font-size: 20px;
 } 
 
 
     
 .btnRegistrar{
-  background-color: grayscale($color: #232428);
+  background-color:  grayscale($color: #232428);
   color: white;
   padding: 2px 10px 2px 10px;
-   border-radius: 18px;
+  // border-radius: 50px;
   font-size: 20px;
   border: 1px solid #363e42;
-  font-size: 20px;
 }
 ion-button {
   text-align: center;
@@ -47,12 +53,13 @@ ion-button {
 }
 
 .saltar {
-  background-color: grayscale($color: #232428);
+  background-color:  grayscale($color: #232428);
   color: white;
   padding: 2px 10px 2px 10px;
-   border-radius: 18px;
+  // border-radius: 50px;
   font-size: 20px;
   border: 1px solid #363e42;
-  font-size: 20px;
+  
+  // color: white;
 }
 
