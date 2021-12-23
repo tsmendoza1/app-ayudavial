@@ -2,9 +2,9 @@
 
   <ion-toolbar>
 
-    <ion-title color="blue">Mi Ubicación</ion-title>
+    <ion-title>Mi Ubicación</ion-title>
 
-    <ion-buttons slot="start">
+    <ion-buttons  slot="start">
       <ion-buttons [routerLink]="['/miperfil']">
         <ion-icon slot="start" name="chevron-back-outline">
 
@@ -17,9 +17,9 @@
 
     </ion-buttons>
 
-    <ion-button slot="end" [routerLink]="['/miperfil']">
+    <button  class="perfil" slot="end" [routerLink]="['/miperfil']">
       <ion-icon name="home-outline"></ion-icon>
-    </ion-button>
+    </button>
 
   </ion-toolbar>
   <iframe
