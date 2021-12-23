@@ -19,6 +19,11 @@ import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { FormsModule } from '@angular/forms';
+import { AutomotrizComponent } from './automotriz/automotriz.component';
+import { ServiciosComponent } from './servicios/servicios.component';
+import { ElectricoComponent } from './electrico/electrico.component';
+import { GeneralComponent } from './general/general.component';
+import { GruaComponent } from './grua/grua.component';
 
 
 
@@ -35,9 +40,15 @@ import { FormsModule } from '@angular/forms';
     MenuuComponent,
     AjustesComponent,
     LoginComponent,
-    UbicacionComponent
+    UbicacionComponent,
+    AutomotrizComponent,
+    ServiciosComponent,
+    ElectricoComponent,
+    GeneralComponent,
+    GruaComponent,
   ],
 
+  
   entryComponents: [],
   imports: [
     BrowserModule,

@@ -12,6 +12,11 @@ import { MenuuComponent } from './menu/menuu/menuu.component';
 import { PerfilComponent } from './Perfil/perfil/perfil.component';
 import { AngularFireAuthGuard, canActivate } from '@angular/fire/compat/auth-guard';
 import { map } from 'rxjs/operators'
+import { AutomotrizComponent } from './automotriz/automotriz.component';
+import { ElectricoComponent } from './electrico/electrico.component';
+import { ServiciosComponent } from './servicios/servicios.component';
+import { GeneralComponent } from './general/general.component';
+import { GruaComponent } from './grua/grua.component';
 
 //const uidAdmin = "OUcJ2XWr0cdwftOB7XeY"
 //const onlyAdmin = () => map((user:any) =>  !!user && uidAdmin === user.uid);
@@ -26,7 +31,12 @@ const routes: Routes = [
   {path: 'menu',component:MenuuComponent},
   {path: 'ajustes',component:AjustesComponent, }, //... canActivate (onlyAdmin)
   {path: 'login',component:LoginComponent},  
-  {path: 'ubicacion',component:UbicacionComponent},  
+  {path: 'ubicacion',component:UbicacionComponent}, 
+  {path: 'automotriz',component:AutomotrizComponent}, 
+  {path: 'automotriz',component:ElectricoComponent}, 
+  {path: 'automotriz',component:ServiciosComponent}, 
+  {path: 'automotriz',component:GeneralComponent}, 
+  {path: 'automotriz',component:GruaComponent}, 
 ];
 
 @NgModule({
