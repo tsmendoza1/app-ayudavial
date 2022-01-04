@@ -6,6 +6,8 @@ ion-toolbar {
   padding: 10px 10px 10px 10px;
    border-radius: 18px;
   font-size: 20px;
+  margin-top: 2%;
+  margin-left: 4%;
   border: 1px solid #363e42;
 }
 .logo {
@@ -42,6 +44,7 @@ ion-button {
 }
 .registrarse {
   margin-left: 23%;
+  
 }
 .sesionGoogle{
   background:rgb(0, 89, 255);
@@ -53,7 +56,8 @@ ion-button {
   //padding: 0 1rem;
   width: 400px;
  // margin: 0 auto;
-
+ margin-top: 2%;
+ margin-left: 4%; 
 }
 .sesionFacebook{
   background:rgb(8, 50, 128);
@@ -64,6 +68,8 @@ ion-button {
   border: 1px solid #363e42;
   width: 400px;
   margin: 0 auto;
+  margin-top: 2%;
+  margin-left: 4%;
 }
 .sesionApple{
   background-color: grayscale($color: #232428);
@@ -73,6 +79,8 @@ ion-button {
   font-size: 20px;
   border: 1px solid #363e42;
   width: 400px;
+  margin-top: 2%;
+  margin-left: 4%;
 }
 .iconGoogle{
   padding: 0 1rem;
