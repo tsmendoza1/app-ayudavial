@@ -23,18 +23,17 @@
     <ion-item lines='none' short='block'>
       <ion-input class="contraseña" placeholder='Contraseña' type='password'></ion-input>
     </ion-item>
-
-    <ion-button (click)='presentLoading($event)' color='light blue' short='block' [routerLink]="['/miperfil']"
+    <button (click)='presentLoading($event)' [routerLink]="['/miperfil']"
       class="btnInicio">
       Iniciar Sesión
 
-    </ion-button>
+    </button>
 
-    <ion-button (click)='presentLoading($event)' color='light green' short='block' [routerLink]="['/login']"
+    <button (click)='presentLoading($event)'  [routerLink]="['/login']"
       class="btnRegistrar">
       Registrarse
 
-    </ion-button>
+    </button>
   </div>
   <ion-button class="olvidastetucontraseña" fill='clear' [routerLink]="['/login']">¿Olvidaste tu contraseña?
   </ion-button>
