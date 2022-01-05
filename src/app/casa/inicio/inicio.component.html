@@ -30,7 +30,7 @@
 
     </button>
 
-    <button  (click)="login()" (click)='presentLoading($event)' class="btnRegistrar">
+    <button  (click)='presentLoading($event)' class="btnRegistrar"[routerLink]="['/login']" >
       Registrarse
 
     </button>

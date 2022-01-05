@@ -19,18 +19,6 @@ export class PerfilComponent implements OnInit {
       correo:'a-zh666@hotmail.es',
       auto: 'Hyundai Elantra'
     },
-    {
-      nombre: 'Carlos',
-      apellido: 'Terreros',
-      correo:'carlos.terrerosj@gmail.com',
-      auto: 'Porshe 911'
-    },
-    {
-      nombre: 'Abraham',
-      apellido: 'Jimbo',
-      correo:'abram.Aj@hotmail.com',
-      auto: 'Volkswagen Golf'
-    }
     
   ]
 
