@@ -1,3 +1,4 @@
+<ion-content>
 <ion-header class="ion-text-center">
   <ion-toolbar>
 
@@ -16,21 +17,20 @@
 
   <div class="form">
     <ion-item lines='none'>
-      <ion-input class="correo" placeholder='Correo Electrónico'></ion-input>
+      <ion-input [(ngModel)]="credenciales.correo" class="correo" placeholder='Correo Electrónico'></ion-input>
     </ion-item>
 
 
     <ion-item lines='none' short='block'>
-      <ion-input class="contraseña" placeholder='Contraseña' type='password'></ion-input>
+      <ion-input [(ngModel)]="credenciales.password" class="contraseña" placeholder='Contraseña' type='password'></ion-input>
     </ion-item>
-    <button (click)='presentLoading($event)' [routerLink]="['/miperfil']"
-      class="btnInicio">
+    
+    <button  (click)="login()" (click)='presentLoading($event)' class="btnInicio">
       Iniciar Sesión
 
     </button>
 
-    <button (click)='presentLoading($event)'  [routerLink]="['/login']"
-      class="btnRegistrar">
+    <button  (click)="login()" (click)='presentLoading($event)' class="btnRegistrar">
       Registrarse
 
     </button>

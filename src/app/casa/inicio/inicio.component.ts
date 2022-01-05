@@ -1,3 +1,6 @@
+import { InteractionService } from './../../Services/interaction.service';
+import { AuthService } from './../../Services/auth.service';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { FirestoreService } from './../../Services/firestore.service';
 import { PerfilComponent } from './../../Perfil/perfil/perfil.component';
 import { Component, OnInit } from '@angular/core';
@@ -9,27 +12,43 @@ import { LoadingController } from '@ionic/angular';
 })
 export class InicioComponent implements OnInit {
 
-
   constructor(public loadingController: LoadingController, 
-    private firestore: FirestoreService) { }
+    private firestore: FirestoreService, private auth: AuthService, private interaction:InteractionService) { }
+
+
+    credenciales = {
+      correo: null,
+      password: null
+    }
 
   ngOnInit() {}
 
-  async presentLoading(ev:any) {
-    const loading = await this.loadingController.create({
-      cssClass: 'my-custom-class',
-      message: 'Por favor, espere',
-      duration: 500
-     
-    });
-
-    await loading.present();
-
+  async login(){    
+    console.log("credenciales:", this.credenciales);
+    
+   const res = await this.auth.login(this.credenciales.correo,this.credenciales.password).catch (error => {})
+   console.log("error");
+   this.interaction.closeloading();
+   this.interaction.presentToast("usuario o contraseña incorrectos")
+   
+    if (res) {
+      this.interaction.closeloading();
+      this.interaction.presentToast("ingresado con éxito ");
+    }
   }
 
-  getCliente(){
-    this.firestore.getCollection()
-  }
+    async presentLoading(ev:any) {
+      const loading = await this.loadingController.create({
+        cssClass: 'my-custom-class',
+        message: 'Por favor, espere',
+        duration: 500
+       
+      });
   
-}
+      await loading.present();
+  
+    }
+
+
+  }
 
