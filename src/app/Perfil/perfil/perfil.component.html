@@ -3,16 +3,22 @@
     <ion-toolbar>
       <ion-title color="white">Mi Perfil</ion-title>
       <ion-buttons slot="end">
+
+        <ion-button [routerLink]="['/servicios']" routerLinkActive="router-link-active" >
+          <ion-icon name="call-outline"></ion-icon>
+        </ion-button>
+
         <ion-button (click)='getCollection($event)' (click)='openMenu($event)'>
           <ion-icon slot="icon-only" name="ellipsis-vertical-outline"></ion-icon>
         </ion-button>
-
       </ion-buttons>
       <buttoncarro class="botoncarro" slot="start" [routerLink]="['/miauto']">
         <ion-icon name="car"></ion-icon>
       </buttoncarro>
 
+      
     </ion-toolbar>
+    
     <ion-avatar class="avatarmiperfil">
       <img alt="Perfil"
         src="https://i.pinimg.com/474x/a8/41/e1/a841e1aee253001c1cfaddd67f4b85dc.jpg">
