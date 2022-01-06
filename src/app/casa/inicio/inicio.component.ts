@@ -23,17 +23,19 @@ export class InicioComponent implements OnInit {
 
   ngOnInit() {}
 
-  async login(){    
+  async login(){
+    await this.interaction.presentLoading('Ingresando...');  
     console.log("credenciales:", this.credenciales);
     
-   const res = await this.auth.login(this.credenciales.correo,this.credenciales.password).catch (error => {})
-   console.log("error");
-   this.interaction.closeloading();
-   this.interaction.presentToast("usuario o contraseña incorrectos")
-   
+   const res = await this.auth.login(this.credenciales.correo,this.credenciales.password).catch ( error => {
+       this.interaction.closeloading();
+       this.interaction.presentToast("usuario o contraseña incorrectos")
+   })
+   console.log("res -", res);
     if (res) {
       this.interaction.closeloading();
       this.interaction.presentToast("ingresado con éxito ");
+      
     }
   }
 
