@@ -33,10 +33,10 @@ const routes: Routes = [
   {path: 'login',component:LoginComponent},  
   {path: 'ubicacion',component:UbicacionComponent}, 
   {path: 'automotriz',component:AutomotrizComponent}, 
-  {path: 'automotriz',component:ElectricoComponent}, 
-  {path: 'automotriz',component:ServiciosComponent}, 
-  {path: 'automotriz',component:GeneralComponent}, 
-  {path: 'automotriz',component:GruaComponent}, 
+  {path: 'electrico',component:ElectricoComponent}, 
+  {path: 'servicios',component:ServiciosComponent}, 
+  {path: 'general',component:GeneralComponent}, 
+  {path: 'grua',component:GruaComponent}, 
 ];
 
 @NgModule({

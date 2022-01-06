@@ -64,7 +64,7 @@ import { GruaComponent } from './grua/grua.component';
       registrationStrategy: 'registerWhenStable:30000'
   })
   ],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+  providers: [ { provide: RouteReuseStrategy, useClass: IonicRouteStrategy  }],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
