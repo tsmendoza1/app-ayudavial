@@ -1,7 +1,4 @@
-<div class="fondo">
-</div>
-<ion-content   >
-  <ion-header collapse="center">
+<ion-content class="background"  >
     <ion-toolbar color="mycolor">
       <ion-title>Registrarse</ion-title>
       <ion-buttons slot="start">
@@ -11,42 +8,27 @@
       </ion-buttons>
     </ion-toolbar>
     <ion-title color="white"></ion-title>
-  </ion-header>
-  <ion-header class="ion-text-center">
+
     <div>
       <ion-title></ion-title>
     </div>
-    <ion-toolbar>
-      <div>
-        <img alt="RegistroAsistenciaVial" class="logo"
-          src='http://autoconectado.cabsegurosequinoccial.com/templates/yootheme/cache/home-funcion-09-10ba4b36.jpeg'>
-      </div>
-     
-        <ion-item lines='none'>
-          <ion-input class="correo" placeholder='Correo Electrónico'></ion-input>
-        </ion-item>
-        <ion-item lines='none'>
-          <ion-input class="contraseña" placeholder='Contraseña' type='password'></ion-input>
-        </ion-item>
+    <ion-input></ion-input>
+    <ion-input></ion-input>
+    <ion-input></ion-input>
+    <ion-input></ion-input>
+    <ion-input></ion-input>
+
+    <ion-input class="correo" placeholder='Nombre'></ion-input>
+   <ion-input></ion-input>
+    <ion-input class="correo" placeholder='Apellido'></ion-input>
+    <ion-input></ion-input>
+    <ion-input class="correo" placeholder='Telefono'></ion-input>
+    <ion-input></ion-input>
+    <ion-input class="correo" placeholder='Correo Electrónico'></ion-input>
+    <ion-input></ion-input>
+    <ion-input class="correo" placeholder='Contraseña' type='password'></ion-input>
         <button class="btn1" [routerLink]="['/inicio']" >Registrarme
         </button>
- 
-      <ion-toolbar>
-        <button class="sesionGoogle">
-          <ion-icon slot="start" name="logo-google" class="iconGoogle"> </ion-icon > Inicia sesión con Google
-        </button>
-      </ion-toolbar>
 
-      <ion-toolbar>
-        <button class="sesionFacebook">
-          <ion-icon slot="start" name="logo-facebook" class="iconFacebook"></ion-icon>Inicia sesión con Facebook
-        </button>
-      </ion-toolbar>
-      <ion-toolbar>
-        <button class="sesionApple">
-          <ion-icon slot="start" name="logo-apple" class="iconApple"></ion-icon>Inicia sesión con Apple
-        </button>
-      </ion-toolbar>
-    </ion-toolbar>
-    </ion-header>
+ 
   </ion-content>

@@ -1,11 +1,15 @@
 .boton{
+    margin-top: 2%;
+    margin-left: 9%;
     background-color: grayscale($color: #232428);
     color: white;
-    padding: 10px 10px 10px 10px;
-     border-radius: 18px;
+    //padding: 10px 10px 10px 10px;
+    border-radius: 50px;
     font-size: 20px;
-    margin-top: 2%;
-    margin-left: 4%;
+    width: 80%;
+    position: relative;
+    height: 40px;
+    //smargin: 9%;
     border: 1px solid #363e42;
 }
 .inicio{

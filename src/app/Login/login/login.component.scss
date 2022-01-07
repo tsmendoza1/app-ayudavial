@@ -1,3 +1,7 @@
+ion-content.background{
+  --background: url(C:\Users\Legion\Documents\GitHub\app-ayudavial\src\assets\fondo4.jpg) 0 0/100% 100% ;
+}
+
 .body{
   background-color: transparent;
   background-image: url('https://i0.wp.com/hipertextual.com/wp-content/uploads/2017/03/color-degradado-fondos-degradados-multicolor-51200.jpg?fit=1920%2C1200&ssl=1');
@@ -25,29 +29,13 @@
   }
 }
 
-.form {
-  ion.item {
-    border-radius: 5px;
-    border-color: red;
-    border-width: 2px;
-    border-style: solid;
-    margin-bottom: 10px;
-  }
-}
 .correo {
-  margin-left: 1cm;
-  border-bottom: 1px solid #404649;
-  margin-right: 1cm;
-}
-.contraseña {
-  margin-left: 1cm;
-  border-bottom: 1px solid #404649;
-  margin-right: 1cm;
+  padding: 10px 10px 10px 10px;
+  border: 1px solid #404649;
+  margin: 2%
+
 }
 
-ion-button {
-  color: darkgray;
-}
 .registrarse {
   margin-left: 23%;
   
