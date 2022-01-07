@@ -24,6 +24,7 @@ import { ServiciosComponent } from './servicios/servicios.component';
 import { ElectricoComponent } from './electrico/electrico.component';
 import { GeneralComponent } from './general/general.component';
 import { GruaComponent } from './grua/grua.component';
+import { LoginDosComponent } from './login-dos/login-dos.component';
 
 
 
@@ -46,6 +47,7 @@ import { GruaComponent } from './grua/grua.component';
     ElectricoComponent,
     GeneralComponent,
     GruaComponent,
+    LoginDosComponent,
   ],
 
   

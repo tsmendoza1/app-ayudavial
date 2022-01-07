@@ -17,6 +17,7 @@ import { ElectricoComponent } from './electrico/electrico.component';
 import { ServiciosComponent } from './servicios/servicios.component';
 import { GeneralComponent } from './general/general.component';
 import { GruaComponent } from './grua/grua.component';
+import { LoginDosComponent } from './login-dos/login-dos.component';
 
 //const uidAdmin = "OUcJ2XWr0cdwftOB7XeY"
 //const onlyAdmin = () => map((user:any) =>  !!user && uidAdmin === user.uid);
@@ -37,6 +38,8 @@ const routes: Routes = [
   {path: 'servicios',component:ServiciosComponent}, 
   {path: 'general',component:GeneralComponent}, 
   {path: 'grua',component:GruaComponent}, 
+  {path: 'loginAuto',component:LoginDosComponent}, 
+  
 ];
 
 @NgModule({

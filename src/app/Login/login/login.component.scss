@@ -14,10 +14,10 @@ ion-content.background{
   background-color: grayscale($color: #232428);
   color: white;
   padding: 10px 10px 10px 10px;
-   border-radius: 18px;
+   border-radius: 15px;
   font-size: 20px;
   margin-top: 2%;
-  margin-left: 4%;
+  margin-left: 40%;
   border: 1px solid #363e42;
 }
 .logo {
@@ -29,12 +29,7 @@ ion-content.background{
   }
 }
 
-.correo {
-  padding: 10px 10px 10px 10px;
-  border: 1px solid #404649;
-  margin: 2%
 
-}
 
 .registrarse {
   margin-left: 23%;
@@ -94,4 +89,34 @@ ion-content.background{
   background-color: red;
   background-size: cover;
   background-position: right bottom ;
+}
+.cuadro {
+  border: 1px solid #ffffff;
+  margin-left: 40%;
+  width: 20%;
+}
+.texto1{
+  margin-left: 30%;
+  font-size: 20px;
+  font-family:monospace ;
+}
+.texto2{
+  margin-left: 29%;
+  font-size: 20px;
+  font-family:monospace ;
+}
+.texto3{
+  margin-left: 22%;
+  font-size: 20px;
+  font-family:monospace ;
+}
+.texto4{
+  margin-left: 22%;
+  font-size: 20px;
+  font-family:monospace ;
+}
+.texto5{
+  margin-left: 31%;
+  font-size: 20px;
+  font-family:monospace ;
 }
