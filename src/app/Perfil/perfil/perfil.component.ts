@@ -31,8 +31,7 @@ export class PerfilComponent implements OnInit {
 
   ngOnInit() {}
  
-
-  async openMenu(ev: any){
+    async openMenu(ev: any){
     console.log("abir");
     const menu = await this.popoverController.create({
       component: MenuuComponent,

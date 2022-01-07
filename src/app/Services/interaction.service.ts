@@ -29,8 +29,9 @@ export class InteractionService {
   }
 
   async closeloading() {
-    
-    await this.loading.dismiss();
+    if (this.loading) {
+      await this.loading.dismiss();
+    }
 
     
   }
