@@ -35,7 +35,6 @@ export class InicioComponent implements OnInit {
     if (res) {
       this.interaction.closeloading();
       this.interaction.presentToast("ingresado con éxito ");
-      
     }
   }
 
