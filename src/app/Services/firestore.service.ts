@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/compat/firestore';
+import { pathToFileURL } from 'url';
 
 @Injectable({
   providedIn: 'root'
 })
 export class FirestoreService {
 
-  constructor(private firestore: AngularFirestore) { }
+  constructor(private firestore: AngularFirestore, public database: AngularFirestore) { }
 
 
 
@@ -28,12 +29,16 @@ export class FirestoreService {
   }
 
 
-  getCollection (){
+  getCollection (path: string){
     console.log('prueba');
     
     this.firestore.collection('Clientes').valueChanges().subscribe( (res)=> {
     console.log("res:",res);
-    
+
+    const collection = this.database.collection(path);
+    return collection.valueChanges();
     });
   }
+
+  
 }

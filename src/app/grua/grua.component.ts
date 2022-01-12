@@ -1,3 +1,4 @@
+import { FirestoreService } from './../../../app-ayudavial/src/app/Services/firestore.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,8 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GruaComponent implements OnInit {
 
-  constructor() { }
+private path = 'grua/'
+
+  constructor(public firestorService: FirestoreService) { }
 
   ngOnInit() {}
+
+  getGrua(){
+    this.firestorService.getCollection(this.path);
+  }
 
 }
