@@ -66,7 +66,7 @@ import { LoginDosComponent } from './login-dos/login-dos.component';
       registrationStrategy: 'registerWhenStable:30000'
   })
   ],
-  providers: [ { provide: RouteReuseStrategy, useClass: IonicRouteStrategy  }],
+  providers: [NgModule, { provide: RouteReuseStrategy, useClass: IonicRouteStrategy   }],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

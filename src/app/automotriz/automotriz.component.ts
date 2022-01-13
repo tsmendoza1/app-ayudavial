@@ -1,3 +1,6 @@
+import { AngularFirestore } from '@angular/fire/compat/firestore';
+import { FirestoreService } from './../Services/firestore.service';
+import { MecanicoAutomotriz } from './../Models/models';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,8 +10,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AutomotrizComponent implements OnInit {
 
-  constructor() { }
+  mecanicoAutomotrizs: MecanicoAutomotriz[]=[];
 
-  ngOnInit() {}
+  newMecanico:MecanicoAutomotriz= {
+    Nombre:'',
+    PrecioMinimo:'',
+    Telefono:null
+  }
+
+  private path = 'automotriz/'
+
+  constructor(public firestoreService: FirestoreService, private firestore: AngularFirestore) { }
+
+  ngOnInit() {
+    this.getMecanicoA();
+  }
+
+  getMecanicoA(){
+    this.firestoreService.getServiciosT<MecanicoAutomotriz>(this.path).subscribe(res => {
+      this.mecanicoAutomotrizs = res;
+      
+    })
+  }
 
 }

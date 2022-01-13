@@ -23,5 +23,10 @@
     </ion-label>
   </ion-item>
   <a href="https://api.whatsapp.com/send?phone=593995835806&text=Envia%20tu%20ubicacion%20:)" ion-button>Compartir ubicacion <ion-icon name="logo-whatsapp"></ion-icon></a>
+
+  
 </ion-content>
 
+<ion-item *ngFor= "let grua of gruas">
+  <ion-label> {{grua.Nombre}} </ion-label>
+</ion-item>

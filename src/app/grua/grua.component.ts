@@ -1,4 +1,6 @@
-import { FirestoreService } from './../../../app-ayudavial/src/app/Services/firestore.service';
+import { Grua } from './../Models/models';
+import { FirestoreService } from './../Services/firestore.service';
+import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -8,14 +10,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GruaComponent implements OnInit {
 
+  gruas: Grua[]=[];
+
+newGrua: Grua = {
+  Nombre:'',
+  PrecioMinimo:'',
+  Telefono:null
+}  
+
 private path = 'grua/'
 
-  constructor(public firestorService: FirestoreService) { }
+  constructor(public firestoreService: FirestoreService, private firestore: AngularFirestore) { }
 
-  ngOnInit() {}
-
-  getGrua(){
-    this.firestorService.getCollection(this.path);
+  ngOnInit() {
+    this.getGrua();
   }
 
+  getGrua(){
+    this.firestoreService.getServiciosT<Grua>(this.path).subscribe(res => {
+      this.gruas = res;
+      
+    })
+  }
+ 
 }
+

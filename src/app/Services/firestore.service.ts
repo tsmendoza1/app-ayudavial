@@ -9,7 +9,10 @@ export class FirestoreService {
 
   constructor(private firestore: AngularFirestore, public database: AngularFirestore) { }
 
-
+  getServiciosT<tipo>(path:string){
+    const collection =this.database.collection<tipo>(path);
+    return collection.valueChanges();
+  }
 
   createDoc1(data: any, path: string, id: string) {
 
@@ -29,16 +32,29 @@ export class FirestoreService {
   }
 
 
-  getCollection (path: string){
+  getCollection (path:string){
+
+    const collection =this.database.collection(path);
+    return collection.valueChanges();
+
     console.log('prueba');
     
     this.firestore.collection('Clientes').valueChanges().subscribe( (res)=> {
-    console.log("res:",res);
+    console.log("res:",res);   });
 
-    const collection = this.database.collection(path);
-    return collection.valueChanges();
-    });
+    this.firestore.collection('Grua').valueChanges().subscribe( (res)=> {
+      console.log("res:",res);  });
+
+    this.firestore.collection('Mecanico automotriz').valueChanges().subscribe( (res)=> {
+      console.log("res:",res);  });  
+      
+    this.firestore.collection('Mecanico electrico').valueChanges().subscribe( (res)=> {
+      console.log("res:",res);  });  
+
+    this.firestore.collection('Mecanico general').valueChanges().subscribe( (res)=> {
+      console.log("res:",res);  });  
   }
 
-  
+ 
 }
+
