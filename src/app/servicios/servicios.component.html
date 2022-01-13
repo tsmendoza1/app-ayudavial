@@ -1,11 +1,11 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>
-      <ion-button ionclass="inicio" [routerLink]="['/inicio']" routerLinkActive="router-link-active" >      
-        <ion-icon name="chevron-back-outline"></ion-icon>
+    <ion-buttons slot="start">
+      <ion-button [routerLink]="['/miperfil']">
+        <ion-icon slot="icon-only" name="chevron-back-outline"></ion-icon>
       </ion-button>
-      Servicios
-    </ion-title>
+    </ion-buttons>
+    <ion-title color="white">Servicios</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -13,22 +13,22 @@
 
   <ion-item>
     <button class="boton" [routerLink]="['/automotriz']" routerLinkActive="router-link-active" >
-      Mecanico Automotriz
+      Mecánico Automotriz
     </button>
   </ion-item>
   <ion-item>
     <button class="boton" [routerLink]="['/electrico']" routerLinkActive="router-link-active" >
-      Mecanico Electrico
+      Mecánico Eléctrico
     </button>
   </ion-item>
   <ion-item>
     <button class="boton" [routerLink]="['/general']" routerLinkActive="router-link-active" >
-      Mecanico General
+      Mecánico General
     </button>
   </ion-item>
   <ion-item>
     <button class="boton" [routerLink]="['/grua']" routerLinkActive="router-link-active" >
-      Grua
+      Grúa
     </button>
   </ion-item>
 </ion-content>

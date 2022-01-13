@@ -1,20 +1,24 @@
+
 <ion-header>
   <ion-toolbar>
-    <ion-label>
-      Mecanico General
-    </ion-label>
+    <ion-buttons slot="start">
+      <ion-button [routerLink]="['/servicios']">
+        <ion-icon slot="icon-only" name="chevron-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title color="white">Mecánico General</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-item>
     <ion-label>
-      Nombre: Pedro Aviles
+      Nombre: Pedro Áviles
     </ion-label>
   </ion-item>
   <ion-item>
     <ion-label>
-      Precio minimo: $5.00
+      Precio mínimo: $5.00
     </ion-label>
   </ion-item>
   <ion-item>
@@ -23,7 +27,8 @@
     </ion-label>
    
   </ion-item>
-  <a href="https://api.whatsapp.com/send?phone=593995835806&text=Envia%20tu%20ubicacion%20:)" ion-button>Compartir ubicacion <ion-icon name="logo-whatsapp"></ion-icon></a>
+  <a href="https://api.whatsapp.com/send?phone=593995835806&text=Envia%20tu%20ubicacion%20:)" ion-button> Compartir ubicacion <ion-icon name="logo-whatsapp"></ion-icon>
+  </a>
 </ion-content>
 
 <ion-item *ngFor= "let mecanicoGeneral of mecanicoGenerals">
