@@ -26,10 +26,11 @@
     </ion-label>
   </ion-item>
 
-<a href="https://api.whatsapp.com/send?phone=593995835806&text=Envia%20tu%20ubicacion%20:)" ion-button>Compartir ubicacion <ion-icon name="logo-whatsapp"></ion-icon></a>
+  <a href="https://api.whatsapp.com/send?phone=593995835806&text=Envia%20tu%20ubicacion%20:)" ion-button>Compartir
+    ubicacion <ion-icon name="logo-whatsapp"></ion-icon></a>
 </ion-content>
 
-<ion-item *ngFor= "let mecanicoElectrico of mecanicoElectricos">
+<ion-item *ngFor="let mecanicoElectrico of mecanicoElectricos">
   <ion-label> {{mecanicoElectrico.Nombre}} </ion-label>
   <ion-label> {{mecanicoElectrico.PrecioMinimo}} </ion-label>
   <ion-label> {{mecanicoElectrico.Telefono}} </ion-label>

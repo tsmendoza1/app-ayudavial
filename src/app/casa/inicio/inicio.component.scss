@@ -35,8 +35,8 @@
   height: 40px;
   //smargin: 9%;
   border: 1px solid #363e42;
-}     
-.btnRegistrar{
+}
+.btnRegistrar {
   margin-top: 2%;
   margin-left: 9%;
   background-color: grayscale($color: #232428);
@@ -51,8 +51,7 @@
   border: 1px solid #363e42;
 }
 
-
-.olvidastetucontraseña{
+.olvidastetucontraseña {
   margin-top: 2%;
   margin-left: 9%;
   //background-color: grayscale($color: #232428);
@@ -70,15 +69,14 @@
 .saltar {
   margin-top: 13%;
   margin-left: 80%;
-  background-color:  grayscale($color: #232428);
+  background-color: grayscale($color: #232428);
   color: white;
   padding: 2px 10px 2px 10px;
   // border-radius: 50px;
   font-size: 18px;
   border-radius: 50px;
   border: 1px solid #363e42;
- // border: 1px solid #363e42;
-  
+  // border: 1px solid #363e42;
+
   // color: white;
 }
-
