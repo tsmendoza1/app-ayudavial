@@ -13,25 +13,13 @@ export class MiautoComponent implements OnInit {
 
   autos: Auto [] =[
     {
-      color: "Azul",
-      modelo: "Golf",
-      marca: "Volkswagen Golf",
-      año: 2021
-    },
-    {
-      color: "Rojo",
-      modelo: "Porshe 911",
-      marca: "Porshe",
-      año: 2021
-    },
-    {
       color: "Plata",
       modelo: "Elantra",
       marca: "Hyundai",
-      año: 2015
+      tipo:"Sedan",
+      fechaAd: "2015"
     }
 
-    
   ]
 
   constructor(public popoverController: PopoverController) {

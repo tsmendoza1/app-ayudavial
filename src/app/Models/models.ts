@@ -9,7 +9,8 @@ export interface Auto {
     color: string;
     modelo: string;
     marca: string;
-    año: number;
+    tipo: string;
+    fechaAd: string;
     kilometraje?: number;
 }
 

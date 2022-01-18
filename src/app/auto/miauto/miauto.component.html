@@ -1,4 +1,4 @@
-<ion-content >
+<ion-content>
   <ion-header class="ion-text-center">
 
     <ion-toolbar>
@@ -19,27 +19,45 @@
 
   <ion-list>
     <div *ngFor="let Auto of autos">
-      <ion-item>
 
+      <ion-item>
+        <ion-label class="miauto">
+          <ion-icon name="shield"></ion-icon>
+          Tipo: {{Auto.tipo}}
+        </ion-label>
+      </ion-item>
+
+
+      <ion-item>
         <ion-label class="miauto">
           <ion-icon name="shield"></ion-icon>
           Marca: {{Auto.marca}}
         </ion-label>
       </ion-item>
+
       <ion-item>
         <ion-label>
           <ion-icon name="car"></ion-icon>
           Modelo: {{Auto.modelo}}
         </ion-label>
       </ion-item>
+
       <ion-item>
-        <ion-label>
+        <ion-label class="miauto">
+          <ion-icon name="shield"></ion-icon>
+          Año: {{Auto.fechaAd}}
+        </ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label class="miauto">
           <ion-icon name="color-palette-outline"></ion-icon>
           Color: {{Auto.color}}
         </ion-label>
       </ion-item>
 
     </div>
+
   </ion-list>
- 
+
 </ion-content>
