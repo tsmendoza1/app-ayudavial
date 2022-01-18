@@ -24,12 +24,13 @@
       Numero: 0987654321
     </ion-label>
   </ion-item>
-  <a href="https://api.whatsapp.com/send?phone=593995835806&text=Envia%20tu%20ubicacion%20:)" ion-button>Compartir ubicacion <ion-icon name="logo-whatsapp"></ion-icon></a>
+  <a href="https://api.whatsapp.com/send?phone=593995835806&text=Envia%20tu%20ubicacion%20:)" ion-button>Compartir
+    ubicacion <ion-icon name="logo-whatsapp"></ion-icon></a>
 
-  
+
 </ion-content>
 
-<ion-item *ngFor= "let grua of gruas">
+<ion-item *ngFor="let grua of gruas">
   <ion-label> {{grua.Nombre}} </ion-label>
   <ion-label> {{grua.PrecioMinimo}} </ion-label>
   <ion-label> {{grua.Telefono}} </ion-label>

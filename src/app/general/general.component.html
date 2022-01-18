@@ -1,4 +1,3 @@
-
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
@@ -25,13 +24,14 @@
     <ion-label>
       Numero: 0987654321
     </ion-label>
-   
+
   </ion-item>
-  <a href="https://api.whatsapp.com/send?phone=593995835806&text=Envia%20tu%20ubicacion%20:)" ion-button> Compartir ubicacion <ion-icon name="logo-whatsapp"></ion-icon>
+  <a href="https://api.whatsapp.com/send?phone=593995835806&text=Envia%20tu%20ubicacion%20:)" ion-button> Compartir
+    ubicacion <ion-icon name="logo-whatsapp"></ion-icon>
   </a>
 </ion-content>
 
-<ion-item *ngFor= "let mecanicoGeneral of mecanicoGenerals">
+<ion-item *ngFor="let mecanicoGeneral of mecanicoGenerals">
   <ion-label> {{mecanicoGeneral.Nombre}} </ion-label>
   <ion-label> {{mecanicoGeneral.PrecioMinimo}} </ion-label>
   <ion-label> {{mecanicoGeneral.Telefono}} </ion-label>

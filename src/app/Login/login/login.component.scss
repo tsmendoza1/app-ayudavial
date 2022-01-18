@@ -1,7 +1,6 @@
-
-.body{
+.body {
   background-color: transparent;
-  background-image: url('https://i0.wp.com/hipertextual.com/wp-content/uploads/2017/03/color-degradado-fondos-degradados-multicolor-51200.jpg?fit=1920%2C1200&ssl=1');
+  background-image: url("https://i0.wp.com/hipertextual.com/wp-content/uploads/2017/03/color-degradado-fondos-degradados-multicolor-51200.jpg?fit=1920%2C1200&ssl=1");
   background-color: aqua;
   padding: 10px 10px 10px 10px;
   margin-bottom: 10%;
@@ -11,7 +10,7 @@
   background-color: grayscale($color: #232428);
   color: white;
   padding: 10px 10px 10px 10px;
-   border-radius: 15px;
+  border-radius: 15px;
   font-size: 20px;
   margin-top: 2%;
   margin-left: 40%;
@@ -26,29 +25,26 @@
   }
 }
 
-
-
 .registrarse {
   margin-left: 23%;
-  
 }
-.sesionGoogle{
-  background:rgb(0, 89, 255);
+.sesionGoogle {
+  background: rgb(0, 89, 255);
   color: rgb(255, 255, 255);
- padding: 10px 10px 10px 10px;
+  padding: 10px 10px 10px 10px;
   border-radius: 50px;
   font-size: 20px;
   border: 1px solid #363e42;
   //padding: 0 1rem;
   width: 400px;
- // margin: 0 auto;
- margin-top: 2%;
- margin-left: 4%; 
+  // margin: 0 auto;
+  margin-top: 2%;
+  margin-left: 4%;
 }
-.sesionFacebook{
-  background:rgb(8, 50, 128);
+.sesionFacebook {
+  background: rgb(8, 50, 128);
   color: rgb(255, 255, 255);
- padding: 10px 10px 10px 10px;
+  padding: 10px 10px 10px 10px;
   border-radius: 50px;
   font-size: 20px;
   border: 1px solid #363e42;
@@ -57,10 +53,10 @@
   margin-top: 2%;
   margin-left: 4%;
 }
-.sesionApple{
+.sesionApple {
   background-color: grayscale($color: #232428);
   color: rgb(255, 255, 255);
- padding: 10px 10px 10px 10px;
+  padding: 10px 10px 10px 10px;
   border-radius: 50px;
   font-size: 20px;
   border: 1px solid #363e42;
@@ -68,52 +64,52 @@
   margin-top: 2%;
   margin-left: 4%;
 }
-.iconGoogle{
+.iconGoogle {
   padding: 0 1rem;
 }
-.iconFacebook{
+.iconFacebook {
   padding: 0 1rem;
 }
-.iconApple{
+.iconApple {
   padding: 0 1rem;
 }
 
-.sesion{
-  font-size: 100%
+.sesion {
+  font-size: 100%;
 }
-.fondo{
+.fondo {
   background-image: url(https://i0.wp.com/hipertextual.com/wp-content/uploads/2017/03/color-degradado-fondos-degradados-multicolor-51200.jpg?fit=1920%2C1200&ssl=1);
   background-color: red;
   background-size: cover;
-  background-position: right bottom ;
+  background-position: right bottom;
 }
 .cuadro {
   border: 1px solid #ffffff;
   margin-left: 40%;
   width: 20%;
 }
-.texto1{
+.texto1 {
   margin-left: 30%;
   font-size: 20px;
-  font-family:monospace ;
+  font-family: monospace;
 }
-.texto2{
+.texto2 {
   margin-left: 29%;
   font-size: 20px;
-  font-family:monospace ;
+  font-family: monospace;
 }
-.texto3{
+.texto3 {
   margin-left: 22%;
   font-size: 20px;
-  font-family:monospace ;
+  font-family: monospace;
 }
-.texto4{
+.texto4 {
   margin-left: 22%;
   font-size: 20px;
-  font-family:monospace ;
+  font-family: monospace;
 }
-.texto5{
+.texto5 {
   margin-left: 31%;
   font-size: 20px;
-  font-family:monospace ;
+  font-family: monospace;
 }
