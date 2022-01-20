@@ -28,6 +28,8 @@ export class AutomotrizComponent implements OnInit {
 
   getMecanicoA(){
     this.firestoreService.getServiciosT<MecanicoAutomotriz>(this.path).subscribe(res => {
+      console.log("res", res);
+      
       this.mecanicoAutomotrizs = res;
       
     })
