@@ -10,6 +10,10 @@
   max-width: 100%;
   height: auto;
 }
+.card{
+  color: #ffffff;
+  --background:rgba(168, 168, 168, 0.082); 
+}
 
 .btn1 {
   background-color: grayscale($color: #232428);
@@ -32,10 +36,11 @@
 }
 
 .cuadro {
+  border-radius: 10%;
   border: 1px solid #ffffff;
-  margin-left: 40%;
-  width: 20%;
-  border-radius: 9%;
+  margin-left: 30%;
+  width: 40%;
+
 }
 .texto1 {
   margin-left: 30%;

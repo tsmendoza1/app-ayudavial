@@ -39,15 +39,18 @@ ion-content.bg-image{
   margin-top: 2%;
   margin-left: 4%;
 }
-
+.card{
+  color: #ffffff;
+  --background:rgba(168, 168, 168, 0.082); 
+}
 .sesion {
   font-size: 100%;
 }
 .cuadro {
+  border-radius: 10%;
   border: 1px solid #ffffff;
-  margin-left: 40%;
-  width: 20%;
-  border-radius: 9%;
+  margin-left: 30%;
+  width: 40%;
 }
 .texto1 {
   margin-left: 24%;
