@@ -32,9 +32,9 @@ export class FirestoreService {
   }
 
 
-  getCollection (path:string){
+  getCollection <tipo>(path:string){
 
-    const collection =this.database.collection(path);
+    const collection =this.database.collection<tipo>(path);
     return collection.valueChanges();
 
     console.log('prueba');
