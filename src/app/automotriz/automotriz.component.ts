@@ -15,7 +15,7 @@ export class AutomotrizComponent implements OnInit {
   newMecanico:MecanicoAutomotriz= {
     Nombre:'',
     PrecioMinimo:'',
-    Telefono:0995835806 
+    Telefono:null 
   }
 
   private path = 'automotriz/'
