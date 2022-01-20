@@ -14,13 +14,13 @@
 }
 .correo {
   margin-left: 1cm;
-  border-bottom: 1px solid #23363f;
-  margin-right: 1cm;
+  border-bottom: 1px solid #ffffff;
+  margin-right: 2cm;
 }
 .contraseña {
   margin-left: 1cm;
-  border-bottom: 1px solid #23363f;
-  margin-right: 1cm;
+  border-bottom: 1px solid #ffffff;
+  margin-right: 2cm;
 }
 .btnInicio {
   margin-top: 2%;
@@ -79,4 +79,8 @@
   // border: 1px solid #363e42;
 
   // color: white;
+}
+ion-content.bg-image{
+  --background: url(https://static.vecteezy.com/system/resources/previews/002/901/618/non_2x/black-texture-background-free-photo.jpg) 0 0/100% 100% ;
+
 }

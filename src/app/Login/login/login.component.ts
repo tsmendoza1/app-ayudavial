@@ -10,9 +10,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
+img:string;
+
   constructor(private database:  FirestoreService, private interaction: InteractionService) { }
 
-  ngOnInit() {}
+  
+  
+  ngOnInit() {
+  }
 
 
   crearNuevoUsuario(){

@@ -1,29 +1,26 @@
-<ion-content>
-  <ion-header class="ion-text-center">
+
+  <ion-header >
     <ion-toolbar>
 
       <ion-title size="center">Asistencia Vial</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <ion-content class="asistenciavialimg">
+  <ion-content class="bg-image" padding>
 
 
-    <div class="ion-text-center">
       <img alt="asistenciavial" class="logo"
         src='http://autoconectado.cabsegurosequinoccial.com/templates/yootheme/cache/home-funcion-09-10ba4b36.jpeg'>
-    </div>
 
-    <div class="form">
-      <ion-item lines='none'>
+    
         <ion-input [(ngModel)]="credenciales.correo" class="correo" placeholder='Correo Electrónico'></ion-input>
-      </ion-item>
 
 
-      <ion-item lines='none' short='block'>
+
+>
         <ion-input [(ngModel)]="credenciales.password" class="contraseña" placeholder='Contraseña' type='password'>
         </ion-input>
-      </ion-item>
+  
 
       <button (click)="login()" class="btnInicio" [routerLink]="['/miperfil']">
         Iniciar Sesión
@@ -34,5 +31,4 @@
         Registrarse
 
       </button>
-    </div>
   </ion-content>
