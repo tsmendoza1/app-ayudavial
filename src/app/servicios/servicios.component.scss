@@ -4,10 +4,10 @@
     background-color: grayscale($color: #232428);
     color: white;
    // padding: 50px 20px 50px 20px;
-    border-radius: 100px;
+    border-radius: 60px;
     font-size: 20px;
     width: 80%;
-    height: 80px;
+    height: 300px;
     //smargin: 9%;
     border: 2px solid #363e42;
 
@@ -16,4 +16,8 @@
     padding: 20px 20px 20px 5px;
     font-size: 20px;
     background: rgb(29, 29, 29);
+}
+
+.logo{
+    border-radius: 50px;
 }
