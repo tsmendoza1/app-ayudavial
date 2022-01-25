@@ -15,36 +15,33 @@
       <buttoncarro class="botoncarro" slot="start" [routerLink]="['/miauto']">
         <ion-icon name="car-sport-outline"></ion-icon>
       </buttoncarro>
-    </ion-toolbar>
-
-    <ion-avatar class="avatarmiperfil">
-      <img alt="Perfil" src="https://images.vexels.com/media/users/3/135244/isolated/preview/ee21f9d749b69b0a07603c2302083341-silueta-de-icono-plano-de-usuario.png">
-    </ion-avatar>
+    </ion-toolbar>  
   </ion-header>
-      <h5  *ngFor="let cliente of clientes">
-      <ion-item>
-        <ion-label class="nombre">
-          <ion-icon name="person-outline" slot="start"></ion-icon>
-          NOMBRE: {{cliente.nombre}}
-        </ion-label>
-      </ion-item>
-      <ion-item>
-        <ion-label class="apellido">
-          <ion-icon name="person-outline" slot="start"></ion-icon>
-          APELLIDO: {{cliente.apellido}}
-        </ion-label>
-      </ion-item>
-      <ion-item>
-        <ion-label class="correo">
-          <ion-icon name="mail-outline" slot="start"></ion-icon>
-          CORREO: {{cliente.correo}}
-        </ion-label>
-      </ion-item>
-      <ion-item>
+    <ion-card class="card">
+    <ion-avatar class="avatarmiperfil">
+      <img alt="Perfil" src="https://rciminternet.com/wp-content/uploads/2019/04/usuario.png">
+    </ion-avatar>
+
+
+  <ion-label class="nombre">
+    <div  float-ce *ngFor="let cliente of clientes" >
+   {{cliente.nombre}} {{cliente.apellido}}
+    </div>
+  </ion-label>
+
+  <ion-label class="correo">
+    <div  float-ce *ngFor="let cliente of clientes" >
+    {{cliente.correo}}
+    </div>
+  </ion-label>
+</ion-card>
+
+      <div  *ngFor="let cliente of clientes">
+
         <ion-label class="auto">
           <ion-icon name="car-outline" slot="start"></ion-icon>
           AUTO: {{cliente.auto}}
         </ion-label>
-      </ion-item>
-  </h5>
+
+  </div>
 </ion-content>

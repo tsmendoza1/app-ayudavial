@@ -2,41 +2,49 @@ ion-content.bg-image{
   --background: url(https://static.vecteezy.com/system/resources/previews/002/901/618/non_2x/black-texture-background-free-photo.jpg) 0 0/100% 100% ;
 }
 .nombre {
-  padding: 10px 10px 10px 10px;
-  //  background: rgba(0, 45, 248, 0.452);
-  border-bottom: 1px solid #ffffff;
-  color: c00;
+  font-size: 160%;
+margin-left: 10%;
+margin-right: 80%;
+text-align: center
 }
-.apellido {
-  padding: 10px 10px 10px 10px;
-  //background: rgba(0, 174, 255, 0.452);
-  color: c00;
+/*.apellido {
+font-size: 130%;
+margin-left: 10%;
+margin-right: 80%;
+color: c00;
+}*/
+.card{
+  color: #ffffff;
+  --background:rgba(168, 168, 168, 0.082); 
 }
 .correo {
-  padding: 10px 10px 10px 10px;
-  // background: rgba(0, 174, 255, 0.452);
-  color: c00;
+  color: #aaa9a9;
+  font-size: 120%;
+margin-left: 10%;
+margin-right: 80%;
+text-align: center
 }
 .auto {
-  padding: 10px 10px 10px 10px;
-  //  background: rgba(0, 174, 255, 0.452);
+  font-size: 130%;
+margin-left: 10%;
+margin-right: 10%;
   color: c00;
 }
 .avatar {
   max-width: 10%;
   max-height: 200%;
 }
-.auto {
-  padding: 10px 10px 10px 10px;
-
-  color: c00;
-}
 .avatarmiperfil {
-  margin-left: 25%;
-  width: 50%;
-  height: 20%;
+  margin-top: 5%;
+  margin-left: 33%;
+  width: 30%;
+  height: 0%;
 }
 .botoncarro {
   padding: 20px 20px 20px 20px;
   background: rgb(29, 29, 29);
+}
+.card{
+  color: #ffffff;
+  --background:rgba(168, 168, 168, 0.082); 
 }
