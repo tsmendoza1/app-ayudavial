@@ -1,7 +1,6 @@
 import { Cliente } from './../../Models/models';
 import { Component, OnInit } from '@angular/core';
 import { PopoverController } from '@ionic/angular';
-import { MenuuComponent } from 'src/app/menu/menuu/menuu.component';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 @Component({
   selector: 'app-perfil',
@@ -33,13 +32,7 @@ export class PerfilComponent implements OnInit {
  
     async openMenu(ev: any){
     console.log("abir");
-    const menu = await this.popoverController.create({
-      component: MenuuComponent,
-      translucent: false,
-      event: ev
-      
-    });
-    await menu.present();
+    
     
   }
   createDoc () {
