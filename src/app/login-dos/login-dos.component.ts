@@ -6,11 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login-dos.component.scss'],
 })
 export class LoginDosComponent implements OnInit {
-
+  
   constructor() { }
 
   ngOnInit() {}
 
-  
+  registrarme(){
+
+  }
 
 }
