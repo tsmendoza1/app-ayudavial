@@ -1,3 +1,4 @@
+import { MenuComponent } from './menu/menu.component';
 import { BienvenidoComponent } from './Bienvenido/bienvenido/bienvenido.component';
 import { UbicacionComponent } from './Ubicacion/ubicacion/ubicacion.component';
 import { LoginComponent } from './Login/login/login.component';
@@ -45,7 +46,8 @@ import { LoginDosComponent } from './login-dos/login-dos.component';
     GeneralComponent,
     GruaComponent,
     LoginDosComponent,
-    BienvenidoComponent
+    BienvenidoComponent,
+    MenuComponent
   ],
 
   
