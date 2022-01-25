@@ -22,7 +22,12 @@
   width: 470px;
   border-bottom: 1px solid #ffffffc4;
 }
-.btnInicio {
+
+
+button{
+ // background-color: powderblue;
+  transition: background-color .5s;
+  transition-duration: 0.4s;
   margin-top: 2%;
   margin-left: 9%;
   background-color: grayscale($color: #232428);
@@ -31,25 +36,16 @@
   border-radius: 50px;
   font-size: 20px;
   width: 80%;
-  position: relative;
   height: 40px;
   //smargin: 9%;
   border: 1px solid #363e42;
 }
-.btnRegistrar {
-  margin-top: 2%;
-  margin-left: 9%;
-  background-color: grayscale($color: #232428);
-  color: white;
-  //padding: 10px 10px 10px 10px;
-  border-radius: 50px;
-  font-size: 20px;
-  width: 80%;
-  position: relative;
-  height: 40px;
-  //smargin: 9%;
-  border: 1px solid #363e42;
+button:active{
+  font-size: 150%;
+  //transition-duration: 0.2s;
+  background-color: rgb(219, 219, 219);
 }
+
 
 .olvidastetucontraseña {
   margin-top: 2%;
@@ -60,7 +56,6 @@
   position: relative;
   height: 40px;
 }
-
 .saltar {
   margin-top: 13%;
   margin-left: 80%;
@@ -73,5 +68,4 @@
 }
 ion-content.bg-image{
   --background: url(https://static.vecteezy.com/system/resources/previews/002/901/618/non_2x/black-texture-background-free-photo.jpg) 0 0/100% 100% ;
-
 }
