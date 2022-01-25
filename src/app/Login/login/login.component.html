@@ -54,7 +54,7 @@
     <ion-title>
     </ion-title>
   </h5>
-  <ion-input class="cuadro" placeholder=''></ion-input>
+  <ion-input [(ngModel)]="nuevoUsuario.correo" class="cuadro" placeholder=''></ion-input>
   <h5>
     <ion-title>
     </ion-title>
@@ -67,28 +67,8 @@
     </ion-title>
   </h5>
   <ion-input class="cuadro" placeholder='' type='password'></ion-input>
-
-
-
-<h5>
-  <ion-title>
-  </ion-title>
-</h5>
-</ion-card>
-  <h5>
-    
-    <ion-title>
-      
-      <h3>
-        <ion-title>
-          <h4>
-            <ion-title></ion-title>
-          </h4>
-        </ion-title>
-      </h3>
-    </ion-title>
-  </h5>
-  <button class="btn1" [routerLink]="['/loginAuto']">Siguiente
-  </button>
+  </ion-card>
+  <br/>
+  <button class="btn1" (click)="crearNuevoUsuario()" >Siguiente </button>
   
 </ion-content>

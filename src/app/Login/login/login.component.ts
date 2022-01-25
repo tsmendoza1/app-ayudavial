@@ -11,6 +11,12 @@ import { Component, OnInit } from '@angular/core';
 export class LoginComponent implements OnInit {
 
 img:string;
+nuevoUsuario: Cliente = {
+  nombre: "Andrés",
+  apellido: "Zhangallimbay",
+  correo: "a-zh666@hotmail.es",
+  auto: "Hyundai Elantra"
+}
 
   constructor(private database:  FirestoreService, private interaction: InteractionService) { }
 
@@ -20,21 +26,17 @@ img:string;
   }
 
 
+
   crearNuevoUsuario(){
     this.interaction.presentLoading("Guardando")
-    const cliente: Cliente ={
-    nombre: "Andrés",
-    apellido: "Zhangallimbay",
-    correo: "a-zh666@hotmail.es",
-    auto: "Hyundai Elantra"
-    }
+    
 
-    const path = "Clientes";
-    const id = this.database.getId();
-    this.database.createDoc1(cliente,path,id).then((res) => {
-      this.interaction.closeloading();
-        this.interaction.presentToast("Registrado con éxito")
-    })
+    // const path = "Clientes";
+    // const id = this.database.getId();
+    // this.database.createDoc1(Cliente,path,id).then((res) => {
+      // this.interaction.closeloading();
+        // this.interaction.presentToast("Registrado con éxito")
+    // })
   }
 
 } 
