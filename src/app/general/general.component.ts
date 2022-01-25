@@ -18,7 +18,7 @@ export class GeneralComponent implements OnInit {
     Telefono:null
   }  
   
-  private path = 'general/'
+  private path = 'Mecanico general/'
 
   constructor(public firestoreService: FirestoreService, private firestore: AngularFirestore) { }
 
@@ -27,7 +27,7 @@ export class GeneralComponent implements OnInit {
   }
 
   getGeneral(){
-    this.firestoreService.getServiciosT<MecanicoGeneral>(this.path).subscribe(res => {
+    this.firestoreService.getCollection<MecanicoGeneral>(this.path).subscribe(res => {
       this.mecanicoGenerals = res;
       
     })

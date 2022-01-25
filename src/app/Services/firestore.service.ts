@@ -9,7 +9,7 @@ export class FirestoreService {
 
   constructor(private firestore: AngularFirestore, public database: AngularFirestore) { }
 
-  getServiciosT<tipo>(path:string){
+  getCollecction<tipo>(path:string){
     const collection =this.database.collection<tipo>(path);
     return collection.valueChanges();
   }

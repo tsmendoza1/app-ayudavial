@@ -27,7 +27,7 @@ export class ElectricoComponent implements OnInit {
   }
 
   getElectrico(){
-    this.firestoreService.getServiciosT<MecanicoElectrico>(this.path).subscribe(res => {
+    this.firestoreService.getCollection<MecanicoElectrico>(this.path).subscribe(res => {
       this.mecanicoElectricos = res;
       
     })

@@ -18,7 +18,7 @@ export class AutomotrizComponent implements OnInit {
     Telefono:null 
   }
 
-  private path = 'automotriz/'
+  private path = 'Mecanico automotriz/'
 
   constructor(public firestoreService: FirestoreService, private firestore: AngularFirestore) { }
 
@@ -27,7 +27,7 @@ export class AutomotrizComponent implements OnInit {
   }
 
   getMecanicoA(){
-    this.firestoreService.getServiciosT<MecanicoAutomotriz>(this.path).subscribe(res => {
+    this.firestoreService.getCollection<MecanicoAutomotriz>(this.path).subscribe(res => {
       console.log("res", res);
       
       this.mecanicoAutomotrizs = res;
