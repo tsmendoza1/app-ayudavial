@@ -1,0 +1,21 @@
+button{
+    // background-color: powderblue;
+     transition: background-color .5s;
+     transition-duration: 0.4s;
+     margin-top: 2%;
+     margin-left: 9%;
+     background-color: grayscale($color: #232428);
+     color: white;
+     //padding: 10px 10px 10px 10px;
+     border-radius: 50px;
+     font-size: 20px;
+     width: 80%;
+     height: 40px;
+     //smargin: 9%;
+     border: 1px solid #363e42;
+   }
+  
+   ion-content.bg-image{
+    --background: url(https://static.vecteezy.com/system/resources/previews/002/901/618/non_2x/black-texture-background-free-photo.jpg) 0 0/100% 100% ;
+  }
+  

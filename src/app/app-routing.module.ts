@@ -18,6 +18,7 @@ import { ServiciosComponent } from './servicios/servicios.component';
 import { GeneralComponent } from './general/general.component';
 import { GruaComponent } from './grua/grua.component';
 import { LoginDosComponent } from './login-dos/login-dos.component';
+import { BienvenidoComponent } from './Bienvenido/bienvenido/bienvenido.component';
 
 //const uidAdmin = "OUcJ2XWr0cdwftOB7XeY"
 //const onlyAdmin = () => map((user:any) =>  !!user && uidAdmin === user.uid);
@@ -39,6 +40,7 @@ const routes: Routes = [
   {path: 'general',component:GeneralComponent}, 
   {path: 'grua',component:GruaComponent}, 
   {path: 'loginAuto',component:LoginDosComponent}, 
+  {path: 'bienvenido',component:BienvenidoComponent}, 
   
 ];
 

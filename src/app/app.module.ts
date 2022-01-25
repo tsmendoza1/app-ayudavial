@@ -1,3 +1,4 @@
+import { BienvenidoComponent } from './Bienvenido/bienvenido/bienvenido.component';
 import { UbicacionComponent } from './Ubicacion/ubicacion/ubicacion.component';
 import { LoginComponent } from './Login/login/login.component';
 import { FirestoreService } from './Services/firestore.service';
@@ -48,6 +49,7 @@ import { LoginDosComponent } from './login-dos/login-dos.component';
     GeneralComponent,
     GruaComponent,
     LoginDosComponent,
+    BienvenidoComponent
   ],
 
   
