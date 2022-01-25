@@ -18,7 +18,7 @@ export class ElectricoComponent implements OnInit {
     Telefono:null
   }  
 
-  private path = 'electrico/'
+  private path = 'Mecanico electrico/'
 
   constructor(public firestoreService: FirestoreService, private firestore: AngularFirestore) { }
 

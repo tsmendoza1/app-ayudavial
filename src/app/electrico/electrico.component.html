@@ -9,42 +9,41 @@
   </ion-toolbar>
 </ion-header>
 
+<ion-content *ngFor="let mecanicoElectrico of mecanicoElectricos">
+  <ion-card>
+    <ion-card-header>
+      Nombre:
+    </ion-card-header>
+    <ion-card-content>
+      <ion-label> {{mecanicoElectrico.Nombre}} </ion-label>
+    </ion-card-content>
+  </ion-card>
 
-<ion-card>
-  <ion-card-header>
-    Nombre:
-  </ion-card-header>
-  <ion-card-content>
-    Pedro Sanchez
-  </ion-card-content>
-</ion-card>
+  <ion-card>
+    <ion-card-header>
+      Precio Minimo:
+    </ion-card-header>
+    <ion-card-content>
+      <ion-label> {{mecanicoElectrico.PrecioMinimo}} </ion-label>
+    </ion-card-content>
+  </ion-card>
+  
+  <ion-card>
+    <ion-card-header>
+      Telefono:
+    </ion-card-header>
+    <ion-card-content>
+      <ion-label> {{mecanicoElectrico.Telefono}} </ion-label>
+    </ion-card-content>
+  </ion-card>
 
-<ion-card>
-  <ion-card-header>
-  Precio minimo:
-  </ion-card-header>
-  <ion-card-content>
-    $ 20.00
-  </ion-card-content>
-</ion-card>
-
-<ion-card>
-  <ion-card-header>
-    Numero:
-  </ion-card-header>
-  <ion-card-content>
-    0987654321
-  </ion-card-content>
-</ion-card>
-
-<ion-content>
-  <ion-button [href]=" 'https://wa.me/593' + 995835806 + '?text=Envia%20tu%20ubicacion%20:)'" target="blank">
+  <ion-button [href]=" 'https://wa.me/593' + mecanicoElectrico.Telefono + '?text=Envia%20tu%20ubicacion%20:)'" target="blank">
     Compartir Ubicacion actual <ion-icon name="logo-whatsapp"></ion-icon>
     </ion-button>
-</ion-content>
+</ion-content> 
 
-<ion-item *ngFor="let mecanicoElectrico of mecanicoElectricos">
-  <ion-label> {{mecanicoElectrico.Nombre}} </ion-label>
-  <ion-label> {{mecanicoElectrico.PrecioMinimo}} </ion-label>
-  <ion-label> {{mecanicoElectrico.Telefono}} </ion-label>
-</ion-item>
+<ion-content>
+  <ion-button>
+    Solicitar servicio
+  </ion-button>
+</ion-content>
