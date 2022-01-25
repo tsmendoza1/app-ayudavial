@@ -6,9 +6,13 @@ import { AngularFireAuth } from '@angular/fire/compat/auth';
 })
 export class AuthService {
 
-  constructor(private authfirebase: AngularFireAuth ) { }
+  constructor(private authfirebase: AngularFireAuth) { }
 
   login (correo: string, password: string) {
   return  this.authfirebase.signInWithEmailAndPassword(correo, password)
+  }
+
+  logout(){
+    this.authfirebase.signOut(); 
   }
 }

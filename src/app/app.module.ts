@@ -1,3 +1,4 @@
+import { MenuComponent } from './menu/menu.component';
 import { BienvenidoComponent } from './Bienvenido/bienvenido/bienvenido.component';
 import { UbicacionComponent } from './Ubicacion/ubicacion/ubicacion.component';
 import { LoginComponent } from './Login/login/login.component';
@@ -13,8 +14,6 @@ import { InicioComponent } from './casa/inicio/inicio.component';
 import { MiautoComponent } from './auto/miauto/miauto.component';
 import { MensajesComponent } from './Mensajes/mensajes/mensajes.component';
 import { PerfilComponent } from './Perfil/perfil/perfil.component';
-import { MenuuComponent } from './menu/menuu/menuu.component';
-import { AjustesComponent } from './Ajustes/ajustes/ajustes.component';
 import { environment } from 'src/environments/environment';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
@@ -39,8 +38,6 @@ import { LoginDosComponent } from './login-dos/login-dos.component';
     MiautoComponent,
     MensajesComponent,
     PerfilComponent,
-    MenuuComponent,
-    AjustesComponent,
     LoginComponent,
     UbicacionComponent,
     AutomotrizComponent,
@@ -49,7 +46,8 @@ import { LoginDosComponent } from './login-dos/login-dos.component';
     GeneralComponent,
     GruaComponent,
     LoginDosComponent,
-    BienvenidoComponent
+    BienvenidoComponent,
+    MenuComponent
   ],
 
   

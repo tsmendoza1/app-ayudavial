@@ -9,44 +9,40 @@
   </ion-toolbar>
 </ion-header>
 
+<ion-content *ngFor="let Grua of gruas">
+  <ion-card>
+    <ion-card-header>
+      Nombre:
+    </ion-card-header>
+    <ion-card-content>
+      <ion-label> {{Grua.Nombre}} </ion-label>
+    </ion-card-content>
+  </ion-card>
 
-<ion-card>
-  <ion-card-header>
-    Nombre:
-  </ion-card-header>
-  <ion-card-content>
-    Mateo Perez
-  </ion-card-content>
-</ion-card>
+  <ion-card>
+    <ion-card-header>
+      Precio Minimo:
+    </ion-card-header>
+    <ion-card-content>
+      <ion-label> {{Grua.PrecioMinimo}} </ion-label>
+    </ion-card-content>
+  </ion-card>
+  
+  <ion-card>
+    <ion-card-header>
+      Telefono:
+    </ion-card-header>
+    <ion-card-content>
+      <ion-label> {{Grua.Telefono}} </ion-label>
+    </ion-card-content>
+  </ion-card>
 
-<ion-card>
-  <ion-card-header>
-  Precio minimo:
-  </ion-card-header>
-  <ion-card-content>
-    $ 15.00
-  </ion-card-content>
-</ion-card>
-
-<ion-card>
-  <ion-card-header>
-    Numero:
-  </ion-card-header>
-  <ion-card-content>
-    0987654321
-  </ion-card-content>
-</ion-card>
-
-<ion-content>
-  <ion-button [href]=" 'https://wa.me/593' + 995835806 + '?text=Envia%20tu%20ubicacion%20:)'" target="blank">
+  <ion-button [href]=" 'https://wa.me/593' + Grua.Telefono + '?text=Envia%20tu%20ubicacion%20:)'" target="blank">
     Compartir Ubicacion actual <ion-icon name="logo-whatsapp"></ion-icon>
     </ion-button>
-
-
+</ion-content> 
+<ion-content>
+  <ion-button>
+    Solicitar servicio
+  </ion-button>
 </ion-content>
-
-<ion-item *ngFor="let grua of gruas">
-  <ion-label> {{grua.Nombre}} </ion-label>
-  <ion-label> {{grua.PrecioMinimo}} </ion-label>
-  <ion-label> {{grua.Telefono}} </ion-label>
-</ion-item>

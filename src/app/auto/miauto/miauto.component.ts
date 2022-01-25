@@ -1,4 +1,4 @@
-import { MenuuComponent } from 'src/app/menu/menuu/menuu.component';
+
 import { PopoverController } from '@ionic/angular';
 import { Component, OnInit } from '@angular/core';
 import { Auto } from 'src/app/Models/models';
@@ -32,20 +32,5 @@ export class MiautoComponent implements OnInit {
 
   ngOnInit() {}
 
-  async openMenu(ev: any){
-    console.log("abir");
-    const menu = await this.popoverController.create({
-      component: MenuuComponent,
-      translucent: false,
-      event: ev
-      
-    });
-    await menu.present();
-    
-  }
-  ira() {
-    console.log('ira');
-    
-  }
 
 }

@@ -18,7 +18,7 @@ newGrua: Grua = {
   Telefono:null
 }  
 
-private path = 'grua/'
+private path = 'Grua/'
 
   constructor(public firestoreService: FirestoreService, private firestore: AngularFirestore) { }
 
@@ -27,7 +27,7 @@ private path = 'grua/'
   }
 
   getGrua(){
-    this.firestoreService.getServiciosT<Grua>(this.path).subscribe(res => {
+    this.firestoreService.getCollection<Grua>(this.path).subscribe(res => {
       this.gruas = res;
       
     })

@@ -9,42 +9,41 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-card>
-  <ion-card-header>
-    Nombre:
-  </ion-card-header>
-  <ion-card-content>
-    Juan Ochoa
-  </ion-card-content>
-</ion-card>
+<ion-content *ngFor="let mecanicoAutomotriz of mecanicoAutomotrizs">
+  <ion-card>
+    <ion-card-header>
+      Nombre:
+    </ion-card-header>
+    <ion-card-content>
+      <ion-label> {{mecanicoAutomotriz.Nombre}} </ion-label>
+    </ion-card-content>
+  </ion-card>
 
-<ion-card>
-  <ion-card-header>
-  Precio minimo:
-  </ion-card-header>
-  <ion-card-content>
-    $ 5.00
-  </ion-card-content>
-</ion-card>
+  <ion-card>
+    <ion-card-header>
+      Precio Minimo:
+    </ion-card-header>
+    <ion-card-content>
+      <ion-label> {{mecanicoAutomotriz.PrecioMinimo}} </ion-label>
+    </ion-card-content>
+  </ion-card>
+  
+  <ion-card>
+    <ion-card-header>
+      Telefono:
+    </ion-card-header>
+    <ion-card-content>
+      <ion-label> {{mecanicoAutomotriz.Telefono}} </ion-label>
+    </ion-card-content>
+  </ion-card>
 
-<ion-card>
-  <ion-card-header>
-    Numero:
-  </ion-card-header>
-  <ion-card-content>
-    0987654321
-  </ion-card-content>
-</ion-card>
+  <ion-button [href]=" 'https://wa.me/593' + mecanicoAutomotriz.Telefono + '?text=Envia%20tu%20ubicacion%20:)'" target="blank">
+    Compartir Ubicacion actual <ion-icon name="logo-whatsapp"></ion-icon>
+    </ion-button>
+</ion-content> 
 
 <ion-content>
-  <ion-button [href]=" 'https://wa.me/593' + 995835806 + '?text=Envia%20tu%20ubicacion%20:)'" target="blank">
-  Compartir Ubicacion actual <ion-icon name="logo-whatsapp"></ion-icon>
+  <ion-button>
+    Solicitar servicio
   </ion-button>
- 
 </ion-content>
-
-<ion-item *ngFor="let mecanicoAutomotriz of mecanicoAutomotrizs">
-  <ion-label> {{mecanicoAutomotriz.Nombre}} </ion-label>
-  <ion-label> {{mecanicoAutomotriz.PrecioMinimo}} </ion-label>
-  <ion-label> {{mecanicoAutomotriz.Telefono}} </ion-label>
-</ion-item> 

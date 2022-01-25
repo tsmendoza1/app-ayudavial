@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Menu
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<br>
+<ion-menu-toggle>
+<ion-item [routerLink]="['/inicio']" routerLinkActive="router-link-active" >
+  Home
+</ion-item>
+</ion-menu-toggle>
+
+<ion-menu-toggle>
+<ion-item [routerLink]="['/login']" routerLinkActive="router-link-active" >
+  Log in
+</ion-item>
+</ion-menu-toggle>
+
+<ion-menu-toggle>
+<ion-item (click)="logout()" >
+  Log out
+</ion-item>
+</ion-menu-toggle>
+
+<ion-menu-toggle>
+<ion-item [routerLink]="['/servicios']" routerLinkActive="router-link-active" >
+  Servicios
+</ion-item>
+</ion-menu-toggle>
