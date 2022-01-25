@@ -2,7 +2,14 @@
   padding: 18px 50px 18px 50px;
   border-radius: 60px;
 }
-
+.imagen{
+  display: block;
+  margin-top: 3%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: -5%;
+  width: 30%;
+}
 .form {
   ion.item {
     border-radius: 5px;
@@ -14,15 +21,27 @@
 }
 .correo {
   margin-left: 1cm;
-  width: 470px;
-  border-bottom: 1px solid #ffffff;
+  width: 460px;
+  border-bottom: 2px solid #ffffffc4;
+  //border-top: 2px solid #ffffffc4;
+  //border-left: 2px solid #ffffffc4;
+  //border-right: 2px solid #ffffffc4;
 }
 .contraseña {
   margin-left: 1cm;
-  width: 470px;
-  border-bottom: 1px solid #ffffffc4;
+  width: 460px;
+  border-bottom: 2px solid #ffffffc4;
+  //border-top: 2px solid #ffffffc4;
+  //border-left: 2px solid #ffffffc4;
+  //border-right: 2px solid #ffffffc4;
 }
-
+.ingresa{
+  margin-top: 10%;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-bottom: 5%;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
 
 button{
  // background-color: powderblue;
@@ -45,7 +64,10 @@ button:active{
   //transition-duration: 0.2s;
   background-color: rgb(219, 219, 219);
 }
-
+.card{
+  color: #ffffff;
+  --background:rgba(168, 168, 168, 0.082); 
+}
 
 .olvidastetucontraseña {
   margin-top: 2%;

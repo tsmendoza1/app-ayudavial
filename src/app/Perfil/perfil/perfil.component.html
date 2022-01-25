@@ -15,16 +15,13 @@
       <buttoncarro class="botoncarro" slot="start" [routerLink]="['/miauto']">
         <ion-icon name="car-sport-outline"></ion-icon>
       </buttoncarro>
-
-
     </ion-toolbar>
 
     <ion-avatar class="avatarmiperfil">
       <img alt="Perfil" src="https://images.vexels.com/media/users/3/135244/isolated/preview/ee21f9d749b69b0a07603c2302083341-silueta-de-icono-plano-de-usuario.png">
     </ion-avatar>
   </ion-header>
-  <ion-list>
-    <div *ngFor="let cliente of clientes">
+      <h5  *ngFor="let cliente of clientes">
       <ion-item>
         <ion-label class="nombre">
           <ion-icon name="person-outline" slot="start"></ion-icon>
@@ -49,6 +46,5 @@
           AUTO: {{cliente.auto}}
         </ion-label>
       </ion-item>
-    </div>
-  </ion-list>
+  </h5>
 </ion-content>

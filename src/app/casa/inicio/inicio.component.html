@@ -7,12 +7,27 @@
   </ion-header>
 
   <ion-content class="bg-image" padding>
-      <img alt="asistenciavial" class="logo"
-        src='http://autoconectado.cabsegurosequinoccial.com/templates/yootheme/cache/home-funcion-09-10ba4b36.jpeg'>
-        <ion-input [(ngModel)]="credenciales.correo" class="correo" placeholder='Correo Electrónico'></ion-input>
-<h5>
+
+    <h5>
+      <ion-title>
+        <h3>
+          <ion-title>
+            <h4>
+              <ion-title></ion-title>
+            </h4>
+          </ion-title>
+        </h3>
+      </ion-title>
+    </h5>
+
+    <ion-card class="card">
+      <img class="imagen" 
+      src="https://www.coordinadora.com/wp-content/uploads/sidebar_usuario-corporativo.png">
+      <h1 class="ingresa"> INGRESA A TU CUENTA</h1>
+        <ion-input  name="person-outline" [(ngModel)]="credenciales.correo"  class="correo"  placeholder='Correo Electrónico' ><ion-icon name="person-sharp" style="font-size:24px;" class="persona"></ion-icon></ion-input>
+        <h5 >
 </h5>
-        <ion-input [(ngModel)]="credenciales.password" class="contraseña" placeholder='Contraseña' type='password'>
+        <ion-input [(ngModel)]="credenciales.password" class="contraseña" placeholder='Contraseña' type='password'><ion-icon name="lock-closed" style="font-size:24px;"   class="candado" ></ion-icon>
         </ion-input>
         
 
@@ -24,4 +39,16 @@
       <button  [routerLink]="['/login']">
         Registrarse
       </button>
+      <h5>
+        <ion-title>
+          <h3>
+            <ion-title>
+              <h4>
+                <ion-title></ion-title>
+              </h4>
+            </ion-title>
+          </h3>
+        </ion-title>
+      </h5>
+    </ion-card>
   </ion-content>
