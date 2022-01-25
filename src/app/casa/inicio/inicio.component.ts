@@ -13,7 +13,7 @@ import { LoadingController } from '@ionic/angular';
 export class InicioComponent implements OnInit {
 
   constructor(public loadingController: LoadingController, 
-    private firestore: FirestoreService, private auth: AuthService, private interaction:InteractionService) { }
+    private firestore: FirestoreService, private auth: AuthService, private interaction:InteractionService, private auhtfirebase:AngularFireAuth) { }
 
 
     credenciales = {
@@ -38,7 +38,7 @@ export class InicioComponent implements OnInit {
     }
   }
 
-    async presentLoading(ev:any) {
+  async presentLoading(ev:any) {
       const loading = await this.loadingController.create({
         cssClass: 'my-custom-class',
         message: 'Por favor, espere',
@@ -48,8 +48,10 @@ export class InicioComponent implements OnInit {
   
       await loading.present();
   
-    }
+  }
+  logout(){
+    this.auhtfirebase.signOut();
+  }
 
-
-  } 
+} 
 

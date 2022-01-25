@@ -1,3 +1,4 @@
+import { AuthService } from './../../Services/auth.service';
 import { InteractionService } from './../../Services/interaction.service';
 import { Cliente } from './../../Models/models';
 import { FirestoreService } from './../../Services/firestore.service';
@@ -18,7 +19,7 @@ nuevoUsuario: Cliente = {
   auto: "Hyundai Elantra"
 }
 
-  constructor(private database:  FirestoreService, private interaction: InteractionService) { }
+  constructor(private database:  FirestoreService, private interaction: InteractionService, private auth: AuthService) { }
 
   
   
@@ -37,6 +38,10 @@ nuevoUsuario: Cliente = {
       // this.interaction.closeloading();
         // this.interaction.presentToast("Registrado con éxito")
     // })
+  }
+
+  logout(){
+    this.auth.logout();
   }
 
 } 

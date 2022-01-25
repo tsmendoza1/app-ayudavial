@@ -1,4 +1,7 @@
+import { InteractionService } from './../Services/interaction.service';
+import { AuthService } from './../../../app-ayudavial/src/app/Services/auth.service';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-menu',
@@ -7,8 +10,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-  constructor() { }
+  constructor(private auth:AuthService, private interaction:InteractionService, private router:Router) { }
 
   ngOnInit() {}
 
+  logout(){
+    this.auth.logout();
+    this.interaction.presentToast('Sesion Finalizada')
+    this.router.navigate(['/inicio'])
+  }
 }

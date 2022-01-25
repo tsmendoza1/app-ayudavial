@@ -5,19 +5,27 @@
     </ion-title>
   </ion-toolbar>
 </ion-header>
-
-<ion-button [routerLink]="['/inicio']" routerLinkActive="router-link-active" >
+<br>
+<ion-menu-toggle>
+<ion-item [routerLink]="['/inicio']" routerLinkActive="router-link-active" >
   Home
-</ion-button>
-<br>
-<ion-button [routerLink]="['/login']" routerLinkActive="router-link-active" >
+</ion-item>
+</ion-menu-toggle>
+
+<ion-menu-toggle>
+<ion-item [routerLink]="['/login']" routerLinkActive="router-link-active" >
   Log in
-</ion-button>
-<br>
-<ion-button [routerLink]="['/login']" routerLinkActive="router-link-active" >
+</ion-item>
+</ion-menu-toggle>
+
+<ion-menu-toggle>
+<ion-item (click)="logout()" >
   Log out
-</ion-button>
-<br>
-<ion-button [routerLink]="['/servicios']" routerLinkActive="router-link-active" >
+</ion-item>
+</ion-menu-toggle>
+
+<ion-menu-toggle>
+<ion-item [routerLink]="['/servicios']" routerLinkActive="router-link-active" >
   Servicios
-</ion-button>
+</ion-item>
+</ion-menu-toggle>
