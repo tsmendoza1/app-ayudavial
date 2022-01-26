@@ -18,7 +18,7 @@
     </ion-title>
   </h5>
 
-  <ion-input class="cuadro" placeholder=''></ion-input>
+  <ion-input [(ngModel)]="datos.nombre" class="cuadro" placeholder=''></ion-input>
   <h5>
     <ion-title>
     </ion-title>
@@ -30,31 +30,20 @@
     <ion-title>
     </ion-title>
   </h5>
-  <ion-input class="cuadro" placeholder=''></ion-input>
+  <ion-input [(ngModel)]="datos.apellido" class="cuadro" placeholder=''></ion-input>
   <h5>
     <ion-title>
     </ion-title>
   </h5>
 </ion-card>
-<ion-card class="card">
-  <ion-input class="texto3">Ingrese tu número de celular</ion-input>
-  <h5>
-    <ion-title>
-    </ion-title>
-  </h5>
-  <ion-input class="cuadro" placeholder=''></ion-input>
-  <h5>
-    <ion-title>
-    </ion-title>
-  </h5>
-</ion-card> 
+
   <ion-card class="card">
   <ion-input class="texto4">Ingresa tu correo electrónico</ion-input>
   <h5>
     <ion-title>
     </ion-title>
   </h5>
-  <ion-input [(ngModel)]="nuevoUsuario.correo" class="cuadro" placeholder=''></ion-input>
+  <ion-input [(ngModel)]="datos.correo" class="cuadro" placeholder=''></ion-input>
   <h5>
     <ion-title>
     </ion-title>
@@ -66,9 +55,17 @@
     <ion-title>
     </ion-title>
   </h5>
-  <ion-input class="cuadro" placeholder='' type='password'></ion-input>
+  <ion-input [(ngModel)]="datos.password" class="cuadro" placeholder='' type='password'></ion-input>
   </ion-card>
   <br/>
-  <button class="btn1" (click)="crearNuevoUsuario()" >Siguiente </button>
+  <ion-card class="card">
+    <ion-input class="texto5">Modelo de auto</ion-input>
+    <h5>
+      <ion-title>
+      </ion-title>
+    </h5>
+    <ion-input [(ngModel)]="datos.auto" class="cuadro" placeholder=''></ion-input>
+    </ion-card>
+  <button class="btn1" (click)="registrarse()" >Registrarse </button>
   
 </ion-content>

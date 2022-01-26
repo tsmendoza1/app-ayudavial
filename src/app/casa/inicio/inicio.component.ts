@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { InteractionService } from './../../Services/interaction.service';
 import { AuthService } from './../../Services/auth.service';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
@@ -13,7 +14,7 @@ import { LoadingController } from '@ionic/angular';
 export class InicioComponent implements OnInit {
 
   constructor(public loadingController: LoadingController, 
-    private firestore: FirestoreService, private auth: AuthService, private interaction:InteractionService, private auhtfirebase:AngularFireAuth) { }
+    private firestore: FirestoreService, private auth: AuthService, private interaction:InteractionService, private auhtfirebase:AngularFireAuth, private router: Router) { }
 
 
     credenciales = {
@@ -34,7 +35,8 @@ export class InicioComponent implements OnInit {
    console.log("res -", res);
     if (res) {
       this.interaction.closeloading();
-      this.interaction.presentToast("ingresado con éxito ");
+      this.interaction.presentToast("ingresado con éxito ")
+      this.router.navigate(['/miperfil'])
     }
   }
 

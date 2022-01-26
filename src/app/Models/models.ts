@@ -3,6 +3,17 @@ export interface Cliente {
     apellido: string;
     correo: string;
     auto: string;
+    
+}
+
+export interface Useri {
+    nombre: string;
+    apellido: string;
+    correo:string;
+    password:string;
+    uid:string;
+    auto:string;
+    perfil:'visitante'|'admin';
 }
 
 export interface Auto {

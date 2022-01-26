@@ -10,7 +10,18 @@ import { Router } from '@angular/router';
 })
 export class MenuComponent implements OnInit {
 
-  constructor(private auth:AuthService, private interaction:InteractionService, private router:Router) { }
+  constructor(private auth:AuthService, private interaction:InteractionService, private router:Router) {
+    this.auth.stateUser().subscribe(res=>{
+      if (res){
+        console.log("Estas logueado");
+        
+      }else {
+
+        console.log("No estas logeado");
+        
+      }
+    })
+   }
 
   ngOnInit() {}
 
@@ -19,4 +30,5 @@ export class MenuComponent implements OnInit {
     this.interaction.presentToast('Sesion Finalizada')
     this.router.navigate(['/inicio'])
   }
+
 }
