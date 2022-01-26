@@ -20,7 +20,7 @@ export class MenuComponent implements OnInit {
         console.log("No estas logeado");
         
       }
-    })
+    }) 
    }
 
   ngOnInit() {}
