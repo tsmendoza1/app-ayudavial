@@ -1,9 +1,8 @@
-import { AuthService } from './../Services/auth.service';
 import { InteractionService } from './../Services/interaction.service';
+import { AuthService } from './../../../app-ayudavial/src/app/Services/auth.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { FirestoreService } from '../Services/firestore.service';
-
+import { FirestoreService } from 'app-ayudavial/src/app/Services/firestore.service';
 
 @Component({
   selector: 'app-menu',
@@ -14,34 +13,32 @@ export class MenuComponent implements OnInit {
 
   login: boolean = false;
 
- constructor(private auth:AuthService, private interaction:InteractionService, 
-  private router:Router, 
-  private firestore: FirestoreService) {
-   this.auth.stateUser().subscribe(res=>{
-     if (res){
-       console.log("Estas logueado");
+  constructor(private auth:AuthService, private interaction:InteractionService, private router:Router, private firestore: FirestoreService) {
+    this.auth.stateUser().subscribe(res=>{
+      if (res){
+        console.log("Estas logueado");
         this.login=true;
         
-     }else {
+      }else {
 
         console.log("No estas logeado");
-       this.login=false;
-     }
-   }) 
+        this.login=false;
+      }
+    }) 
    }
 
   ngOnInit() {}
 
   logout(){
-   this.auth.logout();
-   this.interaction.presentToast('Sesion Finalizada')
-   this.router.navigate(['/inicio'])
+    this.auth.logout();
+    this.interaction.presentToast('Sesion Finalizada')
+    this.router.navigate(['/inicio'])
   }
 
   getDatosUser(uid:String){
-   const path = "Usuarios";
-   const id = uid;
+    const path = "Usuarios";
+    const id = uid;
     
- }
+  }
 
 }
