@@ -48,6 +48,7 @@ import { LoginDosComponent } from './login-dos/login-dos.component';
     LoginDosComponent,
     BienvenidoComponent,
     MenuComponent
+   
   ],
 
   
