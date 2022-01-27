@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Query } from '@angular/core';
 import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/compat/firestore';
 import { pathToFileURL } from 'url';
 
@@ -15,11 +15,8 @@ export class FirestoreService {
   }
 
   createDoc1(data: any, path: string, id: string) {
-
     const collection = this.firestore.collection(path);
     return collection.doc(id).set(data);
-
-
 }
 
   getId (){
@@ -55,6 +52,9 @@ export class FirestoreService {
       console.log("res:",res);  });  
   }
 
- 
+  getDoc<tipo>(path:String, id:String){
+ //   return this.firestore.collection(path)
+  }
+
 }
 

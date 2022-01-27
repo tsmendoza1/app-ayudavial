@@ -6,26 +6,33 @@
   </ion-toolbar>
 </ion-header>
 <br>
-<ion-menu-toggle>
-<ion-item [routerLink]="['/inicio']" routerLinkActive="router-link-active" >
-  Home
-</ion-item>
-</ion-menu-toggle>
 
 <ion-menu-toggle>
-<ion-item [routerLink]="['/login']" routerLinkActive="router-link-active" >
+  <ion-item *ngIf="login" [routerLink]="['/mipefil']" routerLinkActive="router-link-active" >
+    Perfil
+  </ion-item>
+  </ion-menu-toggle> 
+
+<ion-menu-toggle>
+  <ion-item *ngIf="login" [routerLink]="['/servicios']" routerLinkActive="router-link-active" >
+    Servicios
+  </ion-item>
+  </ion-menu-toggle> 
+
+<ion-menu-toggle>
+  <ion-item *ngIf="login == false" [routerLink]="['/login']" routerLinkActive="router-link-active" >
+    Registrarse
+  </ion-item>
+  </ion-menu-toggle>
+
+<ion-menu-toggle>
+<ion-item *ngIf="login == false" [routerLink]="['/inicio']" routerLinkActive="router-link-active" >
   Log in
 </ion-item>
 </ion-menu-toggle>
 
 <ion-menu-toggle>
-<ion-item (click)="logout()" >
+<ion-item *ngIf="login" (click)="logout()" >
   Log out
 </ion-item>
 </ion-menu-toggle>
-
-<ion-menu-toggle>
-<ion-item [routerLink]="['/servicios']" routerLinkActive="router-link-active" >
-  Servicios
-</ion-item>
-</ion-menu-toggle> 

@@ -1,4 +1,4 @@
-import { Cliente } from './../../Models/models';
+import { Cliente, Useri } from './../../Models/models';
 import { Component, OnInit } from '@angular/core';
 import { PopoverController } from '@ionic/angular';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
@@ -20,6 +20,17 @@ export class PerfilComponent implements OnInit {
     },
     
   ]
+
+  usuarios: Useri=   { 
+    nombre: '',
+    apellido: '',
+    correo:'',
+    password: '',
+    uid:'',
+    auto:'',
+    perfil:'visitante'
+  }
+  
 
   constructor(public popoverController: PopoverController, private firestore: AngularFirestore) {
     this.clientes.forEach(cliente => {

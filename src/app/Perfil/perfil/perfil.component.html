@@ -7,11 +7,9 @@
         <ion-button [routerLink]="['/servicios']" routerLinkActive="router-link-active">
           <ion-icon name="call-outline"></ion-icon>
         </ion-button>
-        <ion-button [routerLink]="['/inicio']" routerLinkActive="router-link-active">
-          <ion-icon name="exit-outline"></ion-icon>
-        </ion-button>
       
       </ion-buttons>
+      <ion-menu-button slot = "start"></ion-menu-button>
       <buttoncarro class="botoncarro" slot="start" [routerLink]="['/miauto']">
         <ion-icon name="car-sport-outline"></ion-icon>
       </buttoncarro>
@@ -45,3 +43,4 @@
 
   </div>
 </ion-content>
+
