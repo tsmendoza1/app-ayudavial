@@ -1,8 +1,7 @@
 import { InteractionService } from './../Services/interaction.service';
-//import { AuthService } from './../../../app-ayudavial/src/app/Services/auth.service';
+import { AuthService } from './../../../app-ayudavial/src/app/Services/auth.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthService } from '../Services/auth.service';
 
 @Component({
   selector: 'app-menu',
