@@ -49,6 +49,8 @@
     </ion-title>
   </h5>
 </ion-card>
+
+
 <ion-card class="card">
   <ion-input class="texto5">Crea una contraseña</ion-input>
   <h5>
@@ -56,16 +58,23 @@
     </ion-title>
   </h5>
   <ion-input [(ngModel)]="datos.password" class="cuadro" placeholder='' type='password'></ion-input>
-  </ion-card>
-  <br/>
+  <h5>
+    <ion-title>
+    </ion-title>
+  </h5> 
+</ion-card>
   <ion-card class="card">
-    <ion-input class="texto5">Modelo de auto</ion-input>
+    <ion-input class="texto6">Modelo de auto</ion-input>
     <h5>
       <ion-title>
       </ion-title>
     </h5>
     <ion-input [(ngModel)]="datos.auto" class="cuadro" placeholder=''></ion-input>
-    </ion-card>
+    <h5>
+      <ion-title>
+      </ion-title>
+    </h5> 
+  </ion-card>
   <button class="btn1" (click)="registrarse()" >Registrarse </button>
   
 </ion-content>
