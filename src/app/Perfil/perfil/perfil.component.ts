@@ -21,7 +21,8 @@ export class PerfilComponent implements OnInit {
     
   ]
 
-  usuarios: Useri=   { 
+usuarios:Useri[]=[];
+  newusuario: Useri=   { 
     nombre: '',
     apellido: '',
     correo:'',
@@ -30,7 +31,8 @@ export class PerfilComponent implements OnInit {
     auto:'',
     perfil:'visitante'
   }
-  
+
+  private path = 'Usuarios/'
 
   constructor(public popoverController: PopoverController, private firestore: AngularFirestore) {
     this.clientes.forEach(cliente => {
