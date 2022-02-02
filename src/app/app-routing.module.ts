@@ -1,3 +1,5 @@
+import { PedidosComponent } from './pedidos/pedidos.component';
+import { MisPedidosComponent } from './mis-pedidos/mis-pedidos.component';
 
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { UbicacionComponent } from './Ubicacion/ubicacion/ubicacion.component';
@@ -37,7 +39,8 @@ const routes: Routes = [
   {path: 'grua',component:GruaComponent}, 
   {path: 'loginAuto',component:LoginDosComponent}, 
   {path: 'bienvenido',component:BienvenidoComponent}, 
-  
+  {path: 'mispedidos',component:MisPedidosComponent},
+  {path: 'pedidos',component:PedidosComponent},
 ];
 
 @NgModule({

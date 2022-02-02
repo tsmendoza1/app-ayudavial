@@ -1,4 +1,4 @@
-<ion-content class="bg-image">
+
   <ion-header class="ion-no-border">
     <ion-toolbar>
       <ion-title color="white">Mi Perfil</ion-title>
@@ -15,33 +15,29 @@
       </buttoncarro>
     </ion-toolbar>  
   </ion-header>
+
+  <ion-content class="bg-image">
+
+
     <ion-card class="card">
     <ion-avatar class="avatarmiperfil">
       <img alt="Perfil" src="https://rciminternet.com/wp-content/uploads/2019/04/usuario.png">
     </ion-avatar>
+    </ion-card>
+
+<ion-list *ngIf="usuario">
+  <ion-item>
+    <ion-label >
+  
+     {{usuario.nombre}}
+    </ion-label>
+  </ion-item>
 
 
-  <ion-label class="nombre">
-    <div  float-ce *ngFor="let cliente of clientes" >
-   {{cliente.nombre}} {{cliente.apellido}}
-    </div>
-  </ion-label>
 
-  <ion-label class="correo">
-    <div  float-ce *ngFor="let cliente of clientes" >
-    {{cliente.correo}}
-    </div>
-  </ion-label>
-</ion-card>
+</ion-list>
+    
 
-      <div  *ngFor="let cliente of clientes">
-
-        <ion-label class="auto">
-          <ion-icon name="car-outline" slot="start"></ion-icon>
-          AUTO: {{cliente.auto}}
-        </ion-label>
-
-  </div>
 
 </ion-content>
 
