@@ -3,8 +3,27 @@ export interface Cliente {
     apellido: string;
     correo: string;
     auto: string;
-    
 }
+
+export interface Pedido {
+    uid: string;
+    usuario: Useri;
+    servicios: ServicioPedido;
+    estado:EstadoPedido;
+    fecha: Date;
+}
+
+interface ServicioPedido {
+    servicio: Servicio;
+}
+
+export interface Servicio {
+    nombre:string;
+    id:string;
+    fecha:Date;
+}
+
+export type EstadoPedido = 'enviado'|'En camino'|'Entregado'|'En espera';
 
 export interface Useri {
     nombre: string;

@@ -24,4 +24,5 @@ export class AuthService {
   stateUser(){
     return this.authfirebase.authState
   }
+  
 }
