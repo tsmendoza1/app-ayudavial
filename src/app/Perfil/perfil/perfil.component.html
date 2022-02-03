@@ -1,14 +1,7 @@
 
-  <ion-header class="ion-no-border">
+  <ion-header class="ion-no-border" >
     <ion-toolbar>
       <ion-title color="white">Mi Perfil</ion-title>
-      <ion-buttons slot="end">
-
-        <ion-button [routerLink]="['/servicios']" routerLinkActive="router-link-active">
-          <ion-icon name="call-outline"></ion-icon>
-        </ion-button>
-      
-      </ion-buttons>
       <ion-menu-button slot = "start"></ion-menu-button>
       <buttoncarro class="botoncarro" slot="start" [routerLink]="['/miauto']">
         <ion-icon name="car-sport-outline"></ion-icon>
@@ -16,7 +9,7 @@
     </ion-toolbar>  
   </ion-header>
 
-  <ion-content class="bg-image">
+  <ion-content class="bg-image" *ngIf="usuario">
 
 
     <ion-card class="card">
@@ -24,20 +17,55 @@
       <img alt="Perfil" src="https://rciminternet.com/wp-content/uploads/2019/04/usuario.png">
     </ion-avatar>
     </ion-card>
-
-<ion-list *ngIf="usuario">
+<br><br><br>
   <ion-item>
-    <ion-label >
-  
-     {{usuario.nombre}}
-    </ion-label>
+  <ion-card>
+    <ion-card-header>
+      Nombre: 
+    </ion-card-header>
+    <ion-card-content>
+      {{usuario.nombre}}
+    </ion-card-content>
+  </ion-card>
   </ion-item>
-
-
-
-</ion-list>
-    
-
-
+  <ion-item>
+    <ion-card >
+      <ion-card-header>
+        Apellido: 
+      </ion-card-header>
+      <ion-card-content>
+        {{usuario.apellido}}
+      </ion-card-content>
+    </ion-card>
+    </ion-item>
+    <ion-item>
+      <ion-card>
+        <ion-card-header>
+          Correo: 
+        </ion-card-header>
+        <ion-card-content>
+          {{usuario.correo}}
+        </ion-card-content>
+      </ion-card>
+      </ion-item>
+      <ion-item>
+        <ion-card > 
+          <ion-card-header>
+            Auto: 
+          </ion-card-header>
+          <ion-card-content>
+            {{usuario.auto}}
+          </ion-card-content>
+        </ion-card>
+        </ion-item>
+        <ion-item>
+          <ion-card>
+            <ion-card-header>
+              Perfil: 
+            </ion-card-header>
+            <ion-card-content>
+              {{usuario.perfil}}
+            </ion-card-content>
+          </ion-card>
+          </ion-item>
 </ion-content>
-
