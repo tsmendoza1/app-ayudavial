@@ -36,13 +36,14 @@
       <ion-label> {{Grua.Telefono}} </ion-label>
     </ion-card-content>
   </ion-card>
-
-  <ion-button [href]=" 'https://wa.me/593' + Grua.Telefono + '?text=Envia%20tu%20ubicacion%20:)'" target="blank">
+<br><br>
+  <ion-button expand="full" [href]=" 'https://wa.me/593' + Grua.Telefono + '?text=Envia%20tu%20ubicacion%20:)'" target="blank">
     Compartir Ubicacion actual <ion-icon name="logo-whatsapp"></ion-icon>
     </ion-button>
-</ion-content> 
-<ion-content>
-  <ion-button>
-    Solicitar servicio
-  </ion-button>
+<br><br>
+    <ion-footer>
+      <button (click)="addPedido()">
+        Solicitar Servicio
+      </button>
+      </ion-footer>
 </ion-content>

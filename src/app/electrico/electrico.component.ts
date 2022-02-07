@@ -1,7 +1,8 @@
+import { PedidoService } from './../Services/pedido.service';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { FirestoreService } from './../Services/firestore.service';
-import { MecanicoAutomotriz, MecanicoElectrico } from './../Models/models';
-import { Component, OnInit } from '@angular/core';
+import { MecanicoAutomotriz, MecanicoElectrico, Servicio } from './../Models/models';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-electrico',
@@ -9,6 +10,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./electrico.component.scss'],
 })
 export class ElectricoComponent implements OnInit {
+
+  @Input() servicio:Servicio;
 
   mecanicoElectricos: MecanicoElectrico[]=[];
 
@@ -20,7 +23,7 @@ export class ElectricoComponent implements OnInit {
 
   private path = 'Mecanico electrico/'
 
-  constructor(public firestoreService: FirestoreService, private firestore: AngularFirestore) { }
+  constructor(public firestoreService: FirestoreService, private firestore: AngularFirestore, public pedidoService:PedidoService) { }
 
   ngOnInit() {
     this.getElectrico();
@@ -32,5 +35,9 @@ export class ElectricoComponent implements OnInit {
       
     })
   }
+
+  addPedido(){
+    this.pedidoService.addServicio(this.servicio);
+   }
 
 }

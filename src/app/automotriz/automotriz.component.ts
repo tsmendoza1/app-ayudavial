@@ -37,7 +37,7 @@ export class AutomotrizComponent implements OnInit {
   }
 
   addPedido(){
-   this.pedidoService.addServicio(this.servicio)
+   this.pedidoService.addServicio(this.servicio);
   }
 
 }

@@ -1,7 +1,8 @@
+import { PedidoService } from './../Services/pedido.service';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { FirestoreService } from './../Services/firestore.service';
-import { MecanicoGeneral } from './../Models/models';
-import { Component, OnInit } from '@angular/core';
+import { MecanicoGeneral, Servicio } from './../Models/models';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-general',
@@ -9,6 +10,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./general.component.scss'],
 })
 export class GeneralComponent implements OnInit {
+
+  @Input() servicio:Servicio;
 
   mecanicoGenerals: MecanicoGeneral []=[];
 
@@ -20,7 +23,7 @@ export class GeneralComponent implements OnInit {
   
   private path = 'Mecanico general/'
 
-  constructor(public firestoreService: FirestoreService, private firestore: AngularFirestore) { }
+  constructor(public firestoreService: FirestoreService, private firestore: AngularFirestore, public pedidoService:PedidoService) { }
 
   ngOnInit() {
     this.getGeneral();
@@ -32,5 +35,9 @@ export class GeneralComponent implements OnInit {
       
     })
   }
+
+  addPedido(){
+    this.pedidoService.addServicio(this.servicio);
+   }
 
 }

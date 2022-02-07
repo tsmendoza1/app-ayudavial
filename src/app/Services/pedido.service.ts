@@ -1,7 +1,11 @@
+import { Pedido, Useri, Servicio, ServicioPedido } from './../Models/models';
+import { Router } from '@angular/router';
 import { AuthService } from './auth.service';
-import { Pedido, Servicio, Useri } from './../Models/models';
 import { Injectable } from '@angular/core';
-import { FirestoreService } from 'app-ayudavial/src/app/Services/firestore.service';
+import { FirestoreService } from './firestore.service';
+import { Observable, Subject } from 'rxjs';
+
+
 
 @Injectable({
   providedIn: 'root'
@@ -9,10 +13,12 @@ import { FirestoreService } from 'app-ayudavial/src/app/Services/firestore.servi
 export class PedidoService {
 
   private pedido:Pedido;
+  pedido$= new Subject<Pedido>();
   path = '/pedido';
   uid='';
+  usuario:Useri;
 
-  constructor(public auth:AuthService, public firestore:FirestoreService) {
+  constructor(public auth:AuthService, public firestore:FirestoreService, public router: Router) {
     this.auth.stateUser().subscribe(res=>{
       if (res){
         this.uid= res.uid;
@@ -24,50 +30,72 @@ export class PedidoService {
     }) 
    }
 
-  loadPedido(){
-  //  const path ='Usuarios/'+this.uid+'/'+this.path;
-   // this.firestore.getDoc<Pedido>(this.path, this.uid).subscribe(res =>{
-    //  console.log(res);
-     // if (res){
-      //  this.pedido=res;
-      //}else{
-       // this.loadUsuario();
-        
-     // }
-    //});
+  initPedido(){
+    this.pedido =  {
+    uid: this.uid,
+    usuario: this.usuario,
+    servicios: [],
+    estado:'enviado',
+    fecha: new Date(),
+    };
+    this.pedido$.next(this.pedido);
   }
 
-  initPedido(){
-   
-  }
+  loadPedido(){
+    const path ='Usuarios/'+this.uid+this.path;
+    this.firestore.getDoc<Pedido>(path, this.uid).subscribe(res =>{
+      console.log('En loadPedido',res);
+      if (res){
+        this.pedido=res;
+        this.pedido$.next(this.pedido);
+      }else{
+        this.initPedido();
+         
+      }
+    });
+   }
 
   loadUsuario(){
-      const path = 'Usuarios';
-    //  this.firestore.getDoc<Useri>(this.path, this.uid).subscribe(res =>{
-      //  console.log('datos ->', res);
-        //this.initPedido();
-      //})
-      
-    
+     const path = 'Usuarios';
+     this.firestore.getDoc<Useri>(path, this.uid).subscribe(res =>{
+       this.usuario=res;
+       this.loadPedido();
+      })
   }
 
-  getPedido(){
-    return this.pedido;
+  getPedido():Observable<Pedido>{
+   return this.pedido$.asObservable();
   }
 
   addServicio(servicio:Servicio){
-
+    if(this.uid.length){
+      const item = this.pedido.servicios.find(servicioPedido =>{
+        return (servicioPedido.servicio.id === servicio.id)
+      });
+      if (item){
+        const add : ServicioPedido = {
+          servicio: servicio,
+        };
+        this.pedido.servicios.push(add)
+      }
+    }else{
+      this.router.navigate(['/login']);
+      return;
+    }
+    console.log('En add pedido->', this.pedido);
+    const path ='Usuarios/'+this.uid+this.path;
+    this.firestore.createDoc1(this.pedido, path, this.pedido.uid).then(()=>{  
+      console.log('añadido con exito');
+      
+    })
   }
 
   removePedido(servicio:Servicio){
-
   }
 
   realizarPedido(){
-
   }
 
   clearPedido(){
-
   }
 }

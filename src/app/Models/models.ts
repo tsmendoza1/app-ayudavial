@@ -5,26 +5,6 @@ export interface Cliente {
     auto: string;
 }
 
-export interface Pedido {
-    uid: string;
-    usuario: Useri;
-    servicios: ServicioPedido;
-    estado:EstadoPedido;
-    fecha: Date;
-}
-
-interface ServicioPedido {
-    servicio: Servicio;
-}
-
-export interface Servicio {
-    nombre:string;
-    id:string;
-    fecha:Date;
-}
-
-export type EstadoPedido = 'enviado'|'En camino'|'Entregado'|'En espera';
-
 export interface Useri {
     nombre: string;
     apellido: string;
@@ -34,6 +14,26 @@ export interface Useri {
     auto:string;
     perfil:'visitante'|'admin';
 }
+
+export interface Servicio {
+    nombre:string;
+    id:string;
+    fecha:Date;
+}
+
+export interface ServicioPedido {
+    servicio: Servicio;
+}
+
+export interface Pedido {
+    uid: string;
+    usuario: Useri;
+    servicios: ServicioPedido[];
+    estado:EstadoPedido;
+    fecha: Date;
+}
+
+export type EstadoPedido = 'enviado'|'En camino'|'Entregado'|'En espera';
 
 export interface Auto {
     color: string;

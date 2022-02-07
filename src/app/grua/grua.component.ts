@@ -1,7 +1,8 @@
-import { Grua } from './../Models/models';
+import { PedidoService } from './../Services/pedido.service';
+import { Grua, Servicio } from './../Models/models';
 import { FirestoreService } from './../Services/firestore.service';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-grua',
@@ -9,6 +10,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./grua.component.scss'],
 })
 export class GruaComponent implements OnInit {
+
+  @Input() servicio:Servicio;
 
   gruas: Grua[]=[];
 
@@ -20,7 +23,7 @@ newGrua: Grua = {
 
 private path = 'Grua/'
 
-  constructor(public firestoreService: FirestoreService, private firestore: AngularFirestore) { }
+  constructor(public firestoreService: FirestoreService, private firestore: AngularFirestore, public pedidoService:PedidoService) { }
 
   ngOnInit() {
     this.getGrua();
@@ -32,6 +35,10 @@ private path = 'Grua/'
       
     })
   }
+
+  addPedido(){
+    this.pedidoService.addServicio(this.servicio);
+   }
  
 }
 

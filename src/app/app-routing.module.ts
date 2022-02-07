@@ -1,3 +1,4 @@
+import { ItempedidoComponent } from './itempedido/itempedido.component';
 import { PedidosComponent } from './pedidos/pedidos.component';
 import { MisPedidosComponent } from './mis-pedidos/mis-pedidos.component';
 
@@ -26,7 +27,7 @@ import { BienvenidoComponent } from './Bienvenido/bienvenido/bienvenido.componen
 
 const routes: Routes = [
   {path: 'inicio',component:InicioComponent},
-  {path: '',component:InicioComponent},
+  {path: '',component:BienvenidoComponent},
   {path: 'miauto',component:MiautoComponent},
   {path: 'mensajes',component:MensajesComponent},
   {path: 'miperfil',component:PerfilComponent,},  //canActivate:[AngularFireAuthGuard] 
@@ -41,6 +42,7 @@ const routes: Routes = [
   {path: 'bienvenido',component:BienvenidoComponent}, 
   {path: 'mispedidos',component:MisPedidosComponent},
   {path: 'pedidos',component:PedidosComponent},
+  {path: 'itempedidos',component:ItempedidoComponent},
 ];
 
 @NgModule({

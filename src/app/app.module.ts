@@ -1,3 +1,4 @@
+import { ItempedidoComponent } from './itempedido/itempedido.component';
 import { PedidosComponent } from './pedidos/pedidos.component';
 import { MisPedidosComponent } from './mis-pedidos/mis-pedidos.component';
 import { MenuComponent } from './menu/menu.component';
@@ -51,7 +52,8 @@ import { LoginDosComponent } from './login-dos/login-dos.component';
     BienvenidoComponent,
     MenuComponent,
     MisPedidosComponent,
-    PedidosComponent
+    PedidosComponent,
+    ItempedidoComponent
   ],
 
   
