@@ -2,9 +2,12 @@ ion-content.bg-image{
   --background: url(https://static.vecteezy.com/system/resources/previews/002/901/618/non_2x/black-texture-background-free-photo.jpg) 0 0/100% 100% ;
 }
 .nombre {
-  font-size: 160%;
-margin-left: 10%;
-margin-right: 80%;
+  margin-top: 5%;
+ margin-bottom: 5%;
+
+font-size: 160%;
+margin-left: 15%;
+margin-right: 18%;
 text-align: center
 }
 /*.apellido {
@@ -16,6 +19,12 @@ color: c00;
 .card{
   color: #ffffff;
   --background:rgba(168, 168, 168, 0.082); 
+}
+.card2{
+  font-size:180%;
+  color: #f3f0f0;
+  --background:rgba(44, 99, 150, 0.322); 
+
 }
 .correo {
   color: #aaa9a9;
@@ -36,7 +45,7 @@ margin-right: 10%;
 }
 .avatarmiperfil {
   margin-top: 5%;
-  margin-left: 33%;
+  margin: 0 auto;
   width: 30%;
   height: 0%;
 }
@@ -47,4 +56,47 @@ margin-right: 10%;
 .card{
   color: #ffffff;
   --background:rgba(168, 168, 168, 0.082); 
+}
+.div{
+  //margin-top: 50%;
+  column-width: 100px;
+}
+.div1{
+  margin-top: 3%;
+  margin-left: 5%;
+  text-align:start
+}
+.div2{
+  margin-top: 5%;
+  margin-bottom: 5%;
+  margin-left: 5%;
+  text-align: start
+  
+}
+.div3{
+  margin-bottom:3%;
+  margin-left: 5%;
+  text-align: start
+
+}
+
+.ribbon {
+  margin: 0 auto;
+  width: 0px;
+  height: 60px;
+  border-left: 50px solid #4fa6d9;
+  border-right: 50px solid #4fa6d9;
+  border-bottom: 35px solid transparent;
+}
+.triangulo-tricolor {
+  margin: 0 auto;
+  width:0;
+  height:0;
+  border-right: 50px solid #ffffff;
+  border-top: 50px solid #428bca;
+  border-left: 50px solid #4b4949;
+  border-bottom: 50px solid #2d415f;
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
+  border-radius: 100%; 
 }

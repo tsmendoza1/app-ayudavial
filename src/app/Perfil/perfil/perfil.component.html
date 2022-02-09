@@ -7,60 +7,32 @@
   </ion-header>
 
   <ion-content class="bg-image" *ngIf="usuario">
+     
     <ion-card class="card">
     <ion-avatar class="avatarmiperfil">
       <img alt="Perfil" src="https://rciminternet.com/wp-content/uploads/2019/04/usuario.png">
+
     </ion-avatar>
+    <div class="nombre"> {{usuario.nombre}} {{usuario.apellido}}</div>
+
     </ion-card>
-<br><br><br>
-  <ion-item>
-  <ion-card>
-    <ion-card-header>
-      Nombre: 
-    </ion-card-header>
-    <ion-card-content>
-      {{usuario.nombre}}
-    </ion-card-content>
-  </ion-card>
-  </ion-item>
-  <ion-item>
-    <ion-card >
-      <ion-card-header>
-        Apellido: 
-      </ion-card-header>
-      <ion-card-content>
-        {{usuario.apellido}}
-      </ion-card-content>
-    </ion-card>
-    </ion-item>
-    <ion-item>
-      <ion-card>
-        <ion-card-header>
-          Correo: 
-        </ion-card-header>
-        <ion-card-content>
-          {{usuario.correo}}
-        </ion-card-content>
-      </ion-card>
-      </ion-item>
-      <ion-item>
-        <ion-card > 
-          <ion-card-header>
-            Auto: 
-          </ion-card-header>
-          <ion-card-content>
-            {{usuario.auto}}
-          </ion-card-content>
+    <div class="ribbon" >
+
+    </div>
+
+<ion-card  class="card2">
+
+  <div   class="div1" ><ion-icon name="mail"></ion-icon>
+  {{usuario.correo}}
+  </div>
+  <div  class="div2"><ion-icon name="car-sport-sharp"></ion-icon>
+   {{usuario.auto}}
+  </div >
+  <div class="div3" ><ion-icon name="happy"></ion-icon>
+   {{usuario.perfil}}
+  </div>
+
         </ion-card>
-        </ion-item>
-        <ion-item>
-          <ion-card>
-            <ion-card-header>
-              Perfil: 
-            </ion-card-header>
-            <ion-card-content>
-              {{usuario.perfil}}
-            </ion-card-content>
-          </ion-card>
-          </ion-item>
+        <div class="triangulo-tricolor">
+        </div>
 </ion-content>
