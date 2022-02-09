@@ -27,12 +27,11 @@ export class MenuComponent implements OnInit{
     private firestore: FirestoreService ) {
     this.auth.stateUser().subscribe(res=>{
       if (res){
-        console.log("Estas logueado");
+       // console.log("Estas logueado");
         this.login = true;
         this.getDatosUser(res.uid)
       }else {
-
-        console.log("No estas logeado");
+        //console.log("No estas logeado");
         this.login= false;
       }
     }) 
@@ -54,7 +53,7 @@ export class MenuComponent implements OnInit{
     const path = 'Usuarios';
     const id = uid;
     this.firestore.getDoc<Useri>(path, id).subscribe(res =>{
-      console.log('datos ->', res);
+     // console.log('datos ->', res);
       if (res){
         this.rol = res.perfil
       }
