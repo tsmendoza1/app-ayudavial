@@ -1,12 +1,17 @@
-
+<ion-content class="bg-image" *ngIf="usuario">
   <ion-header class="ion-no-border" >
-    <ion-toolbar>
+    
+    <ion-toolbar class="menu">
+      
       <ion-title color="white">Mi Perfil</ion-title>
+      
       <ion-menu-button slot = "start"></ion-menu-button>
+
     </ion-toolbar>  
+    
   </ion-header>
 
-  <ion-content class="bg-image" *ngIf="usuario">
+
      
     <ion-card class="card">
     <ion-avatar class="avatarmiperfil">
