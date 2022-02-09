@@ -1,3 +1,5 @@
+import { Useri } from './../Models/models';
+import { FirestoreService } from './../Services/firestore.service';
 import { LoginComponent } from './../Login/login/login.component';
 import { InteractionService } from './../Services/interaction.service';
 import { AuthService } from './../../../app-ayudavial/src/app/Services/auth.service';
@@ -12,12 +14,18 @@ import { Router } from '@angular/router';
 export class MenuComponent implements OnInit {
 
   login:boolean= false;
+  rol:'visitante'|'admin'= null;
 
-  constructor(private auth:AuthService, private interaction:InteractionService, private router:Router) {
+  constructor(
+    private auth:AuthService, 
+    private interaction:InteractionService, 
+    private router:Router,
+    private firestore: FirestoreService ) {
     this.auth.stateUser().subscribe(res=>{
       if (res){
         console.log("Estas logueado");
         this.login = true;
+        this.getDatosUser(res.uid)
       }else {
 
         console.log("No estas logeado");
@@ -35,8 +43,19 @@ export class MenuComponent implements OnInit {
   }
 
   Login(){
-    
+    this.login= true;
   }
 
+  getDatosUser(uid:string){
+    const path = 'Usuarios';
+    const id = uid;
+    this.firestore.getDoc<Useri>(path, id).subscribe(res =>{
+      console.log('datos ->', res);
+      if (res){
+        this.rol = res.perfil
+      }
+    })
+    
+  }
 
 }
