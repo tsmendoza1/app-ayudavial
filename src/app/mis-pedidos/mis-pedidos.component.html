@@ -7,10 +7,10 @@
 </ion-header>
 
 <ion-content>
-  <div *ngFor="let servicio of pedido.servicios">
-  <app-itempedido>  [servicioPedido]="servicio"</app-itempedido>
-  </div>  
-<ion-footer>
+  <ion-item>
+    <ion-label>
+      {{pedido.estado}}
+    </ion-label>
+  </ion-item>
 
-</ion-footer>
 </ion-content>

@@ -17,19 +17,13 @@ export class FirestoreService {
   createDoc1(data: any, path: string, id: string) {
     const collection = this.firestore.collection(path);
     return collection.doc(id).set(data);
-}
+  }
 
   getId (){
-    return this.firestore.createId();
+   return this.firestore.createId();
   }
 
-
-  createDoc() {
-    this.firestore.collection('Clientes')
-  }
-
-
-  getCollection <tipo>(path:string){
+ getCollection <tipo>(path:string){
 
     const collection =this.database.collection<tipo>(path);
     return collection.valueChanges();
@@ -54,6 +48,10 @@ export class FirestoreService {
 
   getDoc<tipo>(path:string, id:string){
    return this.firestore.collection(path).doc<tipo>(id).valueChanges()
+  }
+
+  updateDoc(path: string, id: string, data: any) {
+    return  this.firestore.collection(path).doc(id).update(data);
   }
 
 }

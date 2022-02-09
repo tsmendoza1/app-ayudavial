@@ -12,12 +12,7 @@ import { PopoverController } from '@ionic/angular';
 
 export class PerfilComponent implements OnInit {
   
-
-
-
 usuario:Useri;
-
-
 
   constructor(public popoverController: PopoverController, private firestore: FirestoreService,
               private auth:AuthService) {
@@ -27,19 +22,12 @@ usuario:Useri;
         console.log("Estas logueado");
         this.getDatosUser(res.uid)
       }else {
-
         console.log("No estas logeado");
-
       }
     }) 
-
   }
 
   ngOnInit() {}
- 
-
-
-
 
   getDatosUser(uid:string){
     const path = 'Usuarios';
@@ -52,6 +40,4 @@ usuario:Useri;
     })
     
   }
-
-
 }

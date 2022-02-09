@@ -1,7 +1,5 @@
-import { ItempedidoComponent } from './itempedido/itempedido.component';
 import { PedidosComponent } from './pedidos/pedidos.component';
 import { MisPedidosComponent } from './mis-pedidos/mis-pedidos.component';
-
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { UbicacionComponent } from './Ubicacion/ubicacion/ubicacion.component';
 import { LoginComponent } from './Login/login/login.component';
@@ -42,7 +40,6 @@ const routes: Routes = [
   {path: 'bienvenido',component:BienvenidoComponent}, 
   {path: 'mispedidos',component:MisPedidosComponent},
   {path: 'pedidos',component:PedidosComponent},
-  {path: 'itempedidos',component:ItempedidoComponent},
 ];
 
 @NgModule({

@@ -9,6 +9,7 @@ export interface Useri {
     nombre: string;
     apellido: string;
     correo:string;
+    celular?: number;
     password:string;
     uid:string;
     auto:string;
@@ -16,19 +17,17 @@ export interface Useri {
 }
 
 export interface Servicio {
-    nombre:string;
-    id:string;
-    fecha:Date;
+    Nombre: string;
+    PrecioMinimo: string;
+    Telefono: number;
 }
 
-export interface ServicioPedido {
-    servicio: Servicio;
-}
+
 
 export interface Pedido {
     uid: string;
     usuario: Useri;
-    servicios: ServicioPedido[];
+    servicio: Servicio;
     estado:EstadoPedido;
     fecha: Date;
 }

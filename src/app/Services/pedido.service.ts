@@ -1,11 +1,9 @@
-import { Pedido, Useri, Servicio, ServicioPedido } from './../Models/models';
+import { Pedido, Useri, Servicio} from './../Models/models';
 import { Router } from '@angular/router';
 import { AuthService } from './auth.service';
 import { Injectable } from '@angular/core';
 import { FirestoreService } from './firestore.service';
 import { Observable, Subject } from 'rxjs';
-
-
 
 @Injectable({
   providedIn: 'root'
@@ -25,34 +23,33 @@ export class PedidoService {
         this.loadPedido();
       }else {
         console.log("No estas logeado");
-
       }
     }) 
    }
 
   initPedido(){
-    this.pedido =  {
+  /*  this.pedido =  {
     uid: this.uid,
     usuario: this.usuario,
-    servicios: [],
-    estado:'enviado',
+    servicio: [],
+    estado:'En espera',
     fecha: new Date(),
     };
     this.pedido$.next(this.pedido);
+    */
   }
 
   loadPedido(){
-    const path ='Usuarios/'+this.uid+this.path;
+   /* const path ='Usuarios/'+this.uid+this.path;
     this.firestore.getDoc<Pedido>(path, this.uid).subscribe(res =>{
-      console.log('En loadPedido',res);
+    //  console.log('En loadPedido',res);
       if (res){
         this.pedido=res;
         this.pedido$.next(this.pedido);
       }else{
         this.initPedido();
-         
       }
-    });
+    });*/
    }
 
   loadUsuario(){
@@ -68,15 +65,15 @@ export class PedidoService {
   }
 
   addServicio(servicio:Servicio){
-    if(this.uid.length){
-      const item = this.pedido.servicios.find(servicioPedido =>{
+  /*  if(this.uid.length){
+      const item = this.pedido.servicio.find(servicioPedido =>{
         return (servicioPedido.servicio.id === servicio.id)
       });
       if (item){
         const add : ServicioPedido = {
           servicio: servicio,
         };
-        this.pedido.servicios.push(add)
+        this.pedido.servicio.push(add)
       }
     }else{
       this.router.navigate(['/login']);
@@ -87,7 +84,7 @@ export class PedidoService {
     this.firestore.createDoc1(this.pedido, path, this.pedido.uid).then(()=>{  
       console.log('añadido con exito');
       
-    })
+    })*/
   }
 
   removePedido(servicio:Servicio){

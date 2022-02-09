@@ -9,43 +9,31 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content *ngFor="let mecanicoAutomotriz of mecanicoAutomotrizs">
-  <ion-card>
-    <ion-card-header>
-      Nombre:
-    </ion-card-header>
-    <ion-card-content>
-      <ion-label> {{mecanicoAutomotriz.Nombre}} </ion-label>
-    </ion-card-content>
-  </ion-card>
+<ion-content>
 
-  <ion-card>
+  <ion-card  *ngFor="let mecanicoAutomotriz of mecanicoAutomotrizs">
     <ion-card-header>
-      Precio Minimo:
+      Mecanico Automotriz
     </ion-card-header>
     <ion-card-content>
-      <ion-label> {{mecanicoAutomotriz.PrecioMinimo}} </ion-label>
+      <label>Nombre:</label><br>
+      <ion-label> {{mecanicoAutomotriz.Nombre}} </ion-label><br>
+      <label>Precio Minimo:</label><br>
+      <ion-label> {{mecanicoAutomotriz.PrecioMinimo}} </ion-label><br>
+      <label>Telefono:</label><br>
+      <ion-label> {{mecanicoAutomotriz.Telefono}} </ion-label><br>
+      <ion-button expand="full" class="button" [href]=" 'https://wa.me/593' + mecanicoAutomotriz.Telefono + '?text=Envia%20tu%20ubicacion%20:)'" target="blank">
+       Whatsapp <ion-icon name="logo-whatsapp"></ion-icon>
+        </ion-button><br>
+        <button (click)="solicitarServicio(mecanicoAutomotriz)">
+          Solicitar Servicio
+        </button>
     </ion-card-content>
   </ion-card>
-  
-  <ion-card>
-    <ion-card-header>
-      Telefono:
-    </ion-card-header>
-    <ion-card-content>
-      <ion-label> {{mecanicoAutomotriz.Telefono}} </ion-label>
-    </ion-card-content>
-  </ion-card>
-<br><br>
-  <ion-button expand="full" class="button" [href]=" 'https://wa.me/593' + mecanicoAutomotriz.Telefono + '?text=Envia%20tu%20ubicacion%20:)'" target="blank">
-    Compartir Ubicacion actual <ion-icon name="logo-whatsapp"></ion-icon>
-    </ion-button>
-<br>
-<br>
-    <ion-footer>
-      <button (click)="addPedido()">
-        Solicitar Servicio
-      </button>
-      </ion-footer>
- 
 </ion-content>
+<ion-footer>
+  <label>
+    
+  </label>
+</ion-footer>
+ 
