@@ -1,8 +1,7 @@
+import { AuthService } from './../Services/auth.service';
 import { Useri } from './../Models/models';
 import { FirestoreService } from './../Services/firestore.service';
-import { LoginComponent } from './../Login/login/login.component';
 import { InteractionService } from './../Services/interaction.service';
-import { AuthService } from './../../../app-ayudavial/src/app/Services/auth.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 

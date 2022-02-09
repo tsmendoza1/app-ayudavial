@@ -1,7 +1,8 @@
+
 import { PedidoService } from './../Services/pedido.service';
 import { Pedido } from './../Models/models';
-import { FirestoreService } from 'app-ayudavial/src/app/Services/firestore.service';
 import { Component, OnInit } from '@angular/core';
+import { FirestoreService } from '../Services/firestore.service';
 
 @Component({
   selector: 'app-mis-pedidos',
