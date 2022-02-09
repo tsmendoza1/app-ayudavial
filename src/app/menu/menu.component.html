@@ -26,13 +26,13 @@
   </ion-menu-toggle>
 
 <ion-menu-toggle>
-    <ion-item *ngIf="rol == 'visitante'" [routerLink]="['/mispedidos']" routerLinkActive="router-link-active" >
+    <ion-item *ngIf="rol == 'visitante', login" [routerLink]="['/mispedidos']" routerLinkActive="router-link-active" >
       <ion-icon name="pencil-outline"></ion-icon>  Mis pedidos
     </ion-item>
 </ion-menu-toggle>
   
 <ion-menu-toggle>
-      <ion-item *ngIf="rol == 'admin'" [routerLink]="['/pedidos']" routerLinkActive="router-link-active" >
+      <ion-item *ngIf="rol == 'admin', login" [routerLink]="['/pedidos']" routerLinkActive="router-link-active" >
         <ion-icon name="pencil-outline"></ion-icon>  Pedidos
       </ion-item>
 </ion-menu-toggle>
