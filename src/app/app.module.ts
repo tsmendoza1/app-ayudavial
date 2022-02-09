@@ -1,4 +1,3 @@
-import { PedidosComponent } from './pedidos/pedidos.component';
 import { MisPedidosComponent } from './mis-pedidos/mis-pedidos.component';
 import { MenuComponent } from './menu/menu.component';
 import { BienvenidoComponent } from './Bienvenido/bienvenido/bienvenido.component';
@@ -51,7 +50,6 @@ import { LoginDosComponent } from './login-dos/login-dos.component';
     BienvenidoComponent,
     MenuComponent,
     MisPedidosComponent,
-    PedidosComponent,
     
   ],
 

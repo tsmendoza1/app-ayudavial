@@ -93,20 +93,6 @@ export class AutomotrizComponent implements OnInit {
     // el puede ve su estado y puede ver el numero de whataao del mecanico o del que sea  
   }
 
-  loadSolicitudes() {
-    const path = 'Solicitudes/';
-    this.firestoreService.getCollection<Pedido>(path).subscribe(res=>{
-      console.log('loadSolicitudes', res);
-      if (res){
-        this.solicitudes = res;
-      }
-    });
-   //  eso guardo en una variabe de tipo : pedido[]  
-   // boton de hwtasapp del   usaurio que solicito el servicio
-  }
-
-
-
   loadUser(uid:string) {
     const path = 'Usuarios';
     const id = uid;

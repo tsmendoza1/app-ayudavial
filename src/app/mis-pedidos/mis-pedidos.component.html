@@ -1,5 +1,6 @@
 <ion-header>
   <ion-toolbar>
+    <ion-menu-button slot="start"></ion-menu-button>
     <ion-title>
       Mis pedidos
     </ion-title>
@@ -7,9 +8,24 @@
 </ion-header>
 
 <ion-content>
-  <ion-item>
-    <ion-label>
-    </ion-label>
+  <ion-item *ngFor="let pedido of solicitud">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Solicitud realizada</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        Nombre usuario <br>
+        {{pedido.usuario.nombre}} <br>
+        Nombre mecanico <br>
+        {{pedido.servicio.Nombre}} <br>
+        Estado pedido  <br>
+       {{pedido.estado}} <br>
+      </ion-card-content>
+    </ion-card>
   </ion-item>
 
+  <br><br><br>
+  <button>
+    Eliminar todo
+  </button>
 </ion-content>

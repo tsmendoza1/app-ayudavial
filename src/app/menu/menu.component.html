@@ -34,27 +34,22 @@ Ayuda Vial
 </ion-menu-toggle>
 
   <ion-menu-toggle>
-    <ion-item  class="menuboton" *ngIf="rol == 'visitante'" [routerLink]="['/mispedidos']" routerLinkActive="router-link-active" >
+    <ion-item  class="menuboton" *ngIf="rol == 'admin'" [routerLink]="['/mispedidos']" routerLinkActive="router-link-active" >
       <ion-icon name="pencil-outline"></ion-icon>  Mis pedidos
     </ion-item>
   </ion-menu-toggle>
-  
+
     <ion-menu-toggle>
-      <ion-item class="menuboton" *ngIf="rol == 'admin'" [routerLink]="['/pedidos']" routerLinkActive="router-link-active" >
-        <ion-icon name="pencil-outline"></ion-icon>  Pedidos
-      </ion-item>
-    </ion-menu-toggle>
-
-
 <ion-item class="menuboton" *ngIf="login == false" [routerLink]="['/inicio']" routerLinkActive="router-link-active" >
   <ion-icon name="log-in-outline"></ion-icon>  Log in
 </ion-item>
+</ion-menu-toggle>
 
-
-
+<ion-menu-toggle>
 <ion-item class="menuboton" *ngIf="login" (click)="logout()" >
   <ion-icon name="log-out-outline"></ion-icon>  Log out
 </ion-item>
+</ion-menu-toggle>
 
 <div >
   <img class="imagen" alt="imagenes" 

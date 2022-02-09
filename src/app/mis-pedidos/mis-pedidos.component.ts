@@ -1,6 +1,4 @@
 import { AuthService } from './../Services/auth.service';
-import { AutomotrizComponent } from './../automotriz/automotriz.component';
-
 import { PedidoService } from './../Services/pedido.service';
 import { Pedido, Useri } from './../Models/models';
 import { Component, OnInit } from '@angular/core';
@@ -13,73 +11,55 @@ import { FirestoreService } from '../Services/firestore.service';
 })
 export class MisPedidosComponent implements OnInit {
 
-  pedido:Pedido;
   path ='/Solicitudes';
   usuario:Useri;
 
-  solicitudes: Pedido;
+  solicitud: Pedido[];
 
-  newSolicitud:Pedido= {
-    uid: '',
-    usuario:null,
-    servicio: null,
-    estado:'En espera',
-    fecha: new Date(),
-  }
+  estado;
 
   constructor(public firestoreService:FirestoreService,
               public pedidoService:PedidoService,
               public auth: AuthService
-              
-    ) { 
-
+    ) 
+    { 
       this.auth.stateUser().subscribe(res=>{
         if (res){
           this.getDatosUser(res.uid)
+          this.getSolicitudes(res.uid);
         }else {
         }
       }) 
-
-    this.initPedido();
-    this.loadpedido();
-  }
+    }
 
   ngOnInit() {
-    this.getSolicitudes();
+    
   }
 
-  loadpedido(){
-   this.pedidoService.getPedido().subscribe(res=>{
-     this.pedido = res;
-   })
-  }
-
-  initPedido(){
-    this.pedido =  {
-    uid: '',
-    usuario:null,
-    servicio: null,
-    estado:'enviado',
-    fecha: new Date(),
-    };
-  }
-
-  getSolicitudes(){
-    this.firestoreService.getDoc<Pedido>(this.path, this.pedido.uid).subscribe(res => {
-      console.log("res", res);
-      this.solicitudes = res;
+  getSolicitudes(uid:string){
+    const id = uid;
+    this.firestoreService.getCollecction<Pedido>(this.path).subscribe(res => {
+      console.log("getSolicitudes", res);
+      if(res){
+        this.solicitud = res;
+      }
       })
   }
+   //  eso guardo en una variabe de tipo : pedido[]  
+   // boton de hwtasapp del   usaurio que solicito el servicio
+
+  cambiarEstado(uid:string){
+    
+  } 
 
   getDatosUser(uid:string){
     const path = 'Usuarios';
     const id = uid;
     this.firestoreService.getDoc<Useri>(path, id).subscribe(res =>{
-      console.log('datos ->', res);
+     // console.log('datosUsuario ->', res);
       if (res){
             this.usuario = res;
       }
     })
-    
-  }
+  } 
 }
