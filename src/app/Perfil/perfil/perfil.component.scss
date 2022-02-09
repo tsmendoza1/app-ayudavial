@@ -21,9 +21,10 @@ color: c00;
   --background:rgba(168, 168, 168, 0.082); 
 }
 .card2{
-  font-size:180%;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.267);
+  font-size:120%;
   color: #f3f0f0;
-  --background:rgba(44, 99, 150, 0.322); 
+  --background:rgba(44, 102, 150, 0.322); 
 
 }
 .correo {
@@ -62,11 +63,16 @@ margin-right: 10%;
   column-width: 100px;
 }
 .div1{
+  border-bottom: 1px solid #ffffff;
+ // border-bottom: 5px;
   margin-top: 3%;
   margin-left: 5%;
   text-align:start
+  
 }
 .div2{
+  border-bottom: 1px solid #ffffff;
+
   margin-top: 5%;
   margin-bottom: 5%;
   margin-left: 5%;
@@ -74,6 +80,7 @@ margin-right: 10%;
   
 }
 .div3{
+  border-bottom: 1px solid #ffffff;
   margin-bottom:3%;
   margin-left: 5%;
   text-align: start
@@ -99,4 +106,10 @@ margin-right: 10%;
   -moz-border-radius: 100%;
   -webkit-border-radius: 100%;
   border-radius: 100%; 
+}
+.menu{
+  border-radius: 20px;
+  --background: rgb(37, 136, 194);
+//border-bottom-left-radius: 5%;
+
 }

@@ -20,26 +20,30 @@
   }
 }
 .correo {
-  margin-left: 1cm;
-  width: 460px;
-  border-bottom: 2px solid #ffffffc4;
-  //border-top: 2px solid #ffffffc4;
+  margin: 0 auto;
+ border-bottom: 2px solid #ffffffc4;
+ margin-left: 1cm;
+ margin-right: 1cm;
+ //border-top: 2px solid #ffffffc4;
   //border-left: 2px solid #ffffffc4;
   //border-right: 2px solid #ffffffc4;
 }
 .contraseña {
-  margin-left: 1cm;
-  width: 460px;
+  margin: 0 auto;
   border-bottom: 2px solid #ffffffc4;
+  margin-left: 1cm;
+  margin-right: 1cm;
   //border-top: 2px solid #ffffffc4;
   //border-left: 2px solid #ffffffc4;
   //border-right: 2px solid #ffffffc4;
 }
 .ingresa{
+  display: flex;
+  justify-content: center;
   margin-top: 10%;
-  margin-left: 20%;
-  margin-right: 20%;
-  margin-bottom: 5%;
+  //margin-left: 20%;
+  //margin-right: 20%;
+  //margin-bottom: 5%;
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 

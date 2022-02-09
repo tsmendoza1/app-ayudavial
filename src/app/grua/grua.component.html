@@ -9,9 +9,9 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content *ngFor="let Grua of gruas">
-  <ion-card>
-    <ion-card-header>
+<ion-content class="bg-image" padding *ngFor="let Grua of gruas">
+  <ion-card class="texto">
+    <ion-card-header><ion-icon name="person"></ion-icon>
       Nombre:
     </ion-card-header>
     <ion-card-content>
@@ -19,8 +19,8 @@
     </ion-card-content>
   </ion-card>
 
-  <ion-card>
-    <ion-card-header>
+  <ion-card class="texto"> 
+    <ion-card-header><ion-icon name="wallet-sharp"></ion-icon>
       Precio Minimo:
     </ion-card-header>
     <ion-card-content>
@@ -28,8 +28,8 @@
     </ion-card-content>
   </ion-card>
   
-  <ion-card>
-    <ion-card-header>
+  <ion-card class="texto">
+    <ion-card-header><ion-icon name="call-sharp"></ion-icon>
       Telefono:
     </ion-card-header>
     <ion-card-content>
