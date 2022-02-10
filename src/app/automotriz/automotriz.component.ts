@@ -15,7 +15,7 @@ export class AutomotrizComponent implements OnInit {
 
   login:boolean= false;
   misPedidos:Pedido;
-  solicitudes:Pedido[];
+  solicitudes:Pedido;
   pedido:Pedido;
 
   estados:EstadoPedido []= ['En espera', 'En camino', 'Entregado', 'enviado']
@@ -41,6 +41,7 @@ export class AutomotrizComponent implements OnInit {
                 if (res){
                   this.login = true;
                   this.loadUser(res.uid)
+                  this.getSolicitudes(res.uid)
                 }else {
                   this.login= false;
                 }
@@ -71,6 +72,17 @@ export class AutomotrizComponent implements OnInit {
     console.log('pedido-->', pedido);
     this.firestoreService.createDoc1(pedido, path,pedido.uid);
     this.interaction.presentToast(pedido.estado)
+  }
+
+  getSolicitudes(uid:string){
+    const path ='/Solicitudes'
+    const id = uid;
+    this.firestoreService.getDoc<Pedido>(path, id).subscribe(res => {
+      console.log("getSolicitudes", res);
+      if(res){
+        this.solicitudes = res;
+      }
+      })
   }
 
   loadMiPedido(uid: string) {

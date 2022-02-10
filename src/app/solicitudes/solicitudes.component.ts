@@ -12,17 +12,16 @@ import { InteractionService } from '../Services/interaction.service';
 export class SolicitudesComponent implements OnInit {
 
   user:Useri;
-  pedido: Pedido;
-  path ='/Solicitudes';
+  solicitud: Pedido;
 
   constructor(
-    public firestoreService: FirestoreService,
+    public firestore: FirestoreService,
     public auth:AuthService,
     private interaction: InteractionService,
     ) { 
       this.auth.stateUser().subscribe(res=>{
         if (res){
-          this.loadUser(res.uid)
+          this.getDatosUser(res.uid)
           this.getSolicitudes(res.uid);
         }else {
         }
@@ -32,24 +31,25 @@ export class SolicitudesComponent implements OnInit {
   ngOnInit() {}
 
   getSolicitudes(uid:string){
+    const path ='/Solicitudes'
     const id = uid;
-    this.firestoreService.getDoc<Pedido>(this.path, id).subscribe(res => {
+    this.firestore.getDoc<Pedido>(path, id).subscribe(res => {
       console.log("getSolicitudes", res);
       if(res){
-        this.pedido = res;
+        this.solicitud = res;
       }
       })
   }
 
-  loadUser(uid:string) {
+  getDatosUser(uid:string){
     const path = 'Usuarios';
     const id = uid;
-    this.firestoreService.getDoc<Useri>(path, id).subscribe(res =>{
-     console.log('datosUser ->', res);
+    this.firestore.getDoc<Useri>(path, id).subscribe(res =>{
+      console.log('datos ->', res);
       if (res){
-       this.user=res;
+            this.user = res;
       }
     })
-      // va a traer la informacion del usuario y guarda en la variable this.user
+    
   }
 }
