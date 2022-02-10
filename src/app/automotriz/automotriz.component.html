@@ -1,5 +1,5 @@
-
-  <ion-toolbar>
+<ion-content class="bg-image" padding *ngFor="let mecanicoAutomotriz of mecanicoAutomotrizs">
+  <ion-toolbar class="menu">
     <ion-buttons slot="start">
       <ion-button [routerLink]="['/servicios']">
         <ion-icon slot="icon-only" name="chevron-back-outline"></ion-icon>
@@ -8,8 +8,6 @@
     <ion-title color="white">Mecánico Automotriz</ion-title>
   </ion-toolbar>
 
-
-<ion-content class="bg-image" padding *ngFor="let mecanicoAutomotriz of mecanicoAutomotrizs">
   <ion-card class="texto">
     <ion-card-header><ion-icon name="person"></ion-icon>
       Nombre:
@@ -33,10 +31,12 @@
       Telefono:
     </ion-card-header>
     <ion-card-content>
-      <ion-label> {{mecanicoAutomotriz.Telefono}} </ion-label><br><br><br><br>
+      <ion-label> {{mecanicoAutomotriz.Telefono}} </ion-label>
+    </ion-card-content>
       <ion-button expand="full" class="button" [href]=" 'https://wa.me/593' + mecanicoAutomotriz.Telefono + '?text=Envia%20tu%20ubicacion%20:)'" target="blank">
        Whatsapp <ion-icon name="logo-whatsapp"></ion-icon>
-        </ion-button><br>
+        </ion-button>
+        <ion-card-content>
         <button (click)="solicitarServicio(mecanicoAutomotriz)">
           Solicitar Servicio
         </button>
@@ -49,4 +49,10 @@
       {{pedido.estado}}
     </label>
   </ion-item>
+  <div >
+
+    <img class="gif" alt="imagenes" 
+    src="  https://thumbs.gfycat.com/DisgustingSpiffyIguana-size_restricted.gif" >
+  </div>
+
 </ion-content>

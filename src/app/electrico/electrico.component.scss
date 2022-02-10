@@ -23,3 +23,15 @@ button{
   .texto{
     font-size: 100%;
 }
+.menu{
+  border-radius: 20px;
+  --background: rgb(255, 217, 0);
+//border-bottom-left-radius: 5%;
+}
+.gif{
+  display:block;
+margin:auto;
+margin-top: 5%;
+width: 30%;
+height: 30%;
+}

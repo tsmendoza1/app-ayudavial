@@ -1,15 +1,15 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
+<ion-content class="bg-image" padding *ngFor="let mecanicoGeneral of mecanicoGenerals">
+  <ion-toolbar class="menu">
+  <ion-buttons slot="start">
       <ion-button [routerLink]="['/servicios']">
         <ion-icon slot="icon-only" name="chevron-back-outline"></ion-icon>
       </ion-button>
     </ion-buttons>
     <ion-title color="white">Mecánico General</ion-title>
   </ion-toolbar>
-</ion-header>
 
-<ion-content class="bg-image" padding *ngFor="let mecanicoGeneral of mecanicoGenerals">
+
+
   <ion-card class="texto">
     <ion-card-header><ion-icon name="person"></ion-icon>
       Nombre:
@@ -46,4 +46,11 @@
         Solicitar Servicio
       </button>
       </ion-footer>
+      <div >
+
+        <img class="gif" alt="imagenes" 
+        src="https://spdload.com/wp-content/uploads/2018/06/website-design-company.gif" >
+      </div>
+  
+
 </ion-content>

@@ -1,5 +1,5 @@
-<ion-header>
-  <ion-toolbar>
+<ion-content class="bg-image" padding *ngFor="let Grua of gruas">
+  <ion-toolbar class="menu">
     <ion-buttons slot="start">
       <ion-button [routerLink]="['/servicios']">
         <ion-icon slot="icon-only" name="chevron-back-outline"></ion-icon>
@@ -7,9 +7,9 @@
     </ion-buttons>
     <ion-title color="white">Grúa</ion-title>
   </ion-toolbar>
-</ion-header>
 
-<ion-content class="bg-image" padding *ngFor="let Grua of gruas">
+
+
   <ion-card class="texto">
     <ion-card-header><ion-icon name="person"></ion-icon>
       Nombre:
@@ -46,4 +46,9 @@
         Solicitar Servicio
       </button>
       </ion-footer>
+      <div >
+
+        <img class="gif" alt="imagenes" 
+        src="https://doc-0o-1c-docs.googleusercontent.com/docs/securesc/vkitievo4pov2h7gmgt9h71lcvee1066/vlcmos8fejprfqp3l9gnp5mlao3rr88d/1644470100000/09248226145003715930/02267581089162245622/1BRwKF6I0OAGx9fydjS7PTJbu35nwGBhd?authuser=0f" >
+      </div>
 </ion-content>

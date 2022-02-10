@@ -1,5 +1,5 @@
-<ion-header>
-  <ion-toolbar>
+<ion-content class="bg-image" padding *ngFor="let mecanicoElectrico of mecanicoElectricos">
+  <ion-toolbar class="menu">
     <ion-buttons slot="start">
       <ion-button [routerLink]="['/servicios']">
         <ion-icon slot="icon-only" name="chevron-back-outline"></ion-icon>
@@ -7,9 +7,8 @@
     </ion-buttons>
     <ion-title color="white">Mecánico Eléctrico</ion-title>
   </ion-toolbar>
-</ion-header>
 
-<ion-content class="bg-image" padding *ngFor="let mecanicoElectrico of mecanicoElectricos">
+
   <ion-card class="texto">
     <ion-card-header><ion-icon name="person"></ion-icon>
       Nombre:
@@ -48,4 +47,10 @@
       Solicitar Servicio
     </button>
     </ion-footer>
+    <div >
+
+      <img class="gif" alt="imagenes" 
+      src="https://emprendimiento.ec/wp-content/uploads/2020/10/emprendimiento.gif" >
+    </div>
+
 </ion-content>
