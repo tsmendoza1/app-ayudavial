@@ -1,3 +1,4 @@
+import { SolicitudesComponent } from './solicitudes/solicitudes.component';
 import { MisPedidosComponent } from './mis-pedidos/mis-pedidos.component';
 import { MenuComponent } from './menu/menu.component';
 import { BienvenidoComponent } from './Bienvenido/bienvenido/bienvenido.component';
@@ -27,10 +28,6 @@ import { GeneralComponent } from './general/general.component';
 import { GruaComponent } from './grua/grua.component';
 import { LoginDosComponent } from './login-dos/login-dos.component';
 
-
-
-
-
 @NgModule({
 
   declarations: [
@@ -50,7 +47,7 @@ import { LoginDosComponent } from './login-dos/login-dos.component';
     BienvenidoComponent,
     MenuComponent,
     MisPedidosComponent,
-    
+    SolicitudesComponent
   ],
 
   

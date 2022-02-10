@@ -1,3 +1,4 @@
+import { SolicitudesComponent } from './solicitudes/solicitudes.component';
 import { MisPedidosComponent } from './mis-pedidos/mis-pedidos.component';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { UbicacionComponent } from './Ubicacion/ubicacion/ubicacion.component';
@@ -21,7 +22,6 @@ import { BienvenidoComponent } from './Bienvenido/bienvenido/bienvenido.componen
 //const uidAdmin = "OUcJ2XWr0cdwftOB7XeY"
 //const onlyAdmin = () => map((user:any) =>  !!user && uidAdmin === user.uid);
 
-
 const routes: Routes = [
   {path: 'inicio',component:InicioComponent},
   {path: '',component:BienvenidoComponent},
@@ -38,6 +38,7 @@ const routes: Routes = [
   {path: 'loginAuto',component:LoginDosComponent}, 
   {path: 'bienvenido',component:BienvenidoComponent}, 
   {path: 'mispedidos',component:MisPedidosComponent},
+  {path: 'solicitudes',component:SolicitudesComponent},
 ];
 
 @NgModule({
