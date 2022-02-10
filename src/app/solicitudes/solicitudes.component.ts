@@ -12,7 +12,7 @@ import { InteractionService } from '../Services/interaction.service';
 export class SolicitudesComponent implements OnInit {
 
   user:Useri;
-  solicitud: Pedido;
+  pedido: Pedido;
   path ='/Solicitudes';
 
   constructor(
@@ -36,7 +36,7 @@ export class SolicitudesComponent implements OnInit {
     this.firestoreService.getDoc<Pedido>(this.path, id).subscribe(res => {
       console.log("getSolicitudes", res);
       if(res){
-        this.solicitud = res;
+        this.pedido = res;
       }
       })
   }
