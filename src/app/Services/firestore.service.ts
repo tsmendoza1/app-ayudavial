@@ -51,7 +51,8 @@ export class FirestoreService {
   }
 
   updateDoc(path: string, id: string, data: any) {
-    return  this.firestore.collection(path).doc(id).update(data);
+    const collection = this.database.collection(path);
+    return collection.doc(id).update(data);
   }
 
 }

@@ -42,11 +42,12 @@
           Solicitar Servicio
         </button>
     </ion-card-content>
+    <br><br><br><br>
   </ion-card>
+
+  <ion-item *ngFor="let pedido of solicitudes ">
+    <label>
+      {{pedido.estado}}
+    </label>
+  </ion-item>
 </ion-content>
-<ion-footer>
-  <label>
-    
-  </label>
-</ion-footer>
- 

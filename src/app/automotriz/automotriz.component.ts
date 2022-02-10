@@ -16,13 +16,9 @@ export class AutomotrizComponent implements OnInit {
   login:boolean= false;
   misPedidos:Pedido;
   solicitudes:Pedido[];
+  pedido:Pedido;
 
-  estados:EstadoPedido[] = [
-    'enviado',
-    'En camino',
-    'Entregado',
-    'En espera'
-  ]
+  estados:EstadoPedido []= ['En espera', 'En camino', 'Entregado', 'enviado']
 
   mecanicoAutomotrizs: MecanicoAutomotriz[]=[];
 

@@ -22,8 +22,6 @@ export interface Servicio {
     Telefono: number;
 }
 
-
-
 export interface Pedido {
     uid: string;
     usuario: Useri;

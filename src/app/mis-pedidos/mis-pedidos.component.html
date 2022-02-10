@@ -9,26 +9,29 @@
 
 <ion-content>
   <ion-item *ngFor="let pedido of solicitud">
-    <ion-card>
+    <ion-card aria-expanded="true">
       <ion-card-header>
         <ion-card-title>Solicitud realizada</ion-card-title>
       </ion-card-header>
       <ion-card-content>
-        Nombre usuario <br>
-        {{pedido.usuario.nombre}} <br>
-        Nombre mecanico <br>
-        {{pedido.servicio.Nombre}} <br>
-        Estado pedido  <br>
-       {{pedido.estado}} <br>
-       <ion-label>Estado</ion-label>
-       <ion-select>
-         <ion-select-option *ngFor="let estadoPedido of estados">
-          {{estadoPedido}}
-         </ion-select-option>
-           <ion-select-option>enviado</ion-select-option>
-           <ion-select-option>En camino</ion-select-option>
-           <ion-select-option>Entregado</ion-select-option>
-       </ion-select>
+        <ion-item>
+          Nombre usuario: <br>
+          {{pedido.usuario.nombre}} <br>
+        </ion-item>
+        <ion-item>
+          Nombre mecanico: <br>
+          {{pedido.servicio.Nombre}} <br>
+        </ion-item>
+        <ion-item>
+          Estado pedido:  <br>
+         {{pedido.estado}} <br>
+        </ion-item>
+        <ion-item>
+          <label> Seleciona el estado</label>
+          <ion-select (ionChange)="cambiarEstado(pedido, $event.detail.value)"[value]="pedido.estado" slot="end" okText="Seleccionar" cancelText="Cancelar" interface="popover">
+            <ion-select-option *ngFor="let estado of estados" [value]="estado"> {{estado}} </ion-select-option>
+          </ion-select>
+        </ion-item>
       </ion-card-content>
     </ion-card>
   </ion-item>

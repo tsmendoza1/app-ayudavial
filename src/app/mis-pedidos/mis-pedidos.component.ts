@@ -16,11 +16,7 @@ export class MisPedidosComponent implements OnInit {
 
   solicitud: Pedido[];
 
-  estados:EstadoPedido[]=[];
-
-  newestado:EstadoPedido[]=[
-    'enviado','En camino','Entregado','En espera'
-  ]
+  estados:EstadoPedido []= ['En espera', 'En camino', 'Entregado', 'enviado']
 
   constructor(public firestoreService:FirestoreService,
               public pedidoService:PedidoService,
@@ -36,9 +32,7 @@ export class MisPedidosComponent implements OnInit {
       }) 
     }
 
-  ngOnInit() {
-    
-  }
+  ngOnInit() {}
 
   getSolicitudes(uid:string){
     const id = uid;
@@ -60,4 +54,16 @@ export class MisPedidosComponent implements OnInit {
       }
     })
   } 
+
+  cambiarEstado(pedido:Pedido, estado:EstadoPedido){
+    console.log('cambiarEstado->', pedido);
+    const path = 'Solicitudes'
+    const updateDoc ={
+      estado,
+    };  
+    const id = pedido.uid
+    this.firestoreService.updateDoc(path, id, updateDoc).then(()=>{
+      console.log('actualizado con exito');
+    })
+  }
 }
