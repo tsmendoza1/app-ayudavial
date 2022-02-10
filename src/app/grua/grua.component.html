@@ -8,8 +8,20 @@
     <ion-title color="white">Grúa</ion-title>
   </ion-toolbar>
 
+  <div class="card">
+    <img  alt="John" 
+    src="https://practicatest.com/static/img/cl/blog/como-ser-chofer-camiones.jpg" >
+<h1><ion-icon name="person"></ion-icon> {{Grua.Nombre}}  </h1>
+<p class="title"><ion-icon name="call-sharp"></ion-icon>  {{Grua.Telefono}} </p>  
+<p><ion-icon name="wallet-sharp"></ion-icon>{{Grua.PrecioMinimo}}</p>
 
-
+<p>    <ion-button expand="full" class="buttonn" [href]=" 'https://wa.me/593' + Grua.Telefono + '?text=Envia%20tu%20ubicacion%20:)'" target="blank">
+  Mandar Ubicacion <ion-icon name="logo-whatsapp"></ion-icon>
+  </ion-button>  <ion-button class="buttonn" expand="full" (click)="solicitarServicio(Grua)">
+    Solicitar Servicio
+  </ion-button></p>
+</div>
+<!-- 
   <ion-card class="texto">
     <ion-card-header><ion-icon name="person"></ion-icon>
       Nombre:
@@ -45,7 +57,7 @@
       <button (click)="solicitarServicio(Grua)">
         Solicitar Servicio
       </button>
-      </ion-footer>
+      </ion-footer> -->
       <div >
 
         <img class="gif" alt="imagenes" 

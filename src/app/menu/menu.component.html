@@ -1,7 +1,7 @@
 <ion-header >
   <ion-toolbar class="menu">
     <ion-title>
-      <ion-icon name="grid-outline"></ion-icon> Menu
+      Menu
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -15,43 +15,43 @@ Ayuda Vial
 </h4>
 <br>
 
-<ion-menu-toggle>
+<ion-menu-toggle auto-hide="false">
   <ion-item class="menuboton" *ngIf="login"  [routerLink]="['/miperfil']" routerLinkActive="router-link-active" >
     <ion-icon name="person-outline"></ion-icon>   Perfil
   </ion-item>
 </ion-menu-toggle>
 
-<ion-menu-toggle>
+<ion-menu-toggle auto-hide="false" >
   <ion-item class="menuboton" *ngIf="login" [routerLink]="['/servicios']" routerLinkActive="router-link-active" >
     <ion-icon name="browsers-outline"></ion-icon>  Servicios
   </ion-item>
 </ion-menu-toggle>
 
-<ion-menu-toggle>
+<ion-menu-toggle auto-hide="false" >
   <ion-item class="menuboton" *ngIf="login" [routerLink]="['/solicitudes']" routerLinkActive="router-link-active" >
     <ion-icon name="reader-outline"></ion-icon> Solicitudes
   </ion-item>
 </ion-menu-toggle>
 
-  <ion-menu-toggle>
+<ion-menu-toggle auto-hide="false" >
   <ion-item class="menuboton" *ngIf="login == false" [routerLink]="['/login']" routerLinkActive="router-link-active" >
     <ion-icon name="albums-outline"></ion-icon>  Registrarse
   </ion-item>
 </ion-menu-toggle>
 
-  <ion-menu-toggle>
+<ion-menu-toggle auto-hide="false" >
     <ion-item  class="menuboton" *ngIf="rol == 'admin'" [routerLink]="['/mispedidos']" routerLinkActive="router-link-active" >
       <ion-icon name="pencil-outline"></ion-icon>  Mis pedidos
     </ion-item>
   </ion-menu-toggle>
 
-    <ion-menu-toggle>
+  <ion-menu-toggle auto-hide="false" >
 <ion-item class="menuboton" *ngIf="login == false" [routerLink]="['/inicio']" routerLinkActive="router-link-active" >
   <ion-icon name="log-in-outline"></ion-icon>  Log in
 </ion-item>
 </ion-menu-toggle>
 
-<ion-menu-toggle>
+<ion-menu-toggle auto-hide="false" >
 <ion-item class="menuboton" *ngIf="login" (click)="logout()" >
   <ion-icon name="log-out-outline"></ion-icon>  Log out
 </ion-item>

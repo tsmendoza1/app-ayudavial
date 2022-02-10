@@ -35,3 +35,21 @@ margin-top: 3%;
 width: 60%;
 height: 60%;
 }
+.card {
+  background: rgba(40, 47, 109, 0.5);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+.buttonn {
+  --background:rgb(43, 42, 42);
+  font-size: 18px;
+}

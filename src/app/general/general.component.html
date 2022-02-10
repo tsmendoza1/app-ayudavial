@@ -9,8 +9,22 @@
   </ion-toolbar>
 
 
+  <div class="card">
+    <img  alt="John" 
+    src="https://imagenes.elpais.com/resizer/SWU1m81JCID2iZlsdzavDfI3YKA=/1960x1103/arc-anglerfish-eu-central-1-prod-prisa.s3.amazonaws.com/public/XVUKYH2X4VVNKNBELPWWZXTO6M.jpg" >
+<h1><ion-icon name="person"></ion-icon> {{mecanicoGeneral.Nombre}}  </h1>
+<p class="title"><ion-icon name="call-sharp"></ion-icon>  {{mecanicoGeneral.Telefono}} </p>  
+<p><ion-icon name="wallet-sharp"></ion-icon>{{mecanicoGeneral.PrecioMinimo}}</p>
 
-  <ion-card class="texto">
+<p>    <ion-button class="buttonn" expand="full" [href]=" 'https://wa.me/593' + mecanicoGeneral.Telefono + '?text=Envia%20tu%20ubicacion%20:)'" target="blank">
+  Mandar Ubicacion <ion-icon name="logo-whatsapp"></ion-icon>
+  </ion-button>  <ion-button class="buttonn" expand="full" (click)=" solicitarServicio(mecanicoGeneral)">
+    Solicitar Servicio
+  </ion-button></p>
+</div>
+
+
+<!--   <ion-card class="texto">
     <ion-card-header><ion-icon name="person"></ion-icon>
       Nombre:
     </ion-card-header>
@@ -45,7 +59,7 @@
       <button (click)=" solicitarServicio(mecanicoGeneral)">
         Solicitar Servicio
       </button>
-      </ion-footer>
+      </ion-footer> -->
       <div >
 
         <img class="gif" alt="imagenes" 

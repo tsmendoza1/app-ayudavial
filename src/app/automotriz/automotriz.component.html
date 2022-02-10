@@ -8,47 +8,20 @@
     <ion-title color="white">Mecánico Automotriz</ion-title>
   </ion-toolbar>
 
-  <ion-card class="texto">
-    <ion-card-header><ion-icon name="person"></ion-icon>
-      Nombre:
-    </ion-card-header>
-    <ion-card-content>
-      <ion-label> {{mecanicoAutomotriz.Nombre}} </ion-label>
-    </ion-card-content>
-  </ion-card>
+ <div class="card">
+    <img  alt="John" 
+    src="  https://www.canoncitydailyrecord.com/wp-content/uploads/2021/11/DRC-L-23MECHANIC1.jpg" >
+<h1><ion-icon name="person"></ion-icon> {{mecanicoAutomotriz.Nombre}}  </h1>
+<p class="title"><ion-icon name="call-sharp"></ion-icon>  {{mecanicoAutomotriz.Telefono}} </p>  
+<p><ion-icon name="wallet-sharp"></ion-icon>{{mecanicoAutomotriz.PrecioMinimo}}</p>
 
-  <ion-card class="texto">
-    <ion-card-header><ion-icon name="wallet-sharp"></ion-icon>
-      Precio Minimo:
-    </ion-card-header>
-    <ion-card-content>
-      <ion-label> {{mecanicoAutomotriz.PrecioMinimo}} </ion-label>
-    </ion-card-content>
-  </ion-card>
-  
-  <ion-card class="texto">
-    <ion-card-header><ion-icon name="call-sharp"></ion-icon>
-      Telefono:
-    </ion-card-header>
-    <ion-card-content>
-      <ion-label> {{mecanicoAutomotriz.Telefono}} </ion-label>
-    </ion-card-content>
-      <ion-button expand="full" class="button" [href]=" 'https://wa.me/593' + mecanicoAutomotriz.Telefono + '?text=Envia%20tu%20ubicacion%20:)'" target="blank">
-       Whatsapp <ion-icon name="logo-whatsapp"></ion-icon>
-        </ion-button>
-        <ion-card-content>
-        <button (click)="solicitarServicio(mecanicoAutomotriz)">
-          Solicitar Servicio
-        </button>
-    </ion-card-content>
-    <br><br><br><br>
-  </ion-card>
+<p>   <ion-button expand="full" class="buttonn" [href]=" 'https://wa.me/593' + mecanicoAutomotriz.Telefono + '?text=Envia%20tu%20ubicacion%20:)'" target="blank">
+  Mandar Ubicacion <ion-icon name="logo-whatsapp"></ion-icon>
+   </ion-button>   <ion-button class="buttonn" expand="full" (click)="solicitarServicio(mecanicoAutomotriz)">
+    Solicitar Servicio
+  </ion-button></p>
+</div>
 
-  <ion-item *ngFor="let pedido of solicitudes ">
-    <label>
-      {{pedido.estado}}
-    </label>
-  </ion-item>
   <div >
 
     <img class="gif" alt="imagenes" 
