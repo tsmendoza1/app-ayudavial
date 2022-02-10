@@ -20,6 +20,12 @@
         {{pedido.servicio.Nombre}} <br>
         Estado pedido  <br>
        {{pedido.estado}} <br>
+       <ion-label>Select</ion-label>
+       <ion-select>
+         <ion-select-option *ngFor="let estadoPedido of estados">
+          
+         </ion-select-option>
+       </ion-select>
       </ion-card-content>
     </ion-card>
   </ion-item>

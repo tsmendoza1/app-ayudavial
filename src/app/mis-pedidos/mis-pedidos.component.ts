@@ -1,6 +1,6 @@
 import { AuthService } from './../Services/auth.service';
 import { PedidoService } from './../Services/pedido.service';
-import { Pedido, Useri } from './../Models/models';
+import { EstadoPedido, Pedido, Useri } from './../Models/models';
 import { Component, OnInit } from '@angular/core';
 import { FirestoreService } from '../Services/firestore.service';
 
@@ -16,7 +16,11 @@ export class MisPedidosComponent implements OnInit {
 
   solicitud: Pedido[];
 
-  estado;
+  estados:EstadoPedido[]=[];
+
+  newestado:EstadoPedido[]=[
+    'enviado','En camino','Entregado','En espera'
+  ]
 
   constructor(public firestoreService:FirestoreService,
               public pedidoService:PedidoService,
@@ -45,12 +49,6 @@ export class MisPedidosComponent implements OnInit {
       }
       })
   }
-   //  eso guardo en una variabe de tipo : pedido[]  
-   // boton de hwtasapp del   usaurio que solicito el servicio
-
-  cambiarEstado(uid:string){
-    
-  } 
 
   getDatosUser(uid:string){
     const path = 'Usuarios';

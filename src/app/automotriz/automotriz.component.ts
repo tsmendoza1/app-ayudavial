@@ -52,9 +52,6 @@ export class AutomotrizComponent implements OnInit {
              }
 
   ngOnInit() {
-    // suscribirse a los aestados de autenticacionde  del usurio
-    // if (res)
-    // llamar a la funcion loadinfo user
     this.getMecanicoA();
   }
 
