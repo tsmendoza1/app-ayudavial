@@ -28,22 +28,24 @@ export class AutomotrizComponent implements OnInit {
     Telefono:null 
   }
   user: Useri;
+  rol:'visitante'|'admin'= null;
 
   private path = 'Mecanico automotriz/'
 
-  constructor(public firestoreService: FirestoreService, 
-            private firestore: AngularFirestore, 
-            public pedidoService:PedidoService,
-            public auth:AuthService,
-            private interaction: InteractionService,
-            ) {
-              this.auth.stateUser().subscribe(res=>{
-                if (res){
-                  this.login = true;
-                  this.loadUser(res.uid)
-                  this.getSolicitudes(res.uid)
-                }else {
-                  this.login= false;
+  constructor(
+    public firestoreService: FirestoreService, 
+    private firestore: AngularFirestore, 
+    public pedidoService:PedidoService,
+    public auth:AuthService,
+    private interaction: InteractionService,
+      ) {
+          this.auth.stateUser().subscribe(res=>{
+            if (res){
+                this.login = true;
+                this.loadUser(res.uid)
+                this.getSolicitudes(res.uid)
+            }else {
+                this.login= false;
                 }
               })
              }
@@ -85,17 +87,8 @@ export class AutomotrizComponent implements OnInit {
       })
   }
 
-  loadMiPedido(uid: string) {
-    const path = 'Solicitudes/';
-    this.firestoreService.getDoc(path, uid).subscribe(res=>{
-      console.log('loadMiPedido',res);
-      if(res){
-        
-      }
-    });
-    // traigo pedido de la base de datos e igualo a una variable que se puede llamar mis pedidos 
-    // esta variable tiene el tipo : pedido
-    // el puede ve su estado y puede ver el numero de whataao del mecanico o del que sea  
+  setDatosMecanico(){
+
   }
 
   loadUser(uid:string) {
@@ -105,6 +98,7 @@ export class AutomotrizComponent implements OnInit {
      console.log('datosUser ->', res);
       if (res){
        this.user=res;
+       this.rol= res.perfil;
       }
     })
       // va a traer la informacion del usuario y guarda en la variable this.user
