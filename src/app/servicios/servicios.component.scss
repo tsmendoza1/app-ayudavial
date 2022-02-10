@@ -28,10 +28,24 @@ ion-content.bg-image{
     background-color: #232428;
 
 
+
+  }
+  .foto1{
+    box-shadow: 0 0 10px rgb(0, 195, 255);
+  }
+  .foto2{
+    box-shadow: 0 0 10px rgb(255, 217, 0);
+  }
+  .foto3{
+    box-shadow: 0 0 10px rgb(255, 0, 13);
+  }
+  .foto4{
+    box-shadow: 0 0 10px rgb(0, 255, 42);
   }
   
   .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    
   }
   
   .container {
@@ -39,3 +53,12 @@ ion-content.bg-image{
     background-color: #37394121;
 
   }
+  .menu{
+    border-radius: 20px;
+    --background: rgb(37, 136, 194);
+  //border-bottom-left-radius: 5%;
+  }
+  .botonFlecha{
+background-color:rgb(37, 136, 194) ;
+
+}
