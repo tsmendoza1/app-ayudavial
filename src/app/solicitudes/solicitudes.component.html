@@ -1,5 +1,6 @@
 <ion-header>
   <ion-toolbar>
+    <ion-menu-button slot="start"></ion-menu-button>
     <ion-title>
       Mis solicitudes
     </ion-title>
@@ -7,17 +8,29 @@
 </ion-header>
 <ion-content>
  <ion-item> 
-   <ion-card>
+   <ion-card *ngIf="solicitud">
      <ion-card-header>
-       <ion-card-title> Mis solicitudes</ion-card-title>
+       <ion-card-title> Solicitud</ion-card-title>
      </ion-card-header>
      <ion-card-content>
        <ion-item>
-         <label> Estado de la solicitud </label> <br>
+          Estado de la solicitud: <br> 
          {{solicitud.estado}} <br>
-         <label> Nombre del mecanico</label> <br>
-         {{solicitud.fecha}}
-       </ion-item>
+        </ion-item>
+        <ion-item>
+          Nombre del mecanico:<br>
+         {{solicitud.servicio.Nombre}} <br>
+        </ion-item>
+         <ion-item>
+           Telefono del mecanico: <br> 
+          {{solicitud.servicio.Telefono}} <ion-button expand="full" class="buttonn" [href]=" 'https://wa.me/593' + solicitud.servicio.Telefono + '?text=Envia%20tu%20ubicacion%20:)'" target="blank">
+             <ion-icon name="logo-whatsapp"></ion-icon>
+             </ion-button><br>
+         </ion-item>
+         <ion-item>
+           Precio minimo: <br> 
+          {{solicitud.servicio.PrecioMinimo}} <br>
+         </ion-item>
      </ion-card-content>
    </ion-card>
  </ion-item>

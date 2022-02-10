@@ -7,13 +7,14 @@
     </ion-buttons>
     <ion-title color="white">Mecánico Automotriz</ion-title>
   </ion-toolbar>
-
+  
  <div class="card">
     <img  alt="John" 
     src="  https://www.canoncitydailyrecord.com/wp-content/uploads/2021/11/DRC-L-23MECHANIC1.jpg" >
-<h1><ion-icon name="person"></ion-icon> {{mecanicoAutomotriz.Nombre}}  </h1>
+<h1><ion-icon name="person"></ion-icon> {{mecanicoAutomotriz.Nombre}} </h1> 
 <p class="title"><ion-icon name="call-sharp"></ion-icon>  {{mecanicoAutomotriz.Telefono}} </p>  
-<p><ion-icon name="wallet-sharp"></ion-icon>{{mecanicoAutomotriz.PrecioMinimo}}</p>
+<p><ion-icon name="wallet-sharp"></ion-icon>{{mecanicoAutomotriz.PrecioMinimo}} </p>
+<button *ngIf="rol==='admin'"> <ion-icon name="create-outline"></ion-icon> Editar </button>
 
 <p>   <ion-button expand="full" class="buttonn" [href]=" 'https://wa.me/593' + mecanicoAutomotriz.Telefono + '?text=Envia%20tu%20ubicacion%20:)'" target="blank">
   Mandar Ubicacion <ion-icon name="logo-whatsapp"></ion-icon>
