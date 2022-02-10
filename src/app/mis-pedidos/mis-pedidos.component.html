@@ -28,9 +28,9 @@
         </ion-item>
         <ion-item>
           <label> Seleciona el estado</label>
-          <ion-select (ionChange)="cambiarEstado(pedido, $event.detail.value)"[value]="pedido.estado" slot="end" okText="Seleccionar" cancelText="Cancelar" interface="popover">
+ <!--          <ion-select (ionChange)="cambiarEstado(pedido, $event.detail.value)"[value]="pedido.estado" slot="end" okText="Seleccionar" cancelText="Cancelar" interface="popover">
             <ion-select-option *ngFor="let estado of estados" [value]="estado"> {{estado}} </ion-select-option>
-          </ion-select>
+          </ion-select> -->
         </ion-item>
       </ion-card-content>
     </ion-card>
