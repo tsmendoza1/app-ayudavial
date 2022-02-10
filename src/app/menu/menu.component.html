@@ -28,7 +28,7 @@ Ayuda Vial
 </ion-menu-toggle>
 
 <ion-menu-toggle>
-  <ion-item class="menuboton" *ngIf="login" [routerLink]="['/solicitudes']" routerLinkActive="router-link-active" >
+  <ion-item class="menuboton" *ngIf="rol==='visitante'" [routerLink]="['/solicitudes']" routerLinkActive="router-link-active" >
     <ion-icon name="reader-outline"></ion-icon> Solicitudes
   </ion-item>
 </ion-menu-toggle>
