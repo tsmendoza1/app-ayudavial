@@ -51,6 +51,7 @@ export interface MecanicoAutomotriz {
     Nombre: string;
     PrecioMinimo: string;
     Telefono: number;
+    id:string;
 }
 
 export interface MecanicoElectrico {

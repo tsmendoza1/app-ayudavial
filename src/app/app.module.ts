@@ -47,10 +47,9 @@ import { LoginDosComponent } from './login-dos/login-dos.component';
     BienvenidoComponent,
     MenuComponent,
     MisPedidosComponent,
-    SolicitudesComponent
+    SolicitudesComponent,
   ],
 
-  
   entryComponents: [],
   imports: [
     BrowserModule,
