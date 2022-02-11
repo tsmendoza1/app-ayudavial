@@ -1,4 +1,4 @@
-<ion-content class="bg-image" padding *ngFor="let mecanicoElectrico of mecanicoElectricos">
+<ion-header>
   <ion-toolbar class="menu">
     <ion-buttons slot="start">
       <ion-button [routerLink]="['/servicios']">
@@ -7,63 +7,76 @@
     </ion-buttons>
     <ion-title color="white">Mecánico Eléctrico</ion-title>
   </ion-toolbar>
-
-
-  <div class="card">
-    <img  alt="John" 
-    src=" https://photos.demandstudios.com/getty/article/41/202/86543858_XS.jpg" >
-<h1><ion-icon name="person"></ion-icon> {{mecanicoElectrico.Nombre}}  </h1>
-<p class="title"><ion-icon name="call-sharp"></ion-icon>  {{mecanicoElectrico.Telefono}} </p>  
-<p><ion-icon name="wallet-sharp"></ion-icon>{{mecanicoElectrico.PrecioMinimo}}</p>
+</ion-header>
+<ion-content *ngFor="let mecanicoElectrico of mecanicoElectricos">
+  <ion-grid>
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="6">
+        <button *ngIf="rol==='admin'" (click)="editar(mecanicoElectrico)"> <ion-icon name="create-outline"></ion-icon> Editar </button>
+      </ion-col>
+    </ion-row>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Nombre:</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        {{mecanicoElectrico.Nombre}} 
+      </ion-card-content>
+    </ion-card>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Telefono:</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        {{mecanicoElectrico.Telefono}}  
+      </ion-card-content>
+    </ion-card>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Precio minimo:</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        {{mecanicoElectrico.PrecioMinimo}}  
+      </ion-card-content>
+    </ion-card>
+       
+    <ion-row *ngIf="rol==='admin'">
+      <ion-col>
+        <ion-item>
+          <ion-label position="floating">
+            Nombre:
+          </ion-label>
+          <ion-input [(ngModel)]="newElectrico.Nombre" ></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">
+            Telefono:
+          </ion-label>
+          <ion-input [(ngModel)]="newElectrico.Telefono"></ion-input>
+        </ion-item>
+        <ion-item> 
+          <ion-label position="floating">
+            Precio minimo:
+          </ion-label>
+          <ion-input [(ngModel)]="newElectrico.PrecioMinimo"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row *ngIf="rol==='admin'" class="ion-justify-content-center">
+      <ion-col size="6">
+        <ion-item>
+          <button (click)="guardar()"> Guardar</button>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
 <p>   <ion-button class="buttonn" expand="full" [href]=" 'https://wa.me/593' + mecanicoElectrico.Telefono + '?text=Envia%20tu%20ubicacion%20:)'" target="blank">
   Mandar Ubicacion <ion-icon name="logo-whatsapp"></ion-icon>
   </ion-button>  <ion-button expand="full" class="buttonn" (click)="solicitarServicio(mecanicoElectrico)">
     Solicitar Servicio
   </ion-button></p>
-</div>
 
-
-
-
- <!--  <ion-card class="texto">
-    <ion-card-header><ion-icon name="person"></ion-icon>
-      Nombre:
-    </ion-card-header>
-    <ion-card-content>
-      <ion-label> {{mecanicoElectrico.Nombre}} </ion-label>
-    </ion-card-content>
-  </ion-card>
-
-  <ion-card class="texto">
-    <ion-card-header><ion-icon name="wallet-sharp"></ion-icon>
-      Precio Minimo:
-    </ion-card-header>
-    <ion-card-content>
-      <ion-label> {{mecanicoElectrico.PrecioMinimo}} </ion-label>
-    </ion-card-content>
-  </ion-card>
-  
-  <ion-card class="texto">
-    <ion-card-header><ion-icon name="call-sharp"></ion-icon>
-      Telefono:
-    </ion-card-header>
-    <ion-card-content>
-      <ion-label> {{mecanicoElectrico.Telefono}} </ion-label>
-    </ion-card-content>
-  </ion-card>
-<br><br>
-  <ion-button expand="full" [href]=" 'https://wa.me/593' + mecanicoElectrico.Telefono + '?text=Envia%20tu%20ubicacion%20:)'" target="blank">
-    Compartir Ubicacion actual <ion-icon name="logo-whatsapp"></ion-icon>
-    </ion-button>
-
-<br><br>
-
-  <ion-footer>
-    <button (click)="solicitarServicio(mecanicoElectrico)">
-      Solicitar Servicio
-    </button>
-    </ion-footer> -->
     <div >
 
       <img class="gif" alt="imagenes" 

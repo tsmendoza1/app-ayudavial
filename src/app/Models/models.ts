@@ -45,6 +45,7 @@ export interface Grua {
     Nombre: string;
     PrecioMinimo: string;
     Telefono: number;
+    id:string;
 }
 
 export interface MecanicoAutomotriz {
@@ -58,10 +59,12 @@ export interface MecanicoElectrico {
     Nombre: string;
     PrecioMinimo: string;
     Telefono: number;
+    id:string;
 }
 
 export interface MecanicoGeneral {
     Nombre: string;
     PrecioMinimo: string;
     Telefono: number;
+    id:string;
 }

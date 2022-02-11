@@ -16,13 +16,14 @@ export class GruaComponent implements OnInit {
   @Input() servicio:Servicio;
 
   user:Useri;
-
+  rol:'visitante'|'admin'= null;
   gruas: Grua[]=[];
 
 newGrua: Grua = {
   Nombre:'',
   PrecioMinimo:'',
-  Telefono:null
+  Telefono:null,
+  id: '',
 }  
 
 private path = 'Grua/'
@@ -74,10 +75,23 @@ private path = 'Grua/'
      console.log('datosUser ->', res);
       if (res){
        this.user=res;
+       this.rol= res.perfil;
       }
     })
-      // va a traer la informacion del usuario y guarda en la variable this.user
   }
+
+  editar(grua:Grua){
+    console.log('editar->', grua);
+    this.newGrua = grua;
+   }
+ 
+   async guardar(){
+     await this.interaction.presentLoading('Guardando...');
+     console.log('Guardar->', this.newGrua);
+     const path = 'Grua';
+     await this.firestoreService.createDoc1(this.newGrua, path, this.newGrua.id)
+     this.interaction.closeloading();
+   }
 
 }
 

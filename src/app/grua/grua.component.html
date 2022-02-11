@@ -1,4 +1,4 @@
-<ion-content class="bg-image" padding *ngFor="let Grua of gruas">
+
   <ion-toolbar class="menu">
     <ion-buttons slot="start">
       <ion-button [routerLink]="['/servicios']">
@@ -8,58 +8,77 @@
     <ion-title color="white">Grúa</ion-title>
   </ion-toolbar>
 
-  <div class="card">
-    <img  alt="John" 
-    src="https://practicatest.com/static/img/cl/blog/como-ser-chofer-camiones.jpg" >
-<h1><ion-icon name="person"></ion-icon> {{Grua.Nombre}}  </h1>
-<p class="title"><ion-icon name="call-sharp"></ion-icon>  {{Grua.Telefono}} </p>  
-<p><ion-icon name="wallet-sharp"></ion-icon>{{Grua.PrecioMinimo}}</p>
+<ion-content *ngFor="let Grua of gruas">
+  
+  <ion-grid>
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="6">
+        <button *ngIf="rol==='admin'" (click)="editar(Grua)"> <ion-icon name="create-outline"></ion-icon> Editar </button>
+      </ion-col>
+    </ion-row>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Nombre:</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        {{Grua.Nombre}} 
+      </ion-card-content>
+    </ion-card>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Telefono:</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        {{Grua.Telefono}}  
+      </ion-card-content>
+    </ion-card>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Precio minimo:</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        {{Grua.PrecioMinimo}}  
+      </ion-card-content>
+    </ion-card>
+       
+    <ion-row *ngIf="rol==='admin'">
+      <ion-col>
+        <ion-item>
+          <ion-label position="floating">
+            Nombre:
+          </ion-label>
+          <ion-input [(ngModel)]="newGrua.Nombre" ></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">
+            Telefono:
+          </ion-label>
+          <ion-input [(ngModel)]="newGrua.Telefono"></ion-input>
+        </ion-item>
+        <ion-item> 
+          <ion-label position="floating">
+            Precio minimo:
+          </ion-label>
+          <ion-input [(ngModel)]="newGrua.PrecioMinimo"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row *ngIf="rol==='admin'" class="ion-justify-content-center">
+      <ion-col size="6">
+        <ion-item>
+          <button (click)="guardar()"> Guardar</button>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
 <p>    <ion-button expand="full" class="buttonn" [href]=" 'https://wa.me/593' + Grua.Telefono + '?text=Envia%20tu%20ubicacion%20:)'" target="blank">
   Mandar Ubicacion <ion-icon name="logo-whatsapp"></ion-icon>
   </ion-button>  <ion-button class="buttonn" expand="full" (click)="solicitarServicio(Grua)">
     Solicitar Servicio
   </ion-button></p>
-</div>
-<!-- 
-  <ion-card class="texto">
-    <ion-card-header><ion-icon name="person"></ion-icon>
-      Nombre:
-    </ion-card-header>
-    <ion-card-content>
-      <ion-label> {{Grua.Nombre}} </ion-label>
-    </ion-card-content>
-  </ion-card>
 
-  <ion-card class="texto"> 
-    <ion-card-header><ion-icon name="wallet-sharp"></ion-icon>
-      Precio Minimo:
-    </ion-card-header>
-    <ion-card-content>
-      <ion-label> {{Grua.PrecioMinimo}} </ion-label>
-    </ion-card-content>
-  </ion-card>
-  
-  <ion-card class="texto">
-    <ion-card-header><ion-icon name="call-sharp"></ion-icon>
-      Telefono:
-    </ion-card-header>
-    <ion-card-content>
-      <ion-label> {{Grua.Telefono}} </ion-label>
-    </ion-card-content>
-  </ion-card>
-<br><br>
-  <ion-button expand="full" [href]=" 'https://wa.me/593' + Grua.Telefono + '?text=Envia%20tu%20ubicacion%20:)'" target="blank">
-    Compartir Ubicacion actual <ion-icon name="logo-whatsapp"></ion-icon>
-    </ion-button>
-<br><br>
-    <ion-footer>
-      <button (click)="solicitarServicio(Grua)">
-        Solicitar Servicio
-      </button>
-      </ion-footer> --> 
       <div >
-
         <img class="gif" alt="imagenes" 
         src="https://gruas24.info/wp-content/uploads/2021/08/6.png" >
       </div>

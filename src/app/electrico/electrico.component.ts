@@ -14,13 +14,15 @@ import { InteractionService } from '../Services/interaction.service';
 export class ElectricoComponent implements OnInit {
 
   user:Useri;
+  rol:'visitante'|'admin'= null;
 
   mecanicoElectricos: MecanicoElectrico[]=[];
 
   newElectrico: MecanicoElectrico = {
     Nombre:'',
     PrecioMinimo:'',
-    Telefono:null
+    Telefono:null,
+    id:'',
   }  
 
   private path = 'Mecanico electrico/'
@@ -73,9 +75,22 @@ export class ElectricoComponent implements OnInit {
      console.log('datosUser ->', res);
       if (res){
        this.user=res;
+       this.rol= res.perfil;
       }
     })
-      // va a traer la informacion del usuario y guarda en la variable this.user
   }
+
+  editar(mecanicoElectrico:MecanicoElectrico){
+    console.log('editar->', mecanicoElectrico);
+    this.newElectrico = mecanicoElectrico;
+   }
+ 
+   async guardar(){
+     await this.interaction.presentLoading('Guardando...');
+     console.log('Guardar->', this.newElectrico);
+     const path = 'Mecanico electrico';
+     await this.firestoreService.createDoc1(this.newElectrico, path, this.newElectrico.id)
+     this.interaction.closeloading();
+   }
 
 }

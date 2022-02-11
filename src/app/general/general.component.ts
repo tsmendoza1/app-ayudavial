@@ -16,13 +16,15 @@ export class GeneralComponent implements OnInit {
   @Input() servicio:Servicio;
 
   user:Useri;
+  rol:'visitante'|'admin'= null;
 
   mecanicoGenerals: MecanicoGeneral []=[];
 
   newGeneral: MecanicoGeneral = {
     Nombre:'',
     PrecioMinimo:'',
-    Telefono:null
+    Telefono:null,
+    id:'',
   }  
   
   private path = 'Mecanico general/'
@@ -36,9 +38,7 @@ export class GeneralComponent implements OnInit {
       this.auth.stateUser().subscribe(res=>{
         if (res){
           this.loadUser(res.uid)
-        }else {
-
-      }
+        }
     });
     }
 
@@ -75,8 +75,21 @@ export class GeneralComponent implements OnInit {
      console.log('datosUser ->', res);
       if (res){
        this.user=res;
+       this.rol=res.perfil;
       }
     })
-      // va a traer la informacion del usuario y guarda en la variable this.user
   }
+
+  editar(mecanicoGeneral:MecanicoGeneral){
+    console.log('editar->', mecanicoGeneral);
+    this.newGeneral = mecanicoGeneral;
+   }
+ 
+   async guardar(){
+     await this.interaction.presentLoading('Guardando...');
+     console.log('Guardar->', this.newGeneral);
+     const path = 'Mecanico general';
+     await this.firestoreService.createDoc1(this.newGeneral, path, this.newGeneral.id)
+     this.interaction.closeloading();
+   }
 }
