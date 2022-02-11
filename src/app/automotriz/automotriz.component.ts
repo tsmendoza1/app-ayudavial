@@ -105,7 +105,7 @@ export class AutomotrizComponent implements OnInit {
   async guardar(){
     await this.interaction.presentLoading('Guardando...');
     console.log('Guardar->', this.newMecanico);
-    const path = 'Mecanico Automotriz';
+    const path = 'Mecanico automotriz';
     await this.firestoreService.createDoc1(this.newMecanico, path, this.newMecanico.id)
     this.interaction.closeloading();
   }
