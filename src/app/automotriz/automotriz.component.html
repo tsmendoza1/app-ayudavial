@@ -1,4 +1,4 @@
-  <ion-header>
+<ion-content>
   <ion-toolbar class="menu">
     <ion-buttons slot="start">
       <ion-button [routerLink]="['/servicios']">
@@ -7,39 +7,43 @@
     </ion-buttons>
     <ion-title color="white">Mecánico Automotriz</ion-title>
   </ion-toolbar>
-</ion-header>
 
 <ion-content *ngFor="let mecanicoAutomotriz of mecanicoAutomotrizs">
-<ion-grid>
   <ion-row class="ion-justify-content-center">
     <ion-col size="6">
       <button *ngIf="rol==='admin'" (click)="editar(mecanicoAutomotriz)"> <ion-icon name="create-outline"></ion-icon> Editar </button>
     </ion-col>
   </ion-row>
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title>Nombre:</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      {{mecanicoAutomotriz.Nombre}} 
-    </ion-card-content>
-  </ion-card>
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title>Telefono:</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      {{mecanicoAutomotriz.Telefono}}  
-    </ion-card-content>
-  </ion-card>
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title>Precio minimo:</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      {{mecanicoAutomotriz.PrecioMinimo}}  
-    </ion-card-content>
-  </ion-card>
+  <div class="card">
+    <img  alt="John" 
+    src="  https://www.canoncitydailyrecord.com/wp-content/uploads/2021/11/DRC-L-23MECHANIC1.jpg" >
+    <h1><ion-icon name="person"></ion-icon> {{mecanicoAutomotriz.Nombre}}  </h1>
+    <p class="title"><ion-icon name="call-sharp"></ion-icon>  {{mecanicoAutomotriz.Telefono}} </p>  
+    <p><ion-icon name="wallet-sharp"></ion-icon>{{mecanicoAutomotriz.PrecioMinimo}}</p>
+  
+    <p>   <ion-button expand="full" class="buttonn" [href]=" 'https://wa.me/593' + mecanicoAutomotriz.Telefono + '?text=Envia%20tu%20ubicacion%20:)'" target="blank">
+      Mandar Ubicacion <ion-icon name="logo-whatsapp"></ion-icon>
+       </ion-button>   <ion-button class="buttonn" expand="full" (click)="solicitarServicio(mecanicoAutomotriz)">
+        Solicitar Servicio
+      </ion-button></p>
+  
+  </div>
+
+  <div >
+    <ion-row *ngIf="rol==='admin'" class="ion-justify-content-center">
+      <ion-col size="6">
+        <ion-item>
+          <button (click)="guardar()"> Guardar</button>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <img class="gif" alt="imagenes" 
+    src="  https://thumbs.gfycat.com/DisgustingSpiffyIguana-size_restricted.gif" >
+  </div>
+
+<ion-grid>
+
+
      
   <ion-row *ngIf="rol==='admin'">
     <ion-col>
@@ -63,13 +67,7 @@
       </ion-item>
     </ion-col>
   </ion-row>
-  <ion-row *ngIf="rol==='admin'" class="ion-justify-content-center">
-    <ion-col size="6">
-      <ion-item>
-        <button (click)="guardar()"> Guardar</button>
-      </ion-item>
-    </ion-col>
-  </ion-row>
+
 </ion-grid>
 <p>   <ion-button expand="full" class="buttonn" [href]=" 'https://wa.me/593' + mecanicoAutomotriz.Telefono + '?text=Envia%20tu%20ubicacion%20:)'" target="blank">
   Mandar Ubicacion <ion-icon name="logo-whatsapp"></ion-icon>
@@ -83,5 +81,5 @@
     <img class="gif" alt="imagenes" 
     src="  https://thumbs.gfycat.com/DisgustingSpiffyIguana-size_restricted.gif" >
   </div>
-
+</ion-content>
 </ion-content>

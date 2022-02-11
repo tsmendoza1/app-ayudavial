@@ -1,19 +1,45 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-menu-button slot="start"></ion-menu-button>
+<ion-content class="bg-image" aria-expanded="true" >
+  <ion-toolbar class="menu">
     <ion-title>
       Mis pedidos
     </ion-title>
   </ion-toolbar>
-</ion-header>
 
-<ion-content>
-  <ion-item *ngFor="let pedido of solicitud">
-    <ion-card aria-expanded="true">
+<ion-card class="caja" *ngFor="let pedido of solicitud">
       <ion-card-header>
-        <ion-card-title>Solicitud realizada</ion-card-title>
+        <ion-card-title style="font-size:25px;">Solicitud realizada</ion-card-title>
       </ion-card-header>
-      <ion-card-content>
+      
+<ion-item  class="card">
+  <div class="text">
+    Nombre usuario:</div> <br> 
+   <h5><ion-title></ion-title></h5><br>
+   <br><div class="text2"  size="center">
+    {{pedido.usuario.nombre}}
+ </div  >    <br>
+ </ion-item>
+
+ <ion-item  class="card">
+  <div class="text">
+    Nombre mecanico:</div> <br> 
+   <h5><ion-title></ion-title></h5><br>
+   <br><div class="text2"  size="center" >
+    {{pedido.servicio.Nombre}}
+ </div  >    <br>
+ </ion-item>
+
+ <ion-item  class="card">
+  <div class="text">
+    Estado pedido:</div> <br> 
+   <h5><ion-title></ion-title></h5><br>
+   <br><div class="text2"  size="center">
+    {{pedido.estado}} 
+ </div  >    <br>
+ </ion-item>
+
+ <label> Seleciona el estado</label>
+
+   <!--    <ion-card-content>
         <ion-item>
           Nombre usuario: <br>
           {{pedido.usuario.nombre}} <br>
@@ -28,16 +54,16 @@
         </ion-item>
         <ion-item>
           <label> Seleciona el estado</label>
- <!--          <ion-select (ionChange)="cambiarEstado(pedido, $event.detail.value)"[value]="pedido.estado" slot="end" okText="Seleccionar" cancelText="Cancelar" interface="popover">
+         <ion-select (ionChange)="cambiarEstado(pedido, $event.detail.value)"[value]="pedido.estado" slot="end" okText="Seleccionar" cancelText="Cancelar" interface="popover">
             <ion-select-option *ngFor="let estado of estados" [value]="estado"> {{estado}} </ion-select-option>
-          </ion-select> -->
+          </ion-select> 
         </ion-item>
       </ion-card-content>
-    </ion-card>
-  </ion-item>
+    </ion-card> -->
+  </ion-card>
 
-  <br><br><br>
   <button>
     Eliminar todo
   </button>
-</ion-content>
+  </ion-content>
+
