@@ -8,14 +8,48 @@
     <ion-title color="white">Mecánico Automotriz</ion-title>
   </ion-toolbar>
   
- <div class="card">
+ <div class="card"> 
     <img  alt="John" 
     src="  https://www.canoncitydailyrecord.com/wp-content/uploads/2021/11/DRC-L-23MECHANIC1.jpg" >
 <h1><ion-icon name="person"></ion-icon> {{mecanicoAutomotriz.Nombre}} </h1> 
 <p class="title"><ion-icon name="call-sharp"></ion-icon>  {{mecanicoAutomotriz.Telefono}} </p>  
 <p><ion-icon name="wallet-sharp"></ion-icon>{{mecanicoAutomotriz.PrecioMinimo}} </p>
-<button *ngIf="rol==='admin'"> <ion-icon name="create-outline"></ion-icon> Editar </button>
-
+<ion-grid *ngIf="rol==='admin'">
+  <ion-row class="ion-justify-content-center">
+    <ion-col size="6">
+      <button *ngIf="rol==='admin'" (click)="editar(mecanicoAutomotriz)"> <ion-icon name="create-outline"></ion-icon> Editar </button>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-item>
+        <ion-label position="floating">
+          Nombre:
+        </ion-label>
+        <ion-input [(ngModel)]="newMecanico.Nombre" ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">
+          Telefono:
+        </ion-label>
+        <ion-input [(ngModel)]="newMecanico.Telefono"></ion-input>
+      </ion-item>
+      <ion-item> 
+        <ion-label position="floating">
+          Precio minimo:
+        </ion-label>
+        <ion-input [(ngModel)]="newMecanico.PrecioMinimo"></ion-input>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="6">
+      <ion-item>
+        <button (click)="guardar()"> Guardar</button>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+</ion-grid>
 <p>   <ion-button expand="full" class="buttonn" [href]=" 'https://wa.me/593' + mecanicoAutomotriz.Telefono + '?text=Envia%20tu%20ubicacion%20:)'" target="blank">
   Mandar Ubicacion <ion-icon name="logo-whatsapp"></ion-icon>
    </ion-button>   <ion-button class="buttonn" expand="full" (click)="solicitarServicio(mecanicoAutomotriz)">

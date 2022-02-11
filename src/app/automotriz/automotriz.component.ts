@@ -25,7 +25,8 @@ export class AutomotrizComponent implements OnInit {
   newMecanico:MecanicoAutomotriz= {
     Nombre:'',
     PrecioMinimo:'',
-    Telefono:null 
+    Telefono:null,
+    id:'',
   }
   user: Useri;
   rol:'visitante'|'admin'= null;
@@ -87,8 +88,26 @@ export class AutomotrizComponent implements OnInit {
       })
   }
 
-  setDatosMecanico(){
+  addNew(){
+    this.newMecanico = {
+      Nombre:'',
+      Telefono:null,
+      PrecioMinimo: '',
+      id:this.firestoreService.getId()
+    }
+  }
 
+  editar(mecanicoAutomotriz:MecanicoAutomotriz){
+   console.log('editar->', mecanicoAutomotriz);
+   this.newMecanico = mecanicoAutomotriz;
+  }
+
+  async guardar(){
+    await this.interaction.presentLoading('Guardando...');
+    console.log('Guardar->', this.newMecanico);
+    const path = 'Mecanico Automotriz';
+    await this.firestoreService.createDoc1(this.newMecanico, path, this.newMecanico.id)
+    this.interaction.closeloading();
   }
 
   loadUser(uid:string) {
