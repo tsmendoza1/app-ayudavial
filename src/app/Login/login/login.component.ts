@@ -25,6 +25,7 @@ datos:  Useri = {
   nombre: null,
   apellido: null,
   correo:null,
+  celular:null,
   password:null,
   uid:null,
   auto:null,
