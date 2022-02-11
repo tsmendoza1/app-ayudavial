@@ -1,37 +1,64 @@
-<ion-header>
-  <ion-toolbar>
+<ion-content  class="bg-image">
+  <ion-toolbar class="menu">
     <ion-menu-button slot="start"></ion-menu-button>
+
     <ion-title>
       Mis solicitudes
     </ion-title>
   </ion-toolbar>
-</ion-header>
-<ion-content>
- <ion-item> 
-   <ion-card *ngIf="solicitud">
+
+  
+   <ion-card class="card1" *ngIf="solicitud">
      <ion-card-header>
-       <ion-card-title> Solicitud</ion-card-title>
+       <ion-card-title  style="font-size:40px;"> Solicitud</ion-card-title>
      </ion-card-header>
-     <ion-card-content>
-       <ion-item>
-          Estado de la solicitud: <br> 
-         {{solicitud.estado}} <br>
+
+
+       <ion-item  class="card">
+         <div class="text">
+          Estado de la solicitud:</div> <br> 
+          <h5><ion-title></ion-title></h5><br>
+          <br><div class="text2">
+            {{solicitud.estado}} 
+        </div  >    <br>
         </ion-item>
-        <ion-item>
-          Nombre del mecanico:<br>
-         {{solicitud.servicio.Nombre}} <br>
+
+        <ion-item class="card">
+        <div class="text">
+          Nombre del mecanico:</div> <br> 
+          <h5><ion-title></ion-title></h5><br>
+          <br><div class="text2">
+            {{solicitud.servicio.Nombre}} 
+        </div  >    <br>
         </ion-item>
-         <ion-item>
-           Telefono del mecanico: <br> 
-          {{solicitud.servicio.Telefono}} <ion-button expand="full" class="buttonn" [href]=" 'https://wa.me/593' + solicitud.servicio.Telefono + '?text=Envia%20tu%20ubicacion%20:)'" target="blank">
-             <ion-icon name="logo-whatsapp"></ion-icon>
-             </ion-button><br>
-         </ion-item>
-         <ion-item>
-           Precio minimo: <br> 
-          {{solicitud.servicio.PrecioMinimo}} <br>
-         </ion-item>
-     </ion-card-content>
+
+
+        <ion-item class="card">
+          <div class="text">
+            Telefono del mecanico: </div> <br> 
+            <h5><ion-title></ion-title></h5><br>
+            <br><div class="text2">
+              {{solicitud.servicio.Telefono}}
+          </div  >    <br>
+          </ion-item >
+
+          <ion-item class="card">
+            <div class="text">
+              Precio minimo:  </div> <br> 
+              <h5><ion-title></ion-title></h5><br>
+              <br><div class="textPrecio">
+                {{solicitud.servicio.PrecioMinimo}}
+            </div  >    <br>
+            </ion-item>
+ 
    </ion-card>
- </ion-item>
+
+   <div >
+
+    <img class="gif" alt="imagenes" 
+    src="https://cdn.dribbble.com/users/282923/screenshots/11050247/paymentsbilling.gif" >
+  </div>
+
+
+
 </ion-content>
