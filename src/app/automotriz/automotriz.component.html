@@ -8,7 +8,7 @@
     <ion-title color="white">Mecánico Automotriz</ion-title>
   </ion-toolbar>
 
-<ion-content *ngFor="let mecanicoAutomotriz of mecanicoAutomotrizs">
+<ion-content class="bg-image" *ngFor="let mecanicoAutomotriz of mecanicoAutomotrizs">
   <ion-row class="ion-justify-content-center">
     <ion-col size="6">
       <button *ngIf="rol==='admin'" (click)="editar(mecanicoAutomotriz)"> <ion-icon name="create-outline"></ion-icon> Editar </button>
@@ -27,18 +27,6 @@
         Solicitar Servicio
       </ion-button></p>
   
-  </div>
-
-  <div >
-    <ion-row *ngIf="rol==='admin'" class="ion-justify-content-center">
-      <ion-col size="6">
-        <ion-item>
-          <button (click)="guardar()"> Guardar</button>
-        </ion-item>
-      </ion-col>
-    </ion-row>
-    <img class="gif" alt="imagenes" 
-    src="  https://thumbs.gfycat.com/DisgustingSpiffyIguana-size_restricted.gif" >
   </div>
 
 <ion-grid>
@@ -67,13 +55,13 @@
       </ion-item>
     </ion-col>
   </ion-row>
-
+  <ion-row *ngIf="rol==='admin'"  class="ion-justify-content-center">
+    <ion-col size="6">
+        <button  (click)="guardar()"> Guardar</button>
+    </ion-col>
+  </ion-row>
 </ion-grid>
-<p>   <ion-button expand="full" class="buttonn" [href]=" 'https://wa.me/593' + mecanicoAutomotriz.Telefono + '?text=Envia%20tu%20ubicacion%20:)'" target="blank">
-  Mandar Ubicacion <ion-icon name="logo-whatsapp"></ion-icon>
-   </ion-button>   <ion-button class="buttonn" expand="full" (click)="solicitarServicio(mecanicoAutomotriz)">
-    Solicitar Servicio
-  </ion-button></p>
+
 
 
   <div >

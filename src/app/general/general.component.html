@@ -10,38 +10,28 @@
 </ion-header>
 
   
-<ion-content *ngFor="let mecanicoGeneral of mecanicoGenerals">
+<ion-content class="bg-image" *ngFor="let mecanicoGeneral of mecanicoGenerals">
+  <ion-row class="ion-justify-content-center">
+    <ion-col size="6">
+      <button *ngIf="rol==='admin'" (click)="editar(mecanicoGeneral)"> <ion-icon name="create-outline"></ion-icon> Editar </button>
+    </ion-col>
+  </ion-row>
+  <div class="card">
+    <img  alt="John" 
+    src="https://imagenes.elpais.com/resizer/SWU1m81JCID2iZlsdzavDfI3YKA=/1960x1103/arc-anglerfish-eu-central-1-prod-prisa.s3.amazonaws.com/public/XVUKYH2X4VVNKNBELPWWZXTO6M.jpg" >
+<h1><ion-icon name="person"></ion-icon> {{mecanicoGeneral.Nombre}}  </h1>
+<p class="title"><ion-icon name="call-sharp"></ion-icon>  {{mecanicoGeneral.Telefono}} </p>  
+<p><ion-icon name="wallet-sharp"></ion-icon>{{mecanicoGeneral.PrecioMinimo}}</p>
+  
+
+<p>    <ion-button class="buttonn" expand="full" [href]=" 'https://wa.me/593' + mecanicoGeneral.Telefono + '?text=Envia%20tu%20ubicacion%20:)'" target="blank">
+  Mandar Ubicacion <ion-icon name="logo-whatsapp"></ion-icon>
+  </ion-button>  <ion-button class="buttonn" expand="full" (click)=" solicitarServicio(mecanicoGeneral)">
+    Solicitar Servicio
+  </ion-button></p>
+</div>
 
   <ion-grid>
-    <ion-row class="ion-justify-content-center">
-      <ion-col size="6">
-        <button *ngIf="rol==='admin'" (click)="editar(mecanicoGeneral)"> <ion-icon name="create-outline"></ion-icon> Editar </button>
-      </ion-col>
-    </ion-row>
-    <ion-card>
-      <ion-card-header>
-        <ion-card-title>Nombre:</ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-        {{mecanicoGeneral.Nombre}} 
-      </ion-card-content>
-    </ion-card>
-    <ion-card>
-      <ion-card-header>
-        <ion-card-title>Telefono:</ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-        {{mecanicoGeneral.Telefono}}  
-      </ion-card-content>
-    </ion-card>
-    <ion-card>
-      <ion-card-header>
-        <ion-card-title>Precio minimo:</ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-        {{mecanicoGeneral.PrecioMinimo}}  
-      </ion-card-content>
-    </ion-card>
        
     <ion-row *ngIf="rol==='admin'">
       <ion-col>
@@ -67,19 +57,10 @@
     </ion-row>
     <ion-row *ngIf="rol==='admin'" class="ion-justify-content-center">
       <ion-col size="6">
-        <ion-item>
           <button (click)="guardar()"> Guardar</button>
-        </ion-item>
       </ion-col>
     </ion-row>
   </ion-grid>
-
-<p>    <ion-button class="buttonn" expand="full" [href]=" 'https://wa.me/593' + mecanicoGeneral.Telefono + '?text=Envia%20tu%20ubicacion%20:)'" target="blank">
-  Mandar Ubicacion <ion-icon name="logo-whatsapp"></ion-icon>
-  </ion-button>  <ion-button class="buttonn" expand="full" (click)=" solicitarServicio(mecanicoGeneral)">
-    Solicitar Servicio
-  </ion-button></p>
-
       <div >
         <img class="gif" alt="imagenes" 
         src="https://spdload.com/wp-content/uploads/2018/06/website-design-company.gif" >
