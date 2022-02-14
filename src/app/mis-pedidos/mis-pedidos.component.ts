@@ -66,4 +66,9 @@ export class MisPedidosComponent implements OnInit {
       console.log('actualizado con exito');
     })
   }
+
+  eliminarSolicitud(pedido:Pedido){
+    const id = pedido.uid
+    this.firestoreService.deleteDoc(this.path, id)
+  }
 }

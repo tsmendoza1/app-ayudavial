@@ -14,6 +14,11 @@ export class FirestoreService {
     return collection.valueChanges();
   }
 
+  deleteDoc(path:string, id:string){
+    const collection = this.database.collection(path)
+    return collection.doc(id).delete();
+  }
+
   createDoc1(data: any, path: string, id: string) {
     const collection = this.firestore.collection(path);
     return collection.doc(id).set(data);

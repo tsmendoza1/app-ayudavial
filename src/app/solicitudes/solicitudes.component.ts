@@ -10,7 +10,7 @@ import { InteractionService } from '../Services/interaction.service';
   styleUrls: ['./solicitudes.component.scss'],
 })
 export class SolicitudesComponent implements OnInit {
-
+  path ='/Solicitudes';
   user:Useri;
   solicitud: Pedido;
 
@@ -50,6 +50,6 @@ export class SolicitudesComponent implements OnInit {
             this.user = res;
       }
     })
-    
   }
+
 }

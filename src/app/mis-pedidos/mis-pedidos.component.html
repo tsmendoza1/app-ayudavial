@@ -44,7 +44,8 @@
    <h5><ion-title></ion-title></h5><br>
    <br><div class="text2"  size="center">
     {{pedido.estado}} 
- </div  >    <br>
+ </div  >  
+<br>
  </ion-item>
 
        <ion-card-content>
@@ -52,11 +53,9 @@
          <ion-select (ionChange)="cambiarEstado(pedido, $event)"[value]="pedido.estado" slot="end" okText="Seleccionar" cancelText="Cancelar" interface="popover">
             <ion-select-option *ngFor="let estado of estados" [value]="estado"> {{estado}} </ion-select-option>
           </ion-select> 
+          <button (click)="eliminarSolicitud(pedido)">
+            <ion-icon name="trash-outline"></ion-icon>
+          </button>
       </ion-card-content>
     </ion-card>
-
-  <button>
-    Eliminar todo
-  </button>
   </ion-content>
-
