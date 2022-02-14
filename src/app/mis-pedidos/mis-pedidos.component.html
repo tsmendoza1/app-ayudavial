@@ -47,30 +47,13 @@
  </div  >    <br>
  </ion-item>
 
- <label> Seleciona el estado</label>
-
-   <!--    <ion-card-content>
-        <ion-item>
-          Nombre usuario: <br>
-          {{pedido.usuario.nombre}} <br>
-        </ion-item>
-        <ion-item>
-          Nombre mecanico: <br>
-          {{pedido.servicio.Nombre}} <br>
-        </ion-item>
-        <ion-item>
-          Estado pedido:  <br>
-         {{pedido.estado}} <br>
-        </ion-item>
-        <ion-item>
+       <ion-card-content>
           <label> Seleciona el estado</label>
-         <ion-select (ionChange)="cambiarEstado(pedido, $event.detail.value)"[value]="pedido.estado" slot="end" okText="Seleccionar" cancelText="Cancelar" interface="popover">
+         <ion-select (ionChange)="cambiarEstado(pedido, $event)"[value]="pedido.estado" slot="end" okText="Seleccionar" cancelText="Cancelar" interface="popover">
             <ion-select-option *ngFor="let estado of estados" [value]="estado"> {{estado}} </ion-select-option>
           </ion-select> 
-        </ion-item>
       </ion-card-content>
-    </ion-card> -->
-  </ion-card>
+    </ion-card>
 
   <button>
     Eliminar todo

@@ -55,11 +55,11 @@ export class MisPedidosComponent implements OnInit {
     })
   } 
 
-  cambiarEstado(pedido:Pedido, estado:EstadoPedido){
+  cambiarEstado(pedido:Pedido, estado){
     console.log('cambiarEstado->', pedido);
     const path = 'Solicitudes'
     const updateDoc ={
-      estado,
+      estado: estado.detail.value,
     };  
     const id = pedido.uid
     this.firestoreService.updateDoc(path, id, updateDoc).then(()=>{
